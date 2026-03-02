@@ -21,12 +21,12 @@ export default function Footer({ lang = 'ro' }: FooterProps) {
           <div>
             <h3 className="font-cormorant text-2xl text-cream mb-1">Smaranda Andriciuc</h3>
             <p className="label-style text-brass-l mb-4">
-              {isRo ? 'Claritate financiară. Decizii reale.' : 'Clarity. Systems. Results.'}
+              {isRo ? 'Claritate. Sisteme. Reezultate.' : 'Clarity. Systems. Results.'}
             </p>
             <p className="text-sm text-cream/60 leading-relaxed font-sans">
               {isRo
-                ? 'Consultant operațional și mentor de claritate financiară. Bazată în Bornem, Belgia.'
-                : 'Operational consultant and business mentor. Based in Bornem, Belgium.'}
+                ? 'Operations & Systems Consultant | Business Architect | Business & Financial Strategy Consultant & Mentor. Localizat în Belgia.'
+                : 'Operations & Systems Consultant | Business Architect | Business & Financial Strategy Consultant & Mentor. Based in Belgium.'}
             </p>
           </div>
 
@@ -98,7 +98,7 @@ export default function Footer({ lang = 'ro' }: FooterProps) {
               <li>
                 {/* EMAIL DE COMPLETAT */}
                 <a
-                  href="mailto:EMAIL_DE_COMPLETAT"
+                  href="mailto:smaranda.andriciuc@gmail.com"
                   className="text-sm text-cream/70 hover:text-cream font-sans transition-colors"
                 >
                   EMAIL_DE_COMPLETAT
@@ -107,7 +107,7 @@ export default function Footer({ lang = 'ro' }: FooterProps) {
               <li>
                 {/* LINKEDIN DE COMPLETAT */}
                 <a
-                  href="https://linkedin.com/in/PROFIL_DE_COMPLETAT"
+                  href="https://linkedin.com/in/smaranda-andriciuc/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-cream/70 hover:text-cream font-sans transition-colors flex items-center gap-1"
