@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { staggerContainer, fadeUp, slideInLeft, slideInRight } from '@/lib/animations'
 import AnimatedSection from '@/components/shared/AnimatedSection'
@@ -22,14 +23,15 @@ export default function DespreMine() {
           {/* Left — Photo placeholder */}
           <AnimatedSection variant="fadeIn">
             <div className="relative">
-              {/* Photo placeholder */}
-              <div
-                className="w-full aspect-[3/4] max-w-sm mx-auto lg:mx-0 rounded-2xl bg-green-d flex items-center justify-center border border-brass/20"
-              >
-                <div className="text-center">
-                  <div className="text-brass/40 text-5xl mb-3">◻</div>
-                  <p className="font-sans text-brass-l/60 text-sm">[Foto Smaranda]</p>
-                </div>
+              <div className="w-full aspect-[3/4] max-w-sm mx-auto lg:mx-0 rounded-2xl overflow-hidden">
+                <Image
+                  src="/smaranda.jpg"
+                  alt="Smaranda Andriciuc"
+                  width={400}
+                  height={533}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
               {/* Decorative accent */}
               <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl border border-brass/20 -z-10" />
