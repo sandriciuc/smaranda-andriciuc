@@ -67,13 +67,13 @@ export default function HeroRo() {
             variants={fadeUp}
             className="font-mono text-brass-l text-[13px] mb-10"
           >
-            Inginer. Economist. Coach certificat ICF & EMCC.
+            Inginer. Economist. Coach certificat.
           </motion.p>
 
           {/* 3 business lines */}
           <motion.div variants={fadeUp} className="flex flex-col gap-2 mb-10">
             {[
-              '01 · Arhitect de Business & Strateg Financiar',
+              '01 · Business Arhitect & Strateg Financiar',
               '02 · Operations & Systems Consultant | Business Architect',
               '03 · Personal Leadership & Entrepreneurial Mindset Coaching',
             ].map((line, i) => (
@@ -91,7 +91,7 @@ export default function HeroRo() {
               whileHover={{ scale: 1.02, filter: 'brightness(1.08)' }}
               whileTap={{ scale: 0.97 }}
             >
-              Hai să vedem cifrele
+              Programează o conversație
             </motion.button>
             <motion.button
               onClick={scrollToServcii}
@@ -110,9 +110,9 @@ export default function HeroRo() {
           >
             {[
               '20+ ani experiență reală',
-              'Inginer + Economist, ASE + UTCB',
-              'Certificată ICF & EMCC',
-              'Bornem, Belgia · Online Worldwide',
+              'Inginer + Economist + Coach',
+              'Certificare ICF & EMCC în curs',
+              'Belgia · Online Worldwide',
             ].map((badge, i) => (
               <motion.div
                 key={i}
