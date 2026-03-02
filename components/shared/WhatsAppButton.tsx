@@ -2,16 +2,24 @@
 
 import { motion } from 'framer-motion'
 
-export default function WhatsAppButton() {
-  // {/* WHATSAPP NUMBER DE COMPLETAT */}
-  const whatsappUrl =
-    'https://wa.me/NUMAR_DE_COMPLETAT?text=Bun%C4%83%20Smaranda%2C%20vreau%20s%C4%83%20discut%C4%83m%20despre%20claritate%20financiar%C4%83.'
+interface WhatsAppButtonProps {
+  lang?: 'ro' | 'en'
+}
+
+export default function WhatsAppButton({ lang = 'ro' }: WhatsAppButtonProps) {
+  const isRo = lang === 'ro'
+
+  const whatsappUrl = isRo
+    ? 'https://wa.me/40767740067?text=Bun%C4%83%20Smaranda%2C%20vreau%20s%C4%83%20discut%C4%83m%20despre%20claritate%20financiar%C4%83.'
+    : 'https://wa.me/32489606785?text=Hello%20Smaranda%2C%20I%27d%20like%20to%20discuss%20working%20together.'
+
+  const tooltip = isRo ? 'Scrie-mi pe WhatsApp' : 'Message me on WhatsApp'
 
   return (
     <div className="fixed bottom-6 right-6 z-50 group">
       {/* Tooltip */}
       <div className="absolute bottom-full right-0 mb-2 px-3 py-1.5 bg-[#1C1C1E] text-white text-xs font-sans rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-        Scrie-mi pe WhatsApp
+        {tooltip}
         <div className="absolute top-full right-4 border-4 border-transparent border-t-[#1C1C1E]" />
       </div>
 
@@ -20,17 +28,10 @@ export default function WhatsAppButton() {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Scrie-mi pe WhatsApp"
+        aria-label={tooltip}
         className="flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] shadow-lg hover:shadow-xl"
-        animate={{
-          scale: [1, 1.05, 1],
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-          repeatDelay: 1,
-          ease: 'easeInOut',
-        }}
+        animate={{ scale: [1, 1.05, 1] }}
+        transition={{ duration: 2, repeat: Infinity, repeatDelay: 1, ease: 'easeInOut' }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >

@@ -37,7 +37,7 @@ export default function EnPage() {
       <Testimonials />
       <ContactEn />
       <Footer lang="en" />
-      <WhatsAppButton />
+      <WhatsAppButton lang="en" />
     </main>
   )
 }

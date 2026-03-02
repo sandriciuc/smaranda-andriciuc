@@ -37,7 +37,7 @@ export default function RoPage() {
       <Testimoniale />
       <Contact />
       <Footer lang="ro" />
-      <WhatsAppButton />
+      <WhatsAppButton lang="ro" />
     </main>
   )
 }
