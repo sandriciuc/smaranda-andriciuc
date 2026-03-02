@@ -50,7 +50,7 @@ export default function HeroEn() {
           >
             Clarity for people.
             <br />
-            <em>Systems for business.</em>
+            <em className="text-brass-l">Systems for business.</em>
           </motion.h1>
 
           {/* Subtitle */}
