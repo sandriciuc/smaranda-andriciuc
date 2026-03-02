@@ -101,7 +101,7 @@ export default function Footer({ lang = 'ro' }: FooterProps) {
                   href="mailto:smaranda.andriciuc@gmail.com"
                   className="text-sm text-cream/70 hover:text-cream font-sans transition-colors"
                 >
-                  EMAIL_DE_COMPLETAT
+                  smaranda.andriciuc@gmail.com
                 </a>
               </li>
               <li>
