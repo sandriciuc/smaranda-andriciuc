@@ -39,7 +39,7 @@ export default function HeroEn() {
             className="label-style text-brass-l mb-6"
             style={{ letterSpacing: '0.2em' }}
           >
-            · Operations & Systems Consulting ·
+            · Business Architect · Financial Strategist · Coach ·
           </motion.p>
 
           {/* H1 */}
@@ -48,9 +48,9 @@ export default function HeroEn() {
             className="font-cormorant text-cream leading-[1.1] mb-6"
             style={{ fontSize: 'clamp(36px, 5vw, 60px)' }}
           >
-            Systems for business.
+            Clarity for people.
             <br />
-            <em>Clarity for people.</em>
+            <em>Systems for business.</em>
           </motion.h1>
 
           {/* Subtitle */}
@@ -58,9 +58,8 @@ export default function HeroEn() {
             variants={fadeUp}
             className="font-sans text-cream/75 text-[17px] leading-relaxed mb-4 max-w-xl"
           >
-            I work with businesses that want to operate with more precision —
-            and with entrepreneurs who need to see their numbers clearly
-            before they decide anything.
+            I work with entrepreneurs building real businesses and with organizations
+            that want to operate with more precision, clarity and direction.
           </motion.p>
 
           {/* Tagline mono */}
@@ -68,8 +67,21 @@ export default function HeroEn() {
             variants={fadeUp}
             className="font-mono text-brass-l text-[13px] mb-10"
           >
-            Engineering background. Financial depth. Practical results.
+            Engineer. Economist. ICF & EMCC Certified Coach.
           </motion.p>
+
+          {/* 3 business lines */}
+          <motion.div variants={fadeUp} className="flex flex-col gap-2 mb-10">
+            {[
+              '01 · Business Architect & Financial Strategist',
+              '02 · Operations & Systems Consultant | Business Architect',
+              '03 · Personal Leadership & Entrepreneurial Mindset Coaching',
+            ].map((line, i) => (
+              <p key={i} className="font-mono text-cream/50 text-[12px] leading-relaxed">
+                {line}
+              </p>
+            ))}
+          </motion.div>
 
           {/* CTA buttons */}
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 mb-14">
@@ -97,10 +109,10 @@ export default function HeroEn() {
             className="grid grid-cols-2 sm:grid-cols-4 gap-4"
           >
             {[
-              '20+ years building operational systems',
-              'Belgium-based, international experience',
-              'Engineering + Finance background',
-              'B2B personalized — no packages',
+              '20+ years of real experience',
+              'Engineer + Economist, ASE + UTCB',
+              'ICF & EMCC Certified Coach',
+              'Bornem, Belgium · Online Worldwide',
             ].map((badge, i) => (
               <motion.div
                 key={i}

@@ -3,15 +3,15 @@ import Navbar from '@/components/shared/Navbar'
 import Footer from '@/components/shared/Footer'
 import WhatsAppButton from '@/components/shared/WhatsAppButton'
 import HeroEn from '@/components/en/Hero'
-import Services from '@/components/en/Services'
 import AboutMe from '@/components/en/AboutMe'
-import Process from '@/components/en/Process'
+import Services from '@/components/en/Services'
+import Testimonials from '@/components/en/Testimonials'
 import ContactEn from '@/components/en/Contact'
 
 export const metadata: Metadata = {
-  title: 'Smaranda Andriciuc — Operations Consulting & Business Mentoring | Belgium',
+  title: 'Smaranda Andriciuc — Business Architect · Financial Strategist · Coach | Belgium',
   description:
-    'Operational systems and business mentoring for companies and entrepreneurs in Belgium and Europe. Engineering background. Financial depth. Practical results.',
+    'Business Architect, Financial Strategist and Leadership Coach. Operational systems, financial clarity and entrepreneurial mindset. Based in Belgium.',
   alternates: {
     canonical: 'https://smarandaandriciuc.com/en',
     languages: {
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Smaranda Andriciuc — Systems for business. Clarity for people.',
+    title: 'Smaranda Andriciuc — Clarity for people. Systems for business.',
     description:
-      'Operational consulting and business mentoring. Engineering background. Financial depth. Practical results.',
+      'Business Architect, Financial Strategist and Coach. Three lines of work, one approach: clarity grounded in real data.',
     locale: 'en_BE',
   },
 }
@@ -32,9 +32,9 @@ export default function EnPage() {
     <main>
       <Navbar lang="en" />
       <HeroEn />
-      <Services />
       <AboutMe />
-      <Process />
+      <Services />
+      <Testimonials />
       <ContactEn />
       <Footer lang="en" />
       <WhatsAppButton />

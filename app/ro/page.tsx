@@ -3,18 +3,15 @@ import Navbar from '@/components/shared/Navbar'
 import Footer from '@/components/shared/Footer'
 import WhatsAppButton from '@/components/shared/WhatsAppButton'
 import HeroRo from '@/components/ro/Hero'
-import PentruCine from '@/components/ro/PentruCine'
-import Servicii from '@/components/ro/Servicii'
 import DespreMine from '@/components/ro/DespreMine'
-import Proces from '@/components/ro/Proces'
+import Servicii from '@/components/ro/Servicii'
 import Testimoniale from '@/components/ro/Testimoniale'
-import FAQ from '@/components/ro/FAQ'
 import Contact from '@/components/ro/Contact'
 
 export const metadata: Metadata = {
-  title: 'Smaranda Andriciuc — Claritate Financiară & Coaching Tranziție | Piața Română',
+  title: 'Smaranda Andriciuc — Business Architect · Strateg Financiar · Coach',
   description:
-    'Claritate financiară și structură de decizie pentru antreprenoare din România. Pe date, nu pe speranță. Coaching financiar, business plan, tranziție profesională.',
+    'Business Architect, Strateg Financiar și Coach de Leadership. Claritate financiară, sisteme operaționale și leadership autentic. Pe date, nu pe speranță.',
   alternates: {
     canonical: 'https://smarandaandriciuc.com/ro',
     languages: {
@@ -23,9 +20,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Smaranda Andriciuc — Claritate financiară. Decizii reale.',
+    title: 'Smaranda Andriciuc — Claritate pentru oameni. Structură pentru business-uri.',
     description:
-      'Nu motivație. Instrumente financiare concrete pentru femei care vor să știe, nu să spere.',
+      'Business Architect, Strateg Financiar și Coach. Trei linii de activitate, o singură abordare: claritate pe date reale.',
     locale: 'ro_RO',
   },
 }
@@ -35,12 +32,9 @@ export default function RoPage() {
     <main>
       <Navbar lang="ro" />
       <HeroRo />
-      <PentruCine />
-      <Servicii />
       <DespreMine />
-      <Proces />
+      <Servicii />
       <Testimoniale />
-      <FAQ />
       <Contact />
       <Footer lang="ro" />
       <WhatsAppButton />

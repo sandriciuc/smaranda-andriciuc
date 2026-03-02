@@ -10,17 +10,16 @@ interface NavbarProps {
 }
 
 const navLinksRo = [
-  { label: 'Servicii', href: '#servicii' },
   { label: 'Despre', href: '#despre' },
-  { label: 'Proces', href: '#proces' },
+  { label: 'Servicii', href: '#servicii' },
   { label: 'Testimoniale', href: '#testimoniale' },
   { label: 'Contact', href: '#contact' },
 ]
 
 const navLinksEn = [
-  { label: 'Services', href: '#services' },
   { label: 'About', href: '#about' },
-  { label: 'Process', href: '#process' },
+  { label: 'Services', href: '#services' },
+  { label: 'Testimonials', href: '#testimonials' },
   { label: 'Contact', href: '#contact' },
 ]
 

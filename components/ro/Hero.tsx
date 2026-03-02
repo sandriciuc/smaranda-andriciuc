@@ -39,7 +39,7 @@ export default function HeroRo() {
             className="label-style text-brass-l mb-6"
             style={{ letterSpacing: '0.2em' }}
           >
-            · Coaching financiar ·
+            · Business Architect · Strateg Financiar · Coach ·
           </motion.p>
 
           {/* H1 */}
@@ -48,11 +48,9 @@ export default function HeroRo() {
             className="font-cormorant text-cream leading-[1.1] mb-6"
             style={{ fontSize: 'clamp(40px, 6vw, 72px)' }}
           >
-            Claritate financiară.
+            Claritate pentru oameni.
             <br />
-            <em>Decizie sigură.</em>
-            <br />
-            Tranziție pe date reale.
+            <em>Structură pentru business-uri.</em>
           </motion.h1>
 
           {/* Subtitle */}
@@ -60,9 +58,8 @@ export default function HeroRo() {
             variants={fadeUp}
             className="font-sans text-cream/75 text-lg leading-relaxed mb-4 max-w-xl"
           >
-            Nu motivație. Nu promisiuni vage.
-            <br />
-            Instrumente financiare concrete pentru femei care vor să știe, nu să spere.
+            Lucrez cu antreprenori care construiesc afaceri reale și cu organizații
+            care vor să funcționeze cu mai multă precizie, claritate și direcție.
           </motion.p>
 
           {/* Tagline mono */}
@@ -70,8 +67,21 @@ export default function HeroRo() {
             variants={fadeUp}
             className="font-mono text-brass-l text-[13px] mb-10"
           >
-            Pe date, nu pe speranță.
+            Inginer. Economist. Coach certificat ICF & EMCC.
           </motion.p>
+
+          {/* 3 business lines */}
+          <motion.div variants={fadeUp} className="flex flex-col gap-2 mb-10">
+            {[
+              '01 · Arhitect de Business & Strateg Financiar',
+              '02 · Operations & Systems Consultant | Business Architect',
+              '03 · Personal Leadership & Entrepreneurial Mindset Coaching',
+            ].map((line, i) => (
+              <p key={i} className="font-mono text-cream/50 text-[12px] leading-relaxed">
+                {line}
+              </p>
+            ))}
+          </motion.div>
 
           {/* CTA buttons */}
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 mb-14">
@@ -99,10 +109,10 @@ export default function HeroRo() {
             className="grid grid-cols-2 sm:grid-cols-4 gap-4"
           >
             {[
-              '20 ani experiență reală',
+              '20+ ani experiență reală',
               'Inginer + Economist, ASE + UTCB',
               'Certificată ICF & EMCC',
-              'Online, pentru antreprenoare din România',
+              'Bornem, Belgia · Online Worldwide',
             ].map((badge, i) => (
               <motion.div
                 key={i}
