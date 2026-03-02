@@ -202,7 +202,7 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
             </div>
 
             <motion.button
-              onClick={() => handleNavClick('#contact')}
+              onClick={() => handleNavClick('https://calendar.app.google/t2Am29cmi49yoQ468')}
               className="hidden md:block bg-amber text-white text-sm font-sans font-medium px-5 py-2 rounded-full"
               whileHover={{ scale: 1.02, filter: 'brightness(1.08)' }}
               whileTap={{ scale: 0.97 }}
