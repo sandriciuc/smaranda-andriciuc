@@ -201,14 +201,16 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
               </Link>
             </div>
 
-            <motion.button
-              onClick={() => handleNavClick('https://calendar.app.google/t2Am29cmi49yoQ468')}
+            <motion.a
+              href="https://calendar.app.google/t2Am29cmi49yoQ468"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden md:block bg-amber text-white text-sm font-sans font-medium px-5 py-2 rounded-full"
               whileHover={{ scale: 1.02, filter: 'brightness(1.08)' }}
               whileTap={{ scale: 0.97 }}
             >
               {isRo ? 'Programează o conversație' : 'Book a conversation'}
-            </motion.button>
+            </motion.a>
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -345,15 +347,17 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
               </Link>
             </div>
 
-            <motion.button
-              onClick={() => handleNavClick('#contact')}
+            <motion.a
+              href="https://calendar.app.google/t2Am29cmi49yoQ468"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-8 bg-amber text-white font-sans font-medium px-6 py-3 rounded-full text-center w-fit"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              {isRo ? 'Hai să vedem cifrele' : 'Book a conversation'}
-            </motion.button>
+              {isRo ? 'Programează o conversație' : 'Book a conversation'}
+            </motion.a>
           </motion.div>
         )}
       </AnimatePresence>

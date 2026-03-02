@@ -85,14 +85,16 @@ export default function HeroRo() {
 
           {/* CTA buttons */}
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 mb-14">
-            <motion.button
-              onClick={scrollToContact}
+            <motion.a
+              href="https://calendar.app.google/t2Am29cmi49yoQ468"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-amber text-white font-sans font-medium px-8 py-3.5 rounded-full text-[15px]"
               whileHover={{ scale: 1.02, filter: 'brightness(1.08)' }}
               whileTap={{ scale: 0.97 }}
             >
               Programează o conversație
-            </motion.button>
+            </motion.a>
             <motion.button
               onClick={scrollToServcii}
               className="border border-cream/30 text-cream font-sans font-medium px-8 py-3.5 rounded-full text-[15px] hover:bg-cream/10 transition-colors"
