@@ -207,7 +207,7 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
               whileHover={{ scale: 1.02, filter: 'brightness(1.08)' }}
               whileTap={{ scale: 0.97 }}
             >
-              {isRo ? 'Hai să vedem cifrele' : 'Book a conversation'}
+              {isRo ? 'Programează o conversație' : 'Book a conversation'}
             </motion.button>
 
             <button
