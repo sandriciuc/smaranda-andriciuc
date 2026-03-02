@@ -3,31 +3,47 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 
 interface NavbarProps {
   lang?: 'ro' | 'en'
 }
 
-const navLinksRo = [
-  { label: 'Despre', href: '#despre' },
-  { label: 'Servicii', href: '#servicii' },
-  { label: 'Testimoniale', href: '#testimoniale' },
-  { label: 'Contact', href: '#contact' },
-]
-
-const navLinksEn = [
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Testimonials', href: '#testimonials' },
-  { label: 'Contact', href: '#contact' },
-]
+const serviceLines = {
+  ro: {
+    label: 'Structură pentru business-uri.',
+    items: [
+      { title: 'Arhitect de Business & Strateg Financiar', href: '#servicii' },
+      { title: 'Operations & Systems Consultant', href: '#servicii' },
+    ],
+  },
+  en: {
+    label: 'Systems for business.',
+    items: [
+      { title: 'Business Architect & Financial Strategist', href: '#services' },
+      { title: 'Operations & Systems Consultant', href: '#services' },
+    ],
+  },
+}
 
 export default function Navbar({ lang = 'ro' }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const isRo = lang === 'ro'
-  const navLinks = isRo ? navLinksRo : navLinksEn
+  const lines = serviceLines[lang]
+
+  const navLinks = isRo
+    ? [
+        { label: 'Despre', href: '#despre' },
+        { label: 'Testimoniale', href: '#testimoniale' },
+        { label: 'Contact', href: '#contact' },
+      ]
+    : [
+        { label: 'About', href: '#about' },
+        { label: 'Testimonials', href: '#testimonials' },
+        { label: 'Contact', href: '#contact' },
+      ]
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 80)
@@ -35,7 +51,6 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (mobileOpen) {
       document.body.style.overflow = 'hidden'
@@ -47,6 +62,7 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
 
   const handleNavClick = (href: string) => {
     setMobileOpen(false)
+    setServicesOpen(false)
     if (href.startsWith('#')) {
       const el = document.querySelector(href)
       if (el) el.scrollIntoView({ behavior: 'smooth' })
@@ -77,7 +93,77 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {/* Despre / About */}
+            <button
+              onClick={() => handleNavClick(isRo ? '#despre' : '#about')}
+              className="text-cream/75 hover:text-cream font-sans text-sm font-medium transition-colors"
+            >
+              {isRo ? 'Despre' : 'About'}
+            </button>
+
+            {/* Servicii / Services — with dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
+            >
+              <button
+                onClick={() => handleNavClick(isRo ? '#servicii' : '#services')}
+                className="flex items-center gap-1 text-cream/75 hover:text-cream font-sans text-sm font-medium transition-colors"
+              >
+                {isRo ? 'Servicii' : 'Services'}
+                <motion.svg
+                  className="w-3 h-3 mt-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  animate={{ rotate: servicesOpen ? 180 : 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </motion.svg>
+              </button>
+
+              <AnimatePresence>
+                {servicesOpen && (
+                  <motion.div
+                    className="absolute top-full left-0 mt-3 w-72 bg-green-d rounded-xl border border-brass/15 shadow-xl overflow-hidden"
+                    initial={{ opacity: 0, y: -6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -6 }}
+                    transition={{ duration: 0.18 }}
+                  >
+                    {/* Category label */}
+                    <div className="px-4 pt-4 pb-2">
+                      <p
+                        className="font-mono text-[11px] uppercase tracking-widest"
+                        style={{ color: '#B89A6E' }}
+                      >
+                        {lines.label}
+                      </p>
+                    </div>
+                    <div className="h-px bg-brass/15 mx-4" />
+                    {/* Line items */}
+                    {lines.items.map((item, i) => (
+                      <button
+                        key={i}
+                        onClick={() => handleNavClick(item.href)}
+                        className="w-full text-left px-4 py-3 hover:bg-green/50 transition-colors group"
+                      >
+                        <span className="font-mono text-cream/40 text-[10px] mr-2">0{i + 1}</span>
+                        <span className="font-sans text-cream/80 group-hover:text-cream text-[13px] transition-colors">
+                          {item.title}
+                        </span>
+                      </button>
+                    ))}
+                    <div className="h-3" />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Remaining links */}
+            {navLinks.slice(1).map((link) => (
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
@@ -161,14 +247,79 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
             transition={{ type: 'tween', duration: 0.3 }}
           >
             <nav className="flex flex-col gap-6">
-              {navLinks.map((link, i) => (
+              {/* Despre / About */}
+              <motion.button
+                onClick={() => handleNavClick(isRo ? '#despre' : '#about')}
+                className="text-left text-cream font-cormorant text-3xl font-light"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0 }}
+              >
+                {isRo ? 'Despre' : 'About'}
+              </motion.button>
+
+              {/* Servicii / Services — expandable */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.06 }}
+              >
+                <button
+                  onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                  className="flex items-center gap-3 text-left text-cream font-cormorant text-3xl font-light w-full"
+                >
+                  {isRo ? 'Servicii' : 'Services'}
+                  <motion.svg
+                    className="w-5 h-5 text-cream/50"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    animate={{ rotate: mobileServicesOpen ? 180 : 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
+                  </motion.svg>
+                </button>
+
+                <AnimatePresence>
+                  {mobileServicesOpen && (
+                    <motion.div
+                      className="mt-3 ml-2 flex flex-col gap-3"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <p
+                        className="font-mono text-[10px] uppercase tracking-widest mb-1"
+                        style={{ color: '#B89A6E' }}
+                      >
+                        {lines.label}
+                      </p>
+                      {lines.items.map((item, i) => (
+                        <button
+                          key={i}
+                          onClick={() => handleNavClick(item.href)}
+                          className="text-left flex items-start gap-2"
+                        >
+                          <span className="font-mono text-cream/30 text-[11px] mt-1">0{i + 1}</span>
+                          <span className="font-sans text-cream/70 text-[15px] leading-snug">{item.title}</span>
+                        </button>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+
+              {/* Testimoniale / Testimonials + Contact */}
+              {navLinks.slice(1).map((link, i) => (
                 <motion.button
                   key={link.href}
                   onClick={() => handleNavClick(link.href)}
                   className="text-left text-cream font-cormorant text-3xl font-light"
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.06 }}
+                  transition={{ delay: (i + 2) * 0.06 }}
                 >
                   {link.label}
                 </motion.button>
