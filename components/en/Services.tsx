@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { staggerContainer, fadeUp } from '@/lib/animations'
 import AnimatedSection from '@/components/shared/AnimatedSection'
@@ -96,6 +96,15 @@ const opsServices = [
 export default function Services() {
   const [openLine, setOpenLine] = useState<number | null>(0)
 
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const { lineIdx } = (e as CustomEvent).detail
+      setOpenLine(lineIdx)
+    }
+    window.addEventListener('openServiceLine', handler)
+    return () => window.removeEventListener('openServiceLine', handler)
+  }, [])
+
   const handleCta = () => {
     document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -141,7 +150,7 @@ export default function Services() {
         <div className="space-y-4">
           {lines.map((line, idx) => (
             <AnimatedSection key={idx} delay={idx * 0.08}>
-              <div className="rounded-2xl overflow-hidden border border-green/10">
+              <div id={`services-0${idx + 1}`} className="rounded-2xl overflow-hidden border border-green/10">
                 {/* Line header */}
                 <button
                   onClick={() => setOpenLine(openLine === idx ? null : idx)}

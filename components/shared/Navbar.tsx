@@ -12,15 +12,17 @@ const serviceLines = {
   ro: {
     label: 'Structură pentru business-uri.',
     items: [
-      { title: 'Arhitect de Business & Strateg Financiar', href: '#servicii' },
-      { title: 'Operations & Systems Consultant', href: '#servicii' },
+      { title: 'Business Architect & Financial Strategist', href: '#servicii-01', lineIdx: 0 },
+      { title: 'Operations & Systems Consultant | Business Architect', href: '#servicii-02', lineIdx: 1 },
+      { title: 'Personal Leadership & Entrepreneurial Mindset Coaching', href: '#servicii-03', lineIdx: 2 },
     ],
   },
   en: {
     label: 'Systems for business.',
     items: [
-      { title: 'Business Architect & Financial Strategist', href: '#services' },
-      { title: 'Operations & Systems Consultant', href: '#services' },
+      { title: 'Business Architect & Financial Strategist', href: '#services-01', lineIdx: 0 },
+      { title: 'Operations & Systems Consultant | Business Architect', href: '#services-02', lineIdx: 1 },
+      { title: 'Personal Leadership & Entrepreneurial Mindset Coaching', href: '#services-03', lineIdx: 2 },
     ],
   },
 }
@@ -67,6 +69,17 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
       const el = document.querySelector(href)
       if (el) el.scrollIntoView({ behavior: 'smooth' })
     }
+  }
+
+  const handleServiceLineClick = (href: string, lineIdx: number) => {
+    setServicesOpen(false)
+    setMobileOpen(false)
+    setMobileServicesOpen(false)
+    window.dispatchEvent(new CustomEvent('openServiceLine', { detail: { lineIdx } }))
+    setTimeout(() => {
+      const el = document.querySelector(href)
+      if (el) el.scrollIntoView({ behavior: 'smooth' })
+    }, 50)
   }
 
   return (
@@ -147,11 +160,11 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
                     {lines.items.map((item, i) => (
                       <button
                         key={i}
-                        onClick={() => handleNavClick(item.href)}
+                        onClick={() => handleServiceLineClick(item.href, item.lineIdx)}
                         className="w-full text-left px-4 py-3 hover:bg-green/50 transition-colors group"
                       >
                         <span className="font-mono text-cream/40 text-[10px] mr-2">0{i + 1}</span>
-                        <span className="font-sans text-cream/80 group-hover:text-cream text-[13px] transition-colors">
+                        <span className="font-sans text-cream/80 group-hover:text-cream text-[13px] transition-colors leading-snug">
                           {item.title}
                         </span>
                       </button>
@@ -299,7 +312,7 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
                       {lines.items.map((item, i) => (
                         <button
                           key={i}
-                          onClick={() => handleNavClick(item.href)}
+                          onClick={() => handleServiceLineClick(item.href, item.lineIdx)}
                           className="text-left flex items-start gap-2"
                         >
                           <span className="font-mono text-cream/30 text-[11px] mt-1">0{i + 1}</span>
