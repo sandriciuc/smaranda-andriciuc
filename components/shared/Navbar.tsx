@@ -96,7 +96,7 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
               Smaranda Andriciuc
             </span>
             <span className="label-style text-brass-l" style={{ letterSpacing: '0.18em', fontSize: '10px' }}>
-              {isRo ? 'Claritate financiară. Decizii reale.' : 'Clarity. Systems. Results.'}
+              {isRo ? 'Claritate. Sisteme. Rezultate.' : 'Clarity. Systems. Results.'}
             </span>
           </Link>
 
