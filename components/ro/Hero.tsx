@@ -50,7 +50,7 @@ export default function HeroRo() {
           >
             Claritate pentru oameni.
             <br />
-            <em>Structură pentru business-uri.</em>
+            <em className="text-brass-l">Structură pentru business-uri.</em>
           </motion.h1>
 
           {/* Subtitle */}
