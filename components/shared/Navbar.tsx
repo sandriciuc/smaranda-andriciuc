@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 interface NavbarProps {
   lang?: 'ro' | 'en'
@@ -12,17 +13,17 @@ const serviceLines = {
   ro: {
     label: 'Structură pentru business-uri.',
     items: [
-      { title: 'Business Architect & Financial Strategist', href: '#servicii-01', lineIdx: 0 },
-      { title: 'Operations & Systems Consultant | Business Architect', href: '#servicii-02', lineIdx: 1 },
-      { title: 'Personal Leadership & Entrepreneurial Mindset Coaching', href: '#servicii-03', lineIdx: 2 },
+      { title: 'Business Architect & Financial Strategist', href: '/ro/servicii/linia-1' },
+      { title: 'Operations & Systems Consultant | Business Architect', href: '/ro/servicii/linia-2' },
+      { title: 'Personal Leadership & Entrepreneurial Mindset Coaching', href: '/ro/servicii/linia-3' },
     ],
   },
   en: {
     label: 'Systems for business.',
     items: [
-      { title: 'Business Architect & Financial Strategist', href: '#services-01', lineIdx: 0 },
-      { title: 'Operations & Systems Consultant | Business Architect', href: '#services-02', lineIdx: 1 },
-      { title: 'Personal Leadership & Entrepreneurial Mindset Coaching', href: '#services-03', lineIdx: 2 },
+      { title: 'Business Architect & Financial Strategist', href: '/en/services/line-1' },
+      { title: 'Operations & Systems Consultant | Business Architect', href: '/en/services/line-2' },
+      { title: 'Personal Leadership & Entrepreneurial Mindset Coaching', href: '/en/services/line-3' },
     ],
   },
 }
@@ -34,6 +35,7 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const isRo = lang === 'ro'
   const lines = serviceLines[lang]
+  const pathname = usePathname()
 
   const navLinks = isRo
     ? [
@@ -65,21 +67,15 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
   const handleNavClick = (href: string) => {
     setMobileOpen(false)
     setServicesOpen(false)
-    if (href.startsWith('#')) {
-      const el = document.querySelector(href)
-      if (el) el.scrollIntoView({ behavior: 'smooth' })
+    if (!href.startsWith('#')) return
+    const el = document.querySelector(href)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      // On a sub-page — navigate to homepage with hash
+      const home = isRo ? '/ro' : '/en'
+      window.location.href = `${home}${href}`
     }
-  }
-
-  const handleServiceLineClick = (href: string, lineIdx: number) => {
-    setServicesOpen(false)
-    setMobileOpen(false)
-    setMobileServicesOpen(false)
-    window.dispatchEvent(new CustomEvent('openServiceLine', { detail: { lineIdx } }))
-    setTimeout(() => {
-      const el = document.querySelector(href)
-      if (el) el.scrollIntoView({ behavior: 'smooth' })
-    }, 50)
   }
 
   return (
@@ -106,7 +102,6 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">
-            {/* Despre / About */}
             <button
               onClick={() => handleNavClick(isRo ? '#despre' : '#about')}
               className="text-cream/75 hover:text-cream font-sans text-sm font-medium transition-colors"
@@ -114,14 +109,14 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
               {isRo ? 'Despre' : 'About'}
             </button>
 
-            {/* Servicii / Services — with dropdown */}
+            {/* Servicii / Services — dropdown only, no navigation */}
             <div
               className="relative"
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
               <button
-                onClick={() => handleNavClick(isRo ? '#servicii' : '#services')}
+                onClick={() => setServicesOpen(!servicesOpen)}
                 className="flex items-center gap-1 text-cream/75 hover:text-cream font-sans text-sm font-medium transition-colors"
               >
                 {isRo ? 'Servicii' : 'Services'}
@@ -140,13 +135,12 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
               <AnimatePresence>
                 {servicesOpen && (
                   <motion.div
-                    className="absolute top-full left-0 mt-3 w-72 bg-green-d rounded-xl border border-brass/15 shadow-xl overflow-hidden"
+                    className="absolute top-full left-0 mt-3 w-80 bg-green-d rounded-xl border border-brass/15 shadow-xl overflow-hidden"
                     initial={{ opacity: 0, y: -6 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -6 }}
                     transition={{ duration: 0.18 }}
                   >
-                    {/* Category label */}
                     <div className="px-4 pt-4 pb-2">
                       <p
                         className="font-mono text-[11px] uppercase tracking-widest"
@@ -156,18 +150,18 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
                       </p>
                     </div>
                     <div className="h-px bg-brass/15 mx-4" />
-                    {/* Line items */}
                     {lines.items.map((item, i) => (
-                      <button
+                      <Link
                         key={i}
-                        onClick={() => handleServiceLineClick(item.href, item.lineIdx)}
-                        className="w-full text-left px-4 py-3 hover:bg-green/50 transition-colors group"
+                        href={item.href}
+                        onClick={() => setServicesOpen(false)}
+                        className="flex items-start gap-3 w-full px-4 py-3 hover:bg-green/50 transition-colors group"
                       >
-                        <span className="font-mono text-cream/40 text-[10px] mr-2">0{i + 1}</span>
+                        <span className="font-mono text-cream/40 text-[10px] mt-0.5 flex-shrink-0">0{i + 1}</span>
                         <span className="font-sans text-cream/80 group-hover:text-cream text-[13px] transition-colors leading-snug">
                           {item.title}
                         </span>
-                      </button>
+                      </Link>
                     ))}
                     <div className="h-3" />
                   </motion.div>
@@ -175,7 +169,6 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
               </AnimatePresence>
             </div>
 
-            {/* Remaining links */}
             {navLinks.slice(1).map((link) => (
               <button
                 key={link.href}
@@ -189,14 +182,11 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
 
           {/* Right side */}
           <div className="flex items-center gap-3">
-            {/* Language toggle */}
             <div className="hidden md:flex items-center gap-1 bg-green/40 rounded-full p-1">
               <Link
                 href="/ro"
                 className={`px-3 py-1 rounded-full text-xs font-sans font-medium transition-all ${
-                  isRo
-                    ? 'bg-amber text-white'
-                    : 'text-cream/60 hover:text-cream'
+                  isRo ? 'bg-amber text-white' : 'text-cream/60 hover:text-cream'
                 }`}
               >
                 RO
@@ -204,16 +194,13 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
               <Link
                 href="/en"
                 className={`px-3 py-1 rounded-full text-xs font-sans font-medium transition-all ${
-                  !isRo
-                    ? 'bg-amber text-white'
-                    : 'text-cream/60 hover:text-cream'
+                  !isRo ? 'bg-amber text-white' : 'text-cream/60 hover:text-cream'
                 }`}
               >
                 EN
               </Link>
             </div>
 
-            {/* CTA button */}
             <motion.button
               onClick={() => handleNavClick('#contact')}
               className="hidden md:block bg-amber text-white text-sm font-sans font-medium px-5 py-2 rounded-full"
@@ -223,7 +210,6 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
               {isRo ? 'Hai să vedem cifrele' : 'Book a conversation'}
             </motion.button>
 
-            {/* Mobile hamburger */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="md:hidden flex flex-col gap-1.5 p-2"
@@ -253,14 +239,13 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            className="fixed inset-0 z-30 bg-green-d flex flex-col pt-28 px-8"
+            className="fixed inset-0 z-30 bg-green-d flex flex-col pt-28 px-8 overflow-y-auto"
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
           >
             <nav className="flex flex-col gap-6">
-              {/* Despre / About */}
               <motion.button
                 onClick={() => handleNavClick(isRo ? '#despre' : '#about')}
                 className="text-left text-cream font-cormorant text-3xl font-light"
@@ -271,7 +256,7 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
                 {isRo ? 'Despre' : 'About'}
               </motion.button>
 
-              {/* Servicii / Services — expandable */}
+              {/* Servicii mobile — expandable */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -310,21 +295,21 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
                         {lines.label}
                       </p>
                       {lines.items.map((item, i) => (
-                        <button
+                        <Link
                           key={i}
-                          onClick={() => handleServiceLineClick(item.href, item.lineIdx)}
-                          className="text-left flex items-start gap-2"
+                          href={item.href}
+                          onClick={() => setMobileOpen(false)}
+                          className="flex items-start gap-2"
                         >
                           <span className="font-mono text-cream/30 text-[11px] mt-1">0{i + 1}</span>
                           <span className="font-sans text-cream/70 text-[15px] leading-snug">{item.title}</span>
-                        </button>
+                        </Link>
                       ))}
                     </motion.div>
                   )}
                 </AnimatePresence>
               </motion.div>
 
-              {/* Testimoniale / Testimonials + Contact */}
               {navLinks.slice(1).map((link, i) => (
                 <motion.button
                   key={link.href}
@@ -339,7 +324,6 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
               ))}
             </nav>
 
-            {/* Language toggle mobile */}
             <div className="mt-10 flex items-center gap-3">
               <Link
                 href="/ro"
