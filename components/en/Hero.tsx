@@ -67,7 +67,7 @@ export default function HeroEn() {
             variants={fadeUp}
             className="font-mono text-brass-l text-[13px] mb-10"
           >
-            Engineer. Economist. ICF & EMCC Certified Coach.
+            Engineer. Economist. Certified Coach.
           </motion.p>
 
           {/* 3 business lines */}
@@ -91,7 +91,7 @@ export default function HeroEn() {
               whileHover={{ scale: 1.02, filter: 'brightness(1.08)' }}
               whileTap={{ scale: 0.97 }}
             >
-              Request a diagnostic conversation
+              Book a conversation
             </motion.button>
             <motion.button
               onClick={scrollToWork}
@@ -110,9 +110,9 @@ export default function HeroEn() {
           >
             {[
               '20+ years of real experience',
-              'Engineer + Economist, ASE + UTCB',
-              'ICF & EMCC Certified Coach',
-              'Bornem, Belgium · Online Worldwide',
+              'Engineer + Economist + Coach',
+              'Certified Coach ICF & EMCC - in progress',
+              'Belgium · Online Worldwide',
             ].map((badge, i) => (
               <motion.div
                 key={i}
