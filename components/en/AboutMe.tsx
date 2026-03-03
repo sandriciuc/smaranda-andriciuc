@@ -10,7 +10,7 @@ import AnimatedCounter from '@/components/shared/AnimatedCounter'
 const credentials = [
   { icon: '📐', text: 'Civil Engineer (UTCB) + Economist (ASE Bucharest)' },
   { icon: '🏆', text: 'ICF & EMCC Certified Coach (in progress)' },
-  { icon: '🇧🇪', text: 'Based in Bornem, Belgium — international experience' },
+  { icon: '🇧🇪', text:  'Based in Belgium — international experience' },
   { icon: '⚙️', text: '20+ years in technical and industrial environments' },
   { icon: '💼', text: 'Expertise: financial analysis, business structure, mentoring, leadership & mindset' },
 ]
@@ -48,7 +48,7 @@ export default function AboutMe() {
               <h2 className="font-cormorant text-cream text-[clamp(28px,3.5vw,42px)] leading-[1.15] mb-8">
                 Two degrees. One insight: rigor
                 <br />
-                <em>doesn't belong to reports — it belongs to people.</em>
+                <em className="text-brass-l">rigor doesn't belong to reports — it belongs to people who need numbers to decide.</em>
               </h2>
             </AnimatedSection>
 

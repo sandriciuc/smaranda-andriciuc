@@ -10,7 +10,7 @@ import AnimatedCounter from '@/components/shared/AnimatedCounter'
 const credentials = [
   { icon: '📐', text: 'Inginer Civil (UTCB) + Economist (ASE București)' },
   { icon: '🏆', text: 'Coach certificat ICF & EMCC (în curs)' },
-  { icon: '🇧🇪', text: 'Bazată în Bornem, Belgia — experiență internațională' },
+  { icon: '🇧🇪', text:  'Localizat în Belgia — experiență internațională' },
   { icon: '⚙️', text: '20+ ani în medii tehnice și industriale' },
   { icon: '💼', text: 'Expertiză: analiză financiară, structură de business, mentorat, leadership & mindset' },
 ]
@@ -47,9 +47,9 @@ export default function DespreMine() {
 
             <AnimatedSection delay={0.15}>
               <h2 className="font-cormorant text-cream text-[clamp(28px,3.5vw,42px)] leading-[1.15] mb-8">
-                Două diplome. O concluzie: rigoarea
+                Două diplome. O concluzie: 
                 <br />
-                <em>nu aparține rapoartelor — aparține oamenilor.</em>
+                <em className="text-brass-l">rigoarea nu aparține rapoartelor — aparține oamenilor care au nevoie de cifre ca să decidă.</em>
               </h2>
             </AnimatedSection>
 
