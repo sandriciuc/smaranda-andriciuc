@@ -9,10 +9,10 @@ import AnimatedCounter from '@/components/shared/AnimatedCounter'
 
 const credentials = [
   { icon: '📐', text: 'Civil Engineer (UTCB) + Economist (ASE Bucharest)' },
-  { icon: '🏆', text: 'ICF & EMCC Certified Coach' },
+  { icon: '🏆', text: 'ICF & EMCC Certified Coach (in progress)' },
   { icon: '🇧🇪', text: 'Based in Bornem, Belgium — international experience' },
-  { icon: '⚙️', text: '20+ years in technical and industrial systems' },
-  { icon: '💼', text: 'Expertise: Belgian accounting, financial analysis, business mentoring' },
+  { icon: '⚙️', text: '20+ years in technical and industrial environments' },
+  { icon: '💼', text: 'Expertise: financial analysis, business structure, mentoring, leadership & mindset' },
 ]
 
 export default function AboutMe() {
@@ -46,24 +46,25 @@ export default function AboutMe() {
 
             <AnimatedSection delay={0.15}>
               <h2 className="font-cormorant text-cream text-[clamp(28px,3.5vw,42px)] leading-[1.15] mb-8">
-                Engineer who learned that systems
+                Two degrees. One insight: rigor
                 <br />
-                <em>are the most honest language.</em>
+                <em>doesn't belong to reports — it belongs to people.</em>
               </h2>
             </AnimatedSection>
 
             <AnimatedSection delay={0.2}>
               <div className="font-sans text-cream/80 text-[15px] leading-[1.75] space-y-4 mb-8">
                 <p>
-                  I'm Smaranda — an engineer turned operations consultant and business mentor,
-                  based in Bornem, Belgium.
+                  Civil engineer and economist by training. Operations consultant and business
+                  mentor by practice. Over 20 years of experience in technical and industrial
+                  environments in Romania and Belgium.
                 </p>
                 <p>
-                  Over 20 years building systems in technical and industrial environments
-                  in Romania and Belgium. Today I bring that same engineering precision
-                  to two distinct areas of work.
+                  Today I bring that same rigor to three directions: operational systems for
+                  companies, financial clarity for entrepreneurs, and leadership & entrepreneurial
+                  mindset coaching — because external systems don't work without internal clarity.
                 </p>
-                <p className="font-medium text-cream/90">Not guessing. Calculating.</p>
+                <p className="font-medium text-cream/90">I don't sell courage. I build clarity.</p>
               </div>
             </AnimatedSection>
 
@@ -87,7 +88,9 @@ export default function AboutMe() {
                 </div>
                 <div className="w-px bg-cream/10" />
                 <div>
-                  <p className="font-mono text-amber text-[32px] font-medium">2</p>
+                  <p className="font-mono text-amber text-[32px] font-medium">
+                    <AnimatedCounter to={3} suffix="" />
+                  </p>
                   <p className="font-sans text-cream/60 text-[12px] uppercase tracking-widest">
                     Service lines
                   </p>

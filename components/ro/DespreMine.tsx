@@ -2,17 +2,17 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { staggerContainer, fadeUp, slideInLeft, slideInRight } from '@/lib/animations'
+import { staggerContainer, fadeUp } from '@/lib/animations'
 import AnimatedSection from '@/components/shared/AnimatedSection'
 import BrassLine from '@/components/shared/BrassLine'
 import AnimatedCounter from '@/components/shared/AnimatedCounter'
 
 const credentials = [
-  { icon: '📐', text: 'Inginer UTCB + Economist ASE București' },
-  { icon: '🏆', text: 'Certificată ICF & EMCC (coaching)' },
-  { icon: '🇧🇪', text: 'Bazată în Belgia, lucrez online cu antreprenoare din România' },
-  { icon: '⚙️', text: '20+ ani sisteme tehnice, operaționale și financiare' },
-  { icon: '💼', text: 'Expertiză: contabilitate belgiană, analiză financiară, coaching de tranziție' },
+  { icon: '📐', text: 'Inginer Civil (UTCB) + Economist (ASE București)' },
+  { icon: '🏆', text: 'Coach certificat ICF & EMCC (în curs)' },
+  { icon: '🇧🇪', text: 'Bazată în Bornem, Belgia — experiență internațională' },
+  { icon: '⚙️', text: '20+ ani în medii tehnice și industriale' },
+  { icon: '💼', text: 'Expertiză: analiză financiară, structură de business, mentorat, leadership & mindset' },
 ]
 
 export default function DespreMine() {
@@ -47,22 +47,24 @@ export default function DespreMine() {
 
             <AnimatedSection delay={0.15}>
               <h2 className="font-cormorant text-cream text-[clamp(28px,3.5vw,42px)] leading-[1.15] mb-8">
-                Inginer care a învățat că cifrele
+                Două diplome. O concluzie: rigoarea
                 <br />
-                <em>sunt cel mai empatic limbaj.</em>
+                <em>nu aparține rapoartelor — aparține oamenilor.</em>
               </h2>
             </AnimatedSection>
 
             <AnimatedSection delay={0.2}>
               <div className="font-sans text-cream/80 text-[15px] leading-[1.75] space-y-4 mb-8">
                 <p>
-                  Sunt Smaranda — consultant operațional și mentor de claritate financiară,
-                  cu baza în Bornem, Belgia.
+                  Inginer civil și economist de formare. Consultant de operațiuni și mentor
+                  de business din practică. Peste 20 de ani de experiență în medii tehnice
+                  și industriale în România și Belgia.
                 </p>
                 <p>
-                  Peste 20 de ani am construit sisteme în medii tehnice și industriale —
-                  în România și în Belgia. Astăzi aduc aceeași precizie inginerească
-                  în deciziile financiare ale antreprenoarelor care construiesc afaceri reale.
+                  Astăzi aduc aceeași rigoare în trei direcții: sisteme operaționale pentru
+                  companii, claritate financiară pentru antreprenoare și coaching de leadership
+                  și mindset antreprenorial — pentru că sistemele externe nu funcționează
+                  fără claritate internă.
                 </p>
                 <p className="font-medium text-cream/90">Nu vând curaj. Construiesc claritate.</p>
               </div>
@@ -89,10 +91,10 @@ export default function DespreMine() {
                 <div className="w-px bg-cream/10" />
                 <div>
                   <p className="font-mono text-amber text-[32px] font-medium">
-                    <AnimatedCounter to={4} suffix="" />
+                    <AnimatedCounter to={3} suffix="" />
                   </p>
                   <p className="font-sans text-cream/60 text-[12px] uppercase tracking-widest">
-                    Programe
+                    Linii de servicii
                   </p>
                 </div>
               </div>
