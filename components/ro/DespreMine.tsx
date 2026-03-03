@@ -67,6 +67,9 @@ export default function DespreMine() {
                   fără claritate internă.
                 </p>
                 <p className="font-medium text-cream/90">Nu vând curaj. Construiesc claritate.</p>
+                <p className="font-cormorant italic text-brass-l text-[22px] leading-relaxed">
+                  Nu îți promit că poți. Îți arăt că poți. Cu cifrele tale, nu ale altcuiva.
+                </p>
               </div>
             </AnimatedSection>
 
