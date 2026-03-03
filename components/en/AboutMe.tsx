@@ -46,7 +46,7 @@ export default function AboutMe() {
 
             <AnimatedSection delay={0.15}>
               <h2 className="font-cormorant text-cream text-[clamp(28px,3.5vw,42px)] leading-[1.15] mb-8">
-                Two degrees. One insight: rigor
+                Two degrees. One insight:
                 <br />
                 <em className="text-brass-l">rigor doesn't belong to reports — it belongs to people who need numbers to decide.</em>
               </h2>
