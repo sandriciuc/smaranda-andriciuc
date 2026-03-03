@@ -281,8 +281,8 @@ export default function LiniaUna() {
             />
           </div>
 
-          {/* 3A — Business Plan Lab */}
-          <div className="mb-6">
+          {/* 3A + 3B — side by side */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <TierCard
               badge={{ text: 'Program de Grup', variant: 'group' }}
               id="3A · 6 Luni"
@@ -302,10 +302,6 @@ export default function LiniaUna() {
               ctaText="Vreau în grup"
               ctaVariant="green"
             />
-          </div>
-
-          {/* 3B — Business Plan 1:1 */}
-          <div className="mb-6">
             <TierCard
               badge={{ text: '★ Cel mai ales', variant: 'star' }}
               id="3B · Personalizat"
@@ -335,8 +331,8 @@ export default function LiniaUna() {
             </p>
           </div>
 
-          {/* 4A — Strategic Implementation Circle */}
-          <div className="mb-6">
+          {/* 4A + 4B — side by side */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-12">
             <TierCard
               badge={{ text: 'Grup · Continuu', variant: 'group' }}
               id="4A · Lunar"
@@ -356,10 +352,6 @@ export default function LiniaUna() {
               ctaText="Vreau în grup"
               ctaVariant="green"
             />
-          </div>
-
-          {/* 4B — Strategic Partner 1:1 */}
-          <div className="pb-12">
             <TierCard
               badge={{ text: 'Premium', variant: 'premium' }}
               id="4B · Termen Lung"
