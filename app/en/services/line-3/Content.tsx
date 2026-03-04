@@ -3,21 +3,35 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
-const processSteps = [
+const phases = [
   {
     num: '01',
-    title: 'Define the focus',
-    desc: 'We establish what you want to resolve in today\'s session, aligned to the broader goal we\'re working on.',
+    title: 'Diagnostic',
+    tagline: 'What is actually in your way',
+    desc: "We don't start with solutions. We start with what's actually happening — what pattern keeps repeating, where and why you get stuck, what decision you're holding in suspense and why. The first session is precise diagnosis, not brainstorming.",
   },
   {
     num: '02',
-    title: 'Explore in depth',
-    desc: 'We go into the concrete situation — what\'s really happening, what\'s blocking, what you haven\'t seen yet. Precise questions, not generic advice.',
+    title: 'The Work',
+    tagline: 'Session by session, on real situations',
+    desc: "Each session starts from a concrete situation in your business or leadership life. Not from theory. We go into what you're living through right now — decisions, blocks, relationships, pressure — and come out with one clear step.",
   },
   {
     num: '03',
-    title: 'Leave with one concrete step',
-    desc: 'Not a 10-point plan — one single clear step you can take before the next session.',
+    title: 'Direction',
+    tagline: 'Not just clarity, but the capacity to decide on your own',
+    desc: "At the end of the process you don't leave with an external plan. You leave with a clearer way of thinking, deciding, and acting — one that stays with you after the sessions are over.",
+  },
+]
+
+const profiles = [
+  {
+    label: 'The Entrepreneur',
+    desc: "You've made a major decision — or you need to make one — and feel something internal is holding you back. Or you're growing and sense that the way you operate has become a ceiling for the business.",
+  },
+  {
+    label: 'The Leader',
+    desc: "You lead a team and have noticed that how you think and decide affects them too. You want to lead from your own strength, not from reaction to what's happening around you.",
   },
 ]
 
@@ -95,38 +109,52 @@ export default function LineThree() {
           </p>
         </div>
 
-        {/* Who this is for */}
-        <div className="mb-12 space-y-4">
-          <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-brass mb-[18px]">Who this is for</p>
-          <p className="font-sans text-[15px] leading-[1.85] text-ink">
-            For entrepreneurs who've made a big decision — or need to make one — and feel something internal is holding them back. And for leaders who want to lead from their own strength, not from reaction to what's happening around them.
-          </p>
-          <p className="font-sans text-[15px] leading-[1.85] text-ink">
+        {/* Who this is for — two cards */}
+        <div className="mb-12">
+          <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-brass mb-7">Who this is for</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-[3px] mb-6">
+            {profiles.map((p, i) => (
+              <div key={i} className="bg-cream-d p-7">
+                <p className="font-cormorant text-[20px] font-light text-green mb-3">{p.label}</p>
+                <p className="font-sans text-[14px] text-lgrey leading-[1.75]">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+          <p className="font-sans text-[14px] text-grey italic">
             If you recognise yourself, a conversation is enough to start.
           </p>
         </div>
 
-        {/* Process steps */}
+        {/* Phases — The Clarity Process */}
         <div className="mb-12">
-          <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-brass mb-[18px]">How a session works</p>
-          <p className="font-sans text-[15px] leading-[1.85] text-ink mb-6">
-            Every session has a clear structure — not an open conversation without direction.
+          <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-brass mb-2">How the process works</p>
+          <p className="font-cormorant text-[26px] font-light text-green mb-8 leading-snug">The Clarity Process</p>
+          <p className="font-sans text-[15px] leading-[1.85] text-ink mb-8">
+            This is not a package of sessions. It's a process with an internal logic: each session builds on the previous one, and at the end you don't just have clarity — you have a different way of thinking and deciding.
           </p>
           <div>
-            {processSteps.map((step, i) => (
+            {phases.map((phase, i) => (
               <div
                 key={i}
-                className={`grid gap-5 py-5 items-start ${i < processSteps.length - 1 ? 'border-b border-black/[0.07]' : ''}`}
-                style={{ gridTemplateColumns: '40px 1fr' }}
+                className={`grid gap-6 py-8 items-start ${i < phases.length - 1 ? 'border-b border-black/[0.07]' : ''}`}
+                style={{ gridTemplateColumns: '48px 1fr' }}
               >
-                <p className="font-cormorant text-[28px] font-light text-brass leading-none pt-0.5">{step.num}</p>
+                <p className="font-cormorant text-[36px] font-light text-brass-l leading-none pt-1">{phase.num}</p>
                 <div>
-                  <span className="font-sans text-[10px] tracking-[2px] uppercase text-green font-medium mb-1 block">{step.title}</span>
-                  <p className="font-sans text-[14px] text-lgrey leading-[1.7]">{step.desc}</p>
+                  <p className="font-cormorant text-[22px] font-light text-green mb-1 leading-snug">{phase.title}</p>
+                  <p className="font-sans text-[11px] tracking-[0.15em] uppercase text-brass italic mb-3">{phase.tagline}</p>
+                  <p className="font-sans text-[14px] text-lgrey leading-[1.75]">{phase.desc}</p>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Outcome block */}
+        <div className="border-l-4 border-green pl-7 py-2 my-11">
+          <p className="font-cormorant text-[21px] italic text-green leading-[1.6]">
+            At the end of the 4 sessions you don't leave with a plan I gave you. You leave with clarity about how you think, what blocks you, and how you decide — and with the capacity to apply that on your own, going forward.
+          </p>
         </div>
 
         {/* Services & Prices */}
@@ -163,10 +191,10 @@ export default function LineThree() {
               </motion.a>
             </div>
 
-            {/* Featured package */}
+            {/* The Clarity Process — featured */}
             <div className="bg-green p-8">
-              <p className="font-sans text-[10px] tracking-[2.5px] uppercase text-brass-l font-medium mb-3">Recommended pack</p>
-              <p className="font-cormorant text-[22px] font-light text-cream mb-4 leading-[1.25]">4 coaching sessions</p>
+              <p className="font-sans text-[10px] tracking-[2.5px] uppercase text-brass-l font-medium mb-3">Full programme</p>
+              <p className="font-cormorant text-[22px] font-light text-cream mb-4 leading-[1.25]">The Clarity Process</p>
               <p className="font-sans text-[30px] font-medium text-brass-l leading-none tracking-[-0.5px]">€ 450</p>
               <p className="font-sans text-[12px] text-cream/45 italic mt-1 mb-5">full pack · save € 30</p>
               <div className="w-7 h-px bg-brass opacity-35 mb-[18px]" />
@@ -184,22 +212,14 @@ export default function LineThree() {
               <p className="font-sans text-[12px] text-brass-l italic pt-3 border-t border-white/[0.12] mt-1 mb-0">
                 100% guarantee after the first session — if it's not right for you, I refund in full.
               </p>
-              <div className="flex flex-wrap items-center gap-4 mt-[22px]">
-                <motion.a
-                  href="/en#contact"
-                  className="inline-block px-[26px] py-3 text-[10px] tracking-[2px] uppercase font-sans bg-brass text-white hover:bg-brass-l transition-colors duration-200"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.97 }}
-                >
-                  Book the pack
-                </motion.a>
-                <Link
-                  href="/en/services/line-3/the-clarity-process"
-                  className="font-sans text-[11px] tracking-[0.1em] uppercase text-cream/60 hover:text-cream transition-colors"
-                >
-                  Explore the programme →
-                </Link>
-              </div>
+              <motion.a
+                href="/en#contact"
+                className="inline-block mt-[22px] px-[26px] py-3 text-[10px] tracking-[2px] uppercase font-sans bg-brass text-white hover:bg-brass-l transition-colors duration-200"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                Apply
+              </motion.a>
             </div>
 
             {/* Workshop — spans both columns */}
