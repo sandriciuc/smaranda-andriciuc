@@ -129,22 +129,14 @@ export default function Footer({ lang = 'ro' }: FooterProps) {
         {/* Bottom bar */}
         <div className="border-t border-cream/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-cream/40 font-sans">
-            © 2025 Smaranda Andriciuc
+            © 2026 Smaranda Andriciuc
           </p>
-          <div className="flex items-center gap-6">
-            <Link
-              href={isRo ? '/ro/politica-confidentialitate' : '/ro/politica-confidentialitate'}
-              className="text-xs text-cream/40 hover:text-cream/70 font-sans transition-colors"
-            >
-              {isRo ? 'Politică confidențialitate' : 'Privacy Policy'}
-            </Link>
-            <Link
-              href={isRo ? '/ro/politica-confidentialitate' : '/ro/politica-confidentialitate'}
-              className="text-xs text-cream/40 hover:text-cream/70 font-sans transition-colors"
-            >
-              GDPR
-            </Link>
-          </div>
+          <Link
+            href="/ro/politica-confidentialitate"
+            className="text-xs text-cream/40 hover:text-cream/70 font-sans transition-colors"
+          >
+            {isRo ? 'Politică confidențialitate' : 'Privacy Policy'}
+          </Link>
         </div>
       </div>
     </footer>
