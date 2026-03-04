@@ -3,21 +3,35 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
-const processSteps = [
+const phases = [
   {
     num: '01',
-    title: 'Definim focusul',
-    desc: 'Stabilim ce vrei să rezolvi în sesiunea de azi, aliniat la obiectivul mai larg pentru care lucrăm.',
+    title: 'Diagnostic',
+    tagline: 'Ce îți stă în cale cu adevărat',
+    desc: 'Nu începem cu soluții. Începem cu ce se întâmplă de fapt — ce pattern se repetă, unde și de ce te blochezi, ce decizie ții în suspans și de ce. Prima sesiune e de diagnoză precisă, nu de brainstorming.',
   },
   {
     num: '02',
-    title: 'Explorăm în adâncime',
-    desc: 'Intrăm în situația concretă — ce se întâmplă cu adevărat, ce blochează, ce nu ai văzut încă. Întrebări precise, nu sfaturi generice.',
+    title: 'Lucrul',
+    tagline: 'Sesiune cu sesiune, pe situațiile reale',
+    desc: 'Fiecare sesiune pornește de la o situație concretă din business sau din viața ta de lider. Nu de la teorie. Intrăm în ce trăiești acum — decizii, blocaje, relații, presiune — și ieșim cu un pas clar.',
   },
   {
     num: '03',
-    title: 'Ieșim cu un pas concret',
-    desc: 'Nu cu un plan de 10 puncte — cu un singur pas clar pe care îl poți face până la sesiunea următoare.',
+    title: 'Direcție',
+    tagline: 'Nu doar claritate, ci capacitatea de a decide singur',
+    desc: 'La finalul procesului nu ieși cu un plan extern. Ieși cu un mod mai clar de a gândi, de a decide și de a acționa — unul care rămâne cu tine după ce sesiunile se termină.',
+  },
+]
+
+const profiles = [
+  {
+    label: 'Antreprenorul',
+    desc: 'Ai luat o decizie majoră — sau trebuie să o iei — și simți că ceva intern te ține pe loc. Sau ești în creștere și simți că modul în care operezi tu a devenit un plafon pentru business.',
+  },
+  {
+    label: 'Liderul',
+    desc: 'Conduci o echipă și ai observat că felul în care tu gândești și decizi îi afectează și pe ei. Vrei să conduci din putere proprie, nu din reacție la ce se întâmplă în jur.',
   },
 ]
 
@@ -95,38 +109,52 @@ export default function LiniaTrei() {
           </p>
         </div>
 
-        {/* Pentru cine */}
-        <div className="mb-12 space-y-4">
-          <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-brass mb-[18px]">Pentru cine</p>
-          <p className="font-sans text-[15px] leading-[1.85] text-ink">
-            Pentru antreprenori care au luat o decizie mare — sau care trebuie să o ia — și simt că ceva intern îi ține pe loc. Și pentru lideri care vor să conducă din putere proprie, nu din reacție la ce se întâmplă în jurul lor.
-          </p>
-          <p className="font-sans text-[15px] leading-[1.85] text-ink">
+        {/* Pentru cine — two cards */}
+        <div className="mb-12">
+          <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-brass mb-7">Pentru cine</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-[3px] mb-6">
+            {profiles.map((p, i) => (
+              <div key={i} className="bg-cream-d p-7">
+                <p className="font-cormorant text-[20px] font-light text-green mb-3">{p.label}</p>
+                <p className="font-sans text-[14px] text-lgrey leading-[1.75]">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+          <p className="font-sans text-[14px] text-grey italic">
             Dacă te recunoști, e suficient să începem cu o conversație.
           </p>
         </div>
 
-        {/* Process steps */}
+        {/* Phases — The Clarity Process */}
         <div className="mb-12">
-          <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-brass mb-[18px]">Cum funcționează o sesiune</p>
-          <p className="font-sans text-[15px] leading-[1.85] text-ink mb-6">
-            Fiecare sesiune are o structură clară — nu o conversație deschisă fără direcție.
+          <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-brass mb-2">Cum arată procesul</p>
+          <p className="font-cormorant text-[26px] font-light text-green mb-8 leading-snug">The Clarity Process</p>
+          <p className="font-sans text-[15px] leading-[1.85] text-ink mb-8">
+            Nu e un pachet de sesiuni. E un proces cu o logică internă: fiecare sesiune construiește pe cea anterioară, iar la final ai nu doar claritate — ai un mod diferit de a gândi și de a decide.
           </p>
           <div>
-            {processSteps.map((step, i) => (
+            {phases.map((phase, i) => (
               <div
                 key={i}
-                className={`grid gap-5 py-5 items-start ${i < processSteps.length - 1 ? 'border-b border-black/[0.07]' : ''}`}
-                style={{ gridTemplateColumns: '40px 1fr' }}
+                className={`grid gap-6 py-8 items-start ${i < phases.length - 1 ? 'border-b border-black/[0.07]' : ''}`}
+                style={{ gridTemplateColumns: '48px 1fr' }}
               >
-                <p className="font-cormorant text-[28px] font-light text-brass leading-none pt-0.5">{step.num}</p>
+                <p className="font-cormorant text-[36px] font-light text-brass-l leading-none pt-1">{phase.num}</p>
                 <div>
-                  <span className="font-sans text-[10px] tracking-[2px] uppercase text-green font-medium mb-1 block">{step.title}</span>
-                  <p className="font-sans text-[14px] text-lgrey leading-[1.7]">{step.desc}</p>
+                  <p className="font-cormorant text-[22px] font-light text-green mb-1 leading-snug">{phase.title}</p>
+                  <p className="font-sans text-[11px] tracking-[0.15em] uppercase text-brass italic mb-3">{phase.tagline}</p>
+                  <p className="font-sans text-[14px] text-lgrey leading-[1.75]">{phase.desc}</p>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Outcome block */}
+        <div className="border-l-4 border-green pl-7 py-2 my-11">
+          <p className="font-cormorant text-[21px] italic text-green leading-[1.6]">
+            La finalul celor 4 sesiuni nu ieși cu un plan pe care eu ți l-am dat. Ieși cu claritate despre cum gândești, ce te blochează și cum decizi — și cu capacitatea de a aplica asta singur, mai departe.
+          </p>
         </div>
 
         {/* Services & Prices */}
@@ -163,12 +191,12 @@ export default function LiniaTrei() {
               </motion.a>
             </div>
 
-            {/* Featured package */}
+            {/* The Clarity Process — featured */}
             <div className="bg-green p-8">
-              <p className="font-sans text-[10px] tracking-[2.5px] uppercase text-brass-l font-medium mb-3">Pachet recomandat</p>
-              <p className="font-cormorant text-[22px] font-light text-cream mb-4 leading-[1.25]">4 sesiuni de coaching</p>
+              <p className="font-sans text-[10px] tracking-[2.5px] uppercase text-brass-l font-medium mb-3">Programul complet</p>
+              <p className="font-cormorant text-[22px] font-light text-cream mb-4 leading-[1.25]">The Clarity Process</p>
               <p className="font-sans text-[30px] font-medium text-brass-l leading-none tracking-[-0.5px]">1.500 lei</p>
-              <p className="font-sans text-[12px] text-cream/45 italic mt-1 mb-5">pachet complet · economisești 100 lei</p>
+              <p className="font-sans text-[12px] text-cream/45 italic mt-1 mb-5">4 sesiuni · economisești 100 lei</p>
               <div className="w-7 h-px bg-brass opacity-35 mb-[18px]" />
               <p className="font-sans text-[13px] text-cream/70 leading-[1.75] mb-[18px]">
                 Pentru lucru continuu pe un obiectiv sau o tranziție. Patru sesiuni cu ritm de 2–3 săptămâni — suficient timp să aplici între sesiuni, suficient contact să nu pierzi direcția.
@@ -184,26 +212,45 @@ export default function LiniaTrei() {
               <p className="font-sans text-[12px] text-brass-l italic pt-3 border-t border-white/[0.12] mt-1 mb-0">
                 Garanție 100% după prima sesiune — dacă simți că nu e pentru tine, returnez integral suma.
               </p>
-              <div className="flex flex-wrap items-center gap-4 mt-[22px]">
+              <motion.a
+                href="/ro#contact"
+                className="inline-block mt-[22px] px-[26px] py-3 text-[10px] tracking-[2px] uppercase font-sans bg-brass text-white hover:bg-brass-l transition-colors duration-200"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                Aplică
+              </motion.a>
+            </div>
+
+            {/* Sesiune Lunară — continuation */}
+            <div className="sm:col-span-2 bg-white border border-cream-d grid grid-cols-1 sm:grid-cols-2 gap-8 p-8">
+              <div>
+                <p className="font-sans text-[10px] tracking-[2.5px] uppercase text-brass font-medium mb-3">Continuare după program</p>
+                <p className="font-cormorant text-[22px] font-light text-green mb-4 leading-[1.25]">Sesiune Lunară</p>
+                <p className="font-sans text-[30px] font-medium text-brass leading-none tracking-[-0.5px]">400 lei</p>
+                <p className="font-sans text-[12px] text-lgrey italic mt-1 mb-5">pe lună · 50 minute</p>
                 <motion.a
                   href="/ro#contact"
-                  className="inline-block px-[26px] py-3 text-[10px] tracking-[2px] uppercase font-sans bg-brass text-white hover:bg-brass-l transition-colors duration-200"
+                  className="inline-block mt-[22px] px-[26px] py-3 text-[10px] tracking-[2px] uppercase font-sans border border-green text-green bg-transparent hover:bg-green hover:text-cream transition-colors duration-200"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
                 >
-                  Rezervă pachetul
+                  Află mai multe
                 </motion.a>
-                <Link
-                  href="/ro/servicii/linia-3/the-clarity-process"
-                  className="font-sans text-[11px] tracking-[0.1em] uppercase text-cream/60 hover:text-cream transition-colors"
-                >
-                  Descoperă programul →
-                </Link>
+              </div>
+              <div className="pt-2">
+                <p className="font-sans text-[13px] text-lgrey leading-[1.75] mb-3">
+                  După finalizarea The Clarity Process, o sesiune lunară pentru a menține direcția și a lucra pe situațiile noi care apar.
+                </p>
+                <p className="font-sans text-[13px] text-lgrey leading-[1.75] mb-3">
+                  Disponibilă exclusiv după parcurgerea programului. Fără contract minim.
+                </p>
+                <p className="font-sans text-[13px] text-brass italic">Continuitatea e opțională, nu obligatorie.</p>
               </div>
             </div>
 
             {/* Workshop — spans both columns */}
-            <div className="sm:col-span-2 bg-white border border-cream-d grid grid-cols-1 sm:grid-cols-2 gap-8 p-8">
+            <div className="sm:col-span-2 bg-cream-d border border-cream-d grid grid-cols-1 sm:grid-cols-2 gap-8 p-8">
               <div>
                 <p className="font-sans text-[10px] tracking-[2.5px] uppercase text-brass font-medium mb-3">Format pentru organizații</p>
                 <p className="font-cormorant text-[22px] font-light text-green mb-4 leading-[1.25]">Workshop pentru echipe</p>
