@@ -39,7 +39,7 @@ export default function HeroRo() {
             className="label-style text-brass-l mb-6"
             style={{ letterSpacing: '0.2em' }}
           >
-            · Business Architect · Strateg Financiar · Coach ·
+            · Financial Strategist · Business Architect · Coach ·
           </motion.p>
 
           {/* H1 */}

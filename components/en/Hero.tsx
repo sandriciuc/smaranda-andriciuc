@@ -36,7 +36,7 @@ export default function HeroEn() {
             className="label-style text-brass-l mb-6"
             style={{ letterSpacing: '0.2em' }}
           >
-            · Business Architect · Financial Strategist · Coach ·
+            · Financial Strategist · Business Architect · Coach ·
           </motion.p>
 
           {/* H1 */}
