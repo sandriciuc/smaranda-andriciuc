@@ -3,98 +3,270 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
+const processSteps = [
+  {
+    num: '01',
+    title: 'Define the focus',
+    desc: 'We establish what you want to resolve in today\'s session, aligned to the broader goal we\'re working on.',
+  },
+  {
+    num: '02',
+    title: 'Explore in depth',
+    desc: 'We go into the concrete situation — what\'s really happening, what\'s blocking, what you haven\'t seen yet. Precise questions, not generic advice.',
+  },
+  {
+    num: '03',
+    title: 'Leave with one concrete step',
+    desc: 'Not a 10-point plan — one single clear step you can take before the next session.',
+  },
+]
+
 const otherLines = [
-  {
-    number: '01',
-    title: 'Business Architect & Financial Strategist',
-    href: '/en/services/line-1',
-  },
-  {
-    number: '02',
-    title: 'Operations & Systems Consultant | Business Architect',
-    href: '/en/services/line-2',
-  },
+  { number: '01', title: 'Business Architect & Financial Strategist', href: '/en/services/line-1' },
+  { number: '02', title: 'Operations & Systems Consultant | Business Architect', href: '/en/services/line-2' },
 ]
 
 export default function LineThree() {
   return (
-    <div className="min-h-screen bg-cream-d">
-      {/* Page header */}
-      <div className="max-w-6xl mx-auto px-6 pt-36 pb-12">
+    <div className="min-h-screen bg-cream">
+
+      {/* ── Main editorial column ── */}
+      <div className="max-w-[780px] mx-auto px-10 pt-36 pb-20">
+
+        {/* Back link */}
         <Link
           href="/en"
-          className="inline-flex items-center gap-2 font-mono text-[12px] text-brass hover:text-amber transition-colors mb-8"
+          className="inline-flex items-center gap-2 font-sans text-[12px] tracking-[0.12em] uppercase text-grey hover:text-green transition-colors mb-12"
         >
           ← Back to main page
         </Link>
-        <p className="font-mono text-[11px] uppercase tracking-widest text-brass mb-4">LINE 03</p>
-        <h1 className="font-cormorant text-ink text-[clamp(32px,4.5vw,58px)] leading-[1.1] mb-4">
-          Personal Leadership &<br /><em>Entrepreneurial Mindset Coaching</em>
-        </h1>
-        <p className="font-sans text-grey text-[16px] max-w-xl leading-relaxed">
-          For people who want to lead with more clarity.
-        </p>
-      </div>
 
-      {/* Content */}
-      <div className="bg-cream-l">
-        <div className="max-w-6xl mx-auto px-6 py-12">
-          <div className="max-w-2xl mb-8">
-            <p className="font-sans text-grey text-[14px] leading-[1.75] mb-4">
-              Financial clarity and well-built systems are not enough if the person
-              running them is not operating from their own strength.
-            </p>
-            <p className="font-sans text-grey text-[14px] leading-[1.75] mb-4">
-              I work with entrepreneurs and leaders who want to understand how they think,
-              how they decide and how they relate to risk, change and growth.
-            </p>
-            <p className="font-cormorant italic text-green text-[20px] leading-relaxed">
-              "I don't promise you can.
-              I show you that you can — with your numbers and your own clarity."
-            </p>
-          </div>
-
-          <div className="bg-green-l rounded-2xl p-6 border border-green/20 mb-8 max-w-2xl">
-            <p className="label-style text-brass text-[10px] mb-2">COMING SOON</p>
-            <p className="font-sans text-grey text-[13px] leading-[1.7]">
-              Specific programs for this line of work are in preparation.
-              Contact me for an exploratory conversation.
-            </p>
-          </div>
-
-          <a href="/en#contact">
-            <motion.div
-              className="inline-block bg-amber text-white font-sans font-medium px-8 py-3 rounded-full text-[14px] cursor-pointer"
-              whileHover={{ scale: 1.02, filter: 'brightness(1.08)' }}
-              whileTap={{ scale: 0.97 }}
-            >
-              Let's talk
-            </motion.div>
-          </a>
+        {/* Header */}
+        <div className="mb-0">
+          <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-brass mb-[18px]">
+            Personal Leadership & Entrepreneurial Clarity · Line 03
+          </p>
+          <h1 className="font-cormorant font-light text-[clamp(38px,5vw,54px)] leading-[1.15] text-green mb-3.5">
+            You know what to do.<br />
+            <em className="italic text-brass">And yet you don't do it.</em>
+          </h1>
+          <p className="font-sans text-[15px] text-grey italic">
+            For entrepreneurs and leaders who want to act from clarity, not from pressure.
+          </p>
         </div>
-      </div>
 
-      {/* Other lines navigation */}
-      <div className="max-w-6xl mx-auto px-6 py-16">
-        <p className="font-mono text-[11px] uppercase tracking-widest mb-6" style={{ color: '#B89A6E' }}>
-          OTHER LINES OF WORK
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {otherLines.map((line) => (
-            <Link key={line.href} href={line.href} className="group block">
-              <div className="flex items-center justify-between gap-4 px-6 py-5 rounded-xl border border-green/10 bg-cream group-hover:bg-green-d transition-all duration-300">
+        {/* Divider */}
+        <div className="w-12 h-px bg-brass my-11" />
+
+        {/* Problem context */}
+        <div className="mb-12 space-y-4">
+          <p className="font-sans text-[15px] leading-[1.85] text-ink">
+            You're not missing information. You're not missing competence. And yet there are decisions you've been putting off for months, actions you know are necessary and aren't taking, a persistent gap between what you think and what you actually do.
+          </p>
+          <p className="font-sans text-[15px] leading-[1.85] text-ink">
+            Sometimes it's a major decision you're holding in suspense because the stakes feel too high. Other times it's a pattern that keeps repeating — you get stuck at exactly the moment it matters most. Or you're leading a team and sense that something in how <em className="italic">you</em> operate is also limiting them.
+          </p>
+          <p className="font-sans text-[15px] leading-[1.85] text-ink">
+            It's not a lack of willpower. It's a way of thinking and deciding under pressure that no longer serves where you want to go.
+          </p>
+        </div>
+
+        {/* Pull quote */}
+        <blockquote className="border-l-2 border-brass px-7 py-[18px] my-9 font-cormorant text-[23px] italic text-green leading-[1.5] bg-cream-d">
+          "External clarity — numbers, systems, structure — is not enough if the person running them is operating from fear, not from their own strength."
+        </blockquote>
+
+        {/* What I do */}
+        <div className="mb-12 space-y-4">
+          <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-brass mb-[18px]">What I do</p>
+          <p className="font-sans text-[15px] leading-[1.85] text-ink">
+            I work with you on how you think and decide — not in the abstract, but applied to real situations in your business or career. Together we identify where and why you get stuck, which patterns sabotage your execution, and how to make clearer decisions when the pressure is high.
+          </p>
+          <p className="font-sans text-[15px] leading-[1.85] text-ink">
+            This is not therapy. It's not motivation. It's structured work, with precise questions, applied directly to what you're living through right now.
+          </p>
+        </div>
+
+        {/* Anchor block */}
+        <div className="bg-green px-9 py-8 my-11">
+          <p className="font-sans text-[15px] text-cream/90 leading-[1.9] font-light">
+            I've been the person who knew what to do and didn't do it. I understand the difference between having a plan and actually acting from it.{' '}
+            <em className="text-brass-l italic">I work with competent people who don't need more information — they need clarity about what's stopping them.</em>
+          </p>
+        </div>
+
+        {/* Who this is for */}
+        <div className="mb-12 space-y-4">
+          <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-brass mb-[18px]">Who this is for</p>
+          <p className="font-sans text-[15px] leading-[1.85] text-ink">
+            For entrepreneurs who've made a big decision — or need to make one — and feel something internal is holding them back. And for leaders who want to lead from their own strength, not from reaction to what's happening around them.
+          </p>
+          <p className="font-sans text-[15px] leading-[1.85] text-ink">
+            If you recognise yourself, a conversation is enough to start.
+          </p>
+        </div>
+
+        {/* Process steps */}
+        <div className="mb-12">
+          <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-brass mb-[18px]">How a session works</p>
+          <p className="font-sans text-[15px] leading-[1.85] text-ink mb-6">
+            Every session has a clear structure — not an open conversation without direction.
+          </p>
+          <div>
+            {processSteps.map((step, i) => (
+              <div
+                key={i}
+                className={`grid gap-5 py-5 items-start ${i < processSteps.length - 1 ? 'border-b border-black/[0.07]' : ''}`}
+                style={{ gridTemplateColumns: '40px 1fr' }}
+              >
+                <p className="font-cormorant text-[28px] font-light text-brass leading-none pt-0.5">{step.num}</p>
                 <div>
-                  <span className="font-mono text-brass text-[10px]">{line.number}</span>
-                  <p className="font-cormorant text-ink group-hover:text-cream text-[18px] leading-tight mt-1 transition-colors">
-                    {line.title}
-                  </p>
+                  <span className="font-sans text-[10px] tracking-[2px] uppercase text-green font-medium mb-1 block">{step.title}</span>
+                  <p className="font-sans text-[14px] text-lgrey leading-[1.7]">{step.desc}</p>
                 </div>
-                <span className="text-brass group-hover:text-amber transition-all group-hover:translate-x-1">→</span>
               </div>
-            </Link>
-          ))}
+            ))}
+          </div>
+        </div>
+
+        {/* Services & Prices */}
+        <div className="mb-0">
+          <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-brass mb-7">Services & Pricing</p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-[3px]">
+
+            {/* Single session */}
+            <div className="bg-cream-d p-8">
+              <p className="font-sans text-[10px] tracking-[2.5px] uppercase text-brass font-medium mb-3">Individual session</p>
+              <p className="font-cormorant text-[22px] font-light text-green mb-4 leading-[1.25]">One coaching session</p>
+              <p className="font-sans text-[30px] font-medium text-brass leading-none tracking-[-0.5px]">€ 120</p>
+              <p className="font-sans text-[12px] text-lgrey italic mt-1 mb-5">per session · 60 minutes</p>
+              <div className="w-7 h-px bg-brass opacity-35 mb-[18px]" />
+              <p className="font-sans text-[13px] text-lgrey leading-[1.75] mb-[18px]">
+                For when you have a concrete situation to clarify — a decision, a block, a turning point. One focused session, with a clear step at the end.
+              </p>
+              <ul className="mb-5">
+                {['60 minutes 1:1, online', 'Three-phase structure: focus, exploration, action', 'Session notes sent afterwards'].map((item, i, arr) => (
+                  <li key={i} className={`flex items-start gap-2 font-sans text-[13px] text-ink leading-[1.6] py-[7px] ${i < arr.length - 1 ? 'border-b border-black/[0.06]' : ''}`}>
+                    <span className="text-brass text-[11px] flex-shrink-0 mt-[3px]">—</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <motion.a
+                href="/en#contact"
+                className="inline-block mt-[22px] px-[26px] py-3 text-[10px] tracking-[2px] uppercase font-sans bg-green text-cream hover:bg-brass transition-colors duration-200"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                Book a session
+              </motion.a>
+            </div>
+
+            {/* Featured package */}
+            <div className="bg-green p-8">
+              <p className="font-sans text-[10px] tracking-[2.5px] uppercase text-brass-l font-medium mb-3">Recommended pack</p>
+              <p className="font-cormorant text-[22px] font-light text-cream mb-4 leading-[1.25]">4 coaching sessions</p>
+              <p className="font-sans text-[30px] font-medium text-brass-l leading-none tracking-[-0.5px]">€ 450</p>
+              <p className="font-sans text-[12px] text-cream/45 italic mt-1 mb-5">full pack · save € 30</p>
+              <div className="w-7 h-px bg-brass opacity-35 mb-[18px]" />
+              <p className="font-sans text-[13px] text-cream/70 leading-[1.75] mb-[18px]">
+                For sustained work on a goal or a transition. Four sessions at a pace of 2–3 weeks — enough time to apply between sessions, enough contact to not lose direction.
+              </p>
+              <ul className="mb-4">
+                {['4 × 60 minutes, online', 'Paced 2–3 weeks apart', 'Notes after each session', 'Option to split payment in two'].map((item, i, arr) => (
+                  <li key={i} className={`flex items-start gap-2 font-sans text-[13px] text-cream/82 leading-[1.6] py-[7px] ${i < arr.length - 1 ? 'border-b border-white/[0.08]' : ''}`}>
+                    <span className="text-brass-l text-[11px] flex-shrink-0 mt-[3px]">—</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="font-sans text-[12px] text-brass-l italic pt-3 border-t border-white/[0.12] mt-1 mb-0">
+                100% guarantee after the first session — if it's not right for you, I refund in full.
+              </p>
+              <motion.a
+                href="/en#contact"
+                className="inline-block mt-[22px] px-[26px] py-3 text-[10px] tracking-[2px] uppercase font-sans bg-brass text-white hover:bg-brass-l transition-colors duration-200"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                Book the pack
+              </motion.a>
+            </div>
+
+            {/* Workshop — spans both columns */}
+            <div className="sm:col-span-2 bg-white border border-cream-d grid grid-cols-1 sm:grid-cols-2 gap-8 p-8">
+              <div>
+                <p className="font-sans text-[10px] tracking-[2.5px] uppercase text-brass font-medium mb-3">Format for organisations</p>
+                <p className="font-cormorant text-[22px] font-light text-green mb-4 leading-[1.25]">Workshop for teams</p>
+                <p className="font-sans text-[13px] text-lgrey leading-[1.75] mb-3">
+                  One specific topic, a group, one clear outcome. For organisations that want to give their people a structured space to work on decision clarity, leadership, and action under pressure.
+                </p>
+                <motion.a
+                  href="/en#contact"
+                  className="inline-block mt-[22px] px-[26px] py-3 text-[10px] tracking-[2px] uppercase font-sans border border-green text-green bg-transparent hover:bg-green hover:text-cream transition-colors duration-200"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.97 }}
+                >
+                  Request a conversation
+                </motion.a>
+              </div>
+              <div className="pt-2">
+                <p className="font-sans text-[13px] text-lgrey leading-[1.75] mb-3">
+                  Format, duration, and pricing are tailored to the group's objective and number of participants.
+                </p>
+                <p className="font-sans text-[13px] text-lgrey leading-[1.75] mb-3">
+                  Contact me for a diagnostic conversation — I'll tell you whether and how I can help.
+                </p>
+                <p className="font-sans text-[13px] text-brass italic">No proposal if there's no real fit.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* CTA block */}
+        <div className="border-t border-brass pt-11 mt-14">
+          <p className="font-cormorant font-light text-[clamp(22px,3vw,28px)] text-green leading-[1.5] mb-7">
+            Not sure which format is right for you?<br />Start with a free 30-minute conversation.
+          </p>
+          <p className="font-sans text-[13px] text-grey italic mb-7">
+            Tell me where you're stuck. I'll tell you honestly whether and how I can help.
+          </p>
+          <motion.a
+            href="/en#contact"
+            className="inline-block px-9 py-[15px] bg-amber text-cream font-sans text-[11px] tracking-[2.5px] uppercase transition-colors duration-200 hover:bg-green"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            Request a free conversation
+          </motion.a>
+        </div>
+
+      </div>
+
+      {/* ── Other Lines Navigation ── */}
+      <div className="border-t border-cream-d">
+        <div className="max-w-[780px] mx-auto px-10 py-16">
+          <p className="font-mono text-[11px] uppercase tracking-widest mb-6" style={{ color: '#B89A6E' }}>
+            OTHER LINES OF WORK
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {otherLines.map((line) => (
+              <Link key={line.href} href={line.href} className="group block">
+                <div className="flex items-center justify-between gap-4 px-6 py-5 border border-cream-d bg-white group-hover:border-green group-hover:bg-cream transition-all duration-200">
+                  <div>
+                    <p className="font-cormorant text-[28px] text-brass font-light">{line.number}</p>
+                    <p className="font-cormorant text-[16px] text-ink group-hover:text-green transition-colors leading-snug mt-1">{line.title}</p>
+                  </div>
+                  <span className="text-lgrey text-[18px] group-hover:text-green transition-all group-hover:translate-x-1">→</span>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
+
     </div>
   )
 }
