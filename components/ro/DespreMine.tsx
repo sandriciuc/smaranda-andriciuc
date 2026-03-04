@@ -67,9 +67,6 @@ export default function DespreMine() {
                   fără claritate internă.
                 </p>
                 <p className="font-medium text-cream/90">Nu vând curaj. Construiesc claritate.</p>
-                <p className="font-cormorant italic text-brass-l text-[22px] leading-relaxed">
-                  Nu îți promit că poți. Îți arăt că poți. Cu cifrele tale, nu ale altcuiva.
-                </p>
               </div>
             </AnimatedSection>
 
@@ -123,17 +120,6 @@ export default function DespreMine() {
               ))}
             </motion.ul>
 
-            {/* Quote */}
-            <AnimatedSection delay={0.1}>
-              <blockquote className="font-cormorant italic text-brass-l text-[22px] leading-relaxed">
-                „Nu îți promit că poți.
-                <br />
-                Îți arăt că poți. Cu cifrele tale, nu ale altcuiva."
-              </blockquote>
-              <p className="label-style text-cream/30 text-[10px] mt-4">
-                Arhetipul Arhitectului Clarității · Sage 65% + Ruler 35%
-              </p>
-            </AnimatedSection>
           </div>
         </div>
       </div>

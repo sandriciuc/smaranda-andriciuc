@@ -38,52 +38,47 @@ export default function Footer({ lang = 'ro' }: FooterProps) {
               {isRo ? (
                 <>
                   <li>
-                    <a href="#servicii" className="text-sm text-cream/70 hover:text-cream font-sans transition-colors">
+                    <Link href="/ro#servicii" className="text-sm text-cream/70 hover:text-cream font-sans transition-colors">
                       Servicii
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#despre" className="text-sm text-cream/70 hover:text-cream font-sans transition-colors">
+                    <Link href="/ro#despre" className="text-sm text-cream/70 hover:text-cream font-sans transition-colors">
                       Despre
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#proces" className="text-sm text-cream/70 hover:text-cream font-sans transition-colors">
-                      Proces
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#testimoniale" className="text-sm text-cream/70 hover:text-cream font-sans transition-colors">
+                    <Link href="/ro#testimoniale" className="text-sm text-cream/70 hover:text-cream font-sans transition-colors">
                       Testimoniale
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#contact" className="text-sm text-cream/70 hover:text-cream font-sans transition-colors">
+                    <Link href="/ro#contact" className="text-sm text-cream/70 hover:text-cream font-sans transition-colors">
                       Contact
-                    </a>
+                    </Link>
                   </li>
                 </>
               ) : (
                 <>
                   <li>
-                    <a href="#services" className="text-sm text-cream/70 hover:text-cream font-sans transition-colors">
+                    <Link href="/en#services" className="text-sm text-cream/70 hover:text-cream font-sans transition-colors">
                       Services
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#about" className="text-sm text-cream/70 hover:text-cream font-sans transition-colors">
+                    <Link href="/en#about" className="text-sm text-cream/70 hover:text-cream font-sans transition-colors">
                       About
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#process" className="text-sm text-cream/70 hover:text-cream font-sans transition-colors">
-                      Process
-                    </a>
+                    <Link href="/en#testimonials" className="text-sm text-cream/70 hover:text-cream font-sans transition-colors">
+                      Testimonials
+                    </Link>
                   </li>
                   <li>
-                    <a href="#contact" className="text-sm text-cream/70 hover:text-cream font-sans transition-colors">
+                    <Link href="/en#contact" className="text-sm text-cream/70 hover:text-cream font-sans transition-colors">
                       Contact
-                    </a>
+                    </Link>
                   </li>
                 </>
               )}
@@ -132,7 +127,7 @@ export default function Footer({ lang = 'ro' }: FooterProps) {
             © 2026 Smaranda Andriciuc
           </p>
           <Link
-            href="/ro/politica-confidentialitate"
+            href={isRo ? '/ro/politica-confidentialitate' : '/en/privacy-policy'}
             className="text-xs text-cream/40 hover:text-cream/70 font-sans transition-colors"
           >
             {isRo ? 'Politică confidențialitate' : 'Privacy Policy'}

@@ -65,9 +65,6 @@ export default function AboutMe() {
                   mindset coaching — because external systems don't work without internal clarity.
                 </p>
                 <p className="font-medium text-cream/90">I don't sell courage. I build clarity.</p>
-                <p className="font-cormorant italic text-brass-l text-[22px] leading-relaxed">
-                  I don't promise you can. I show you you can. With your numbers, not someone else's.
-                </p>
               </div>
             </AnimatedSection>
 
@@ -121,14 +118,6 @@ export default function AboutMe() {
               ))}
             </motion.ul>
 
-            {/* Quote */}
-            <AnimatedSection delay={0.1}>
-              <blockquote className="font-cormorant italic text-brass-l text-[22px] leading-relaxed">
-                „I don't promise you can.
-                <br />
-                I show you that you can — with your numbers, not someone else's."
-              </blockquote>
-            </AnimatedSection>
           </div>
         </div>
       </div>
