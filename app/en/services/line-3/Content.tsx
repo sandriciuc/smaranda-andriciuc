@@ -184,14 +184,22 @@ export default function LineThree() {
               <p className="font-sans text-[12px] text-brass-l italic pt-3 border-t border-white/[0.12] mt-1 mb-0">
                 100% guarantee after the first session — if it's not right for you, I refund in full.
               </p>
-              <motion.a
-                href="/en#contact"
-                className="inline-block mt-[22px] px-[26px] py-3 text-[10px] tracking-[2px] uppercase font-sans bg-brass text-white hover:bg-brass-l transition-colors duration-200"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.97 }}
-              >
-                Book the pack
-              </motion.a>
+              <div className="flex flex-wrap items-center gap-4 mt-[22px]">
+                <motion.a
+                  href="/en#contact"
+                  className="inline-block px-[26px] py-3 text-[10px] tracking-[2px] uppercase font-sans bg-brass text-white hover:bg-brass-l transition-colors duration-200"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.97 }}
+                >
+                  Book the pack
+                </motion.a>
+                <Link
+                  href="/en/services/line-3/the-clarity-process"
+                  className="font-sans text-[11px] tracking-[0.1em] uppercase text-cream/60 hover:text-cream transition-colors"
+                >
+                  Explore the programme →
+                </Link>
+              </div>
             </div>
 
             {/* Workshop — spans both columns */}

@@ -184,14 +184,22 @@ export default function LiniaTrei() {
               <p className="font-sans text-[12px] text-brass-l italic pt-3 border-t border-white/[0.12] mt-1 mb-0">
                 Garanție 100% după prima sesiune — dacă simți că nu e pentru tine, returnez integral suma.
               </p>
-              <motion.a
-                href="/ro#contact"
-                className="inline-block mt-[22px] px-[26px] py-3 text-[10px] tracking-[2px] uppercase font-sans bg-brass text-white hover:bg-brass-l transition-colors duration-200"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.97 }}
-              >
-                Rezervă pachetul
-              </motion.a>
+              <div className="flex flex-wrap items-center gap-4 mt-[22px]">
+                <motion.a
+                  href="/ro#contact"
+                  className="inline-block px-[26px] py-3 text-[10px] tracking-[2px] uppercase font-sans bg-brass text-white hover:bg-brass-l transition-colors duration-200"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.97 }}
+                >
+                  Rezervă pachetul
+                </motion.a>
+                <Link
+                  href="/ro/servicii/linia-3/the-clarity-process"
+                  className="font-sans text-[11px] tracking-[0.1em] uppercase text-cream/60 hover:text-cream transition-colors"
+                >
+                  Descoperă programul →
+                </Link>
+              </div>
             </div>
 
             {/* Workshop — spans both columns */}
