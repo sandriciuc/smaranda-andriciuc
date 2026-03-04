@@ -8,24 +8,45 @@ import BrassLine from '@/components/shared/BrassLine'
 const testimonials = [
   {
     quote:
-      "There was nothing wrong with me. I was missing structure. Now I have it.",
-    author: 'Raluca M.',
-    details: 'Lawyer, 34 · Bucharest',
-    program: 'Business Plan 1 on 1',
+      "I attended the workshop won through the charity auction organized by La primul bebe, and the experience was exactly what I needed. It brought clarity to the chaos called handmade — where emotion, time, materials, and work mix together until you no longer know the real value of your products. The workshop was structured, logical, and easy to put into practice. I understood where I was going wrong, how to correctly calculate costs, and what I can improve so that my prices truly reflect the work I put in. I wholeheartedly recommend it to any creator who feels lost among numbers and doesn't know where to start. For me, it was exactly the guidance I needed.",
+    author: 'G.N.',
+    details: 'Creative Producer · Bucharest',
+    program: 'Workshop · Setting the Right Price',
   },
   {
     quote:
-      'I came with the question: "Is it feasible to leave my job in 6 months?" The answer, on numbers: yes — but in 10 months, not 6. And I know exactly why.',
-    author: 'Andreea P.',
-    details: 'Architect · Cluj',
-    program: 'Business Plan 1 on 1',
+      "I attended Smaranda's workshop on setting the right price and had many valuable 'aha moments'. She is a warm person, the information is well structured. Smaranda knows exactly what questions to ask so that you see the situation from a different perspective and understand that value is not only material. Highly recommend!",
+    author: 'I.M.',
+    details: 'Creative Producer · Constanța',
+    program: 'Workshop · Setting the Right Price',
   },
   {
     quote:
-      "I check the numbers monthly now. I no longer avoid them. I have control.",
-    author: 'Mihaela D.',
-    details: 'Beauty entrepreneur · Brașov',
-    program: 'Group Program',
+      "Highly recommend! After 90 minutes I left with more clarity and a practical working tool. I really liked that the tool Smaranda created for correct price calculations is very detailed, simple to use, and editable whenever needed.",
+    author: 'G.E.',
+    details: 'Integrative Play Space · Cluj',
+    program: 'Workshop · Setting the Right Price',
+  },
+  {
+    quote:
+      "I had 3 coaching sessions using the FAB method and I feel I gained enormously. Along the way I gained vision for what I want to do and clarity on 3 important directions for me. I had space for discovery, support between sessions, and great openness to everything I brought into the conversations. It was a valuable experience that helped me greatly and I recommend it with all my warmth to anyone who needs a business or life coach.",
+    author: 'M.B.',
+    details: 'Coach for Mothers · Ireland',
+    program: 'Coaching · FAB Method',
+  },
+  {
+    quote:
+      "I have known Smaranda for almost 20 years, but only in recent years have I discovered how much an encounter with her can mean. In a conversation that stayed with me, she said: 'For sustainability, the most important thing is to know our limits and know how to communicate them to others.' That phrase changed my perspective. I began a coaching journey together — one of reconstruction, of letting go of old habits, of stepping out of the feeling of 'nothing' and 'too much'. We worked on a clear program, on self-esteem, self-control, saving, cost analysis, and understanding my own value. I am already at my 11th session and the journey continues. I am grateful to Smaranda for her patience, guidance, and the way she manages to bring to light what truly matters.",
+    author: 'B.C.',
+    details: 'Hairstylist Entrepreneur · Bucharest',
+    program: 'Coaching & Business Mentoring',
+  },
+  {
+    quote:
+      "Taking the step into entrepreneurship in cosmetics was a challenge — a major decision that came with many questions and uncertainties. Smaranda was my essential guide in the transition from employee to entrepreneur. With her help, I transformed the initial chaos into structure and clarity. She guided me to set clear, realistic, and tangible goals, and to prioritize effectively. With full conviction, I recommend Smaranda to any entrepreneur who feels they need direction, organization, and a strong push to reach their full potential.",
+    author: 'B.T.',
+    details: 'Cosmetics Entrepreneur · Bucharest',
+    program: 'Business Consulting & Mentoring',
   },
 ]
 
@@ -40,10 +61,7 @@ export default function Testimonials() {
       <div className="max-w-4xl mx-auto">
         <AnimatedSection className="mb-14 text-center">
           <p className="label-style text-brass-l mb-3">REAL RESULTS</p>
-          <BrassLine className="mb-6 mx-auto" />
-          <h2 className="font-cormorant text-cream text-[clamp(28px,3.5vw,42px)] leading-tight">
-            What the numbers say about our work
-          </h2>
+          <BrassLine className="mx-auto" />
         </AnimatedSection>
 
         <div className="relative">
@@ -60,7 +78,7 @@ export default function Testimonials() {
                 "
               </div>
 
-              <blockquote className="font-cormorant text-ink text-[clamp(20px,2.5vw,28px)] leading-[1.5] mb-8">
+              <blockquote className="font-cormorant text-ink text-[15px] leading-[1.75] mb-8">
                 {testimonials[active].quote}
               </blockquote>
 
