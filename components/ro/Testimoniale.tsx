@@ -61,10 +61,7 @@ export default function Testimoniale() {
       <div className="max-w-4xl mx-auto">
         <AnimatedSection className="mb-14 text-center">
           <p className="label-style text-brass-l mb-3">REZULTATE REALE</p>
-          <BrassLine className="mb-6 mx-auto" />
-          <h2 className="font-cormorant text-cream text-[clamp(28px,3.5vw,42px)] leading-tight">
-            Ce spun cifrele despre munca noastră
-          </h2>
+          <BrassLine className="mx-auto" />
         </AnimatedSection>
 
         {/* Carousel */}
@@ -83,7 +80,7 @@ export default function Testimoniale() {
                 "
               </div>
 
-              <blockquote className="font-cormorant text-ink text-[clamp(20px,2.5vw,28px)] leading-[1.5] mb-8">
+              <blockquote className="font-cormorant text-ink text-[15px] leading-[1.75] mb-8">
                 {testimoniale[active].quote}
               </blockquote>
 
