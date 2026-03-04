@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 
 interface FooterProps {
   lang?: 'ro' | 'en'
@@ -133,10 +132,16 @@ export default function Footer({ lang = 'ro' }: FooterProps) {
             © 2025 Smaranda Andriciuc
           </p>
           <div className="flex items-center gap-6">
-            <Link href="#" className="text-xs text-cream/40 hover:text-cream/70 font-sans transition-colors">
+            <Link
+              href={isRo ? '/ro/politica-confidentialitate' : '/ro/politica-confidentialitate'}
+              className="text-xs text-cream/40 hover:text-cream/70 font-sans transition-colors"
+            >
               {isRo ? 'Politică confidențialitate' : 'Privacy Policy'}
             </Link>
-            <Link href="#" className="text-xs text-cream/40 hover:text-cream/70 font-sans transition-colors">
+            <Link
+              href={isRo ? '/ro/politica-confidentialitate' : '/ro/politica-confidentialitate'}
+              className="text-xs text-cream/40 hover:text-cream/70 font-sans transition-colors"
+            >
               GDPR
             </Link>
           </div>
