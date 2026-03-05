@@ -109,7 +109,7 @@ function TierCard({ badge, id, title, subtitle, priceMain, priceNote, priceGreen
 const flowSteps = [
   { id: '1A', name: 'Cercul Clarității', sub: 'Unde ești acum?' },
   { id: '1B', name: 'Money Map', sub: 'Prima structură financiară' },
-  { id: '3A / 3B', name: 'The Clarity Lab / Decision', sub: 'Construiești planul de business' },
+  { id: '3A / 3B', name: 'The Financial Lab / Decision', sub: 'Construiești planul de business' },
   { id: '4A / 4B', name: 'Implementare', sub: 'Execuți cu suport' },
 ]
 
@@ -135,13 +135,13 @@ const decisionCards = [
   {
     borderColor: 'border-t-brass',
     label: 'Dacă ești deja în mișcare și ai nevoie de structură',
-    name: 'The Clarity Lab',
+    name: 'The Financial Lab',
     desc: 'Șase luni, grup de maximum 6 femei. Nu ești la zero — dar nu ai încă un plan financiar funcțional.',
   },
   {
     borderColor: 'border-t-green',
     label: 'Dacă ai o decizie majoră în față',
-    name: 'The Clarity Decision',
+    name: 'The Financial Decision',
     desc: 'Planul tău. Cifrele tale. Răspunsul la: «Când pot face tranziția în siguranță?» — cu dovezi, nu cu speranță.',
   },
   {
@@ -286,7 +286,7 @@ export default function LiniaUna() {
             <TierCard
               badge={{ text: 'Program de Grup', variant: 'group' }}
               id="3A · 6 Luni"
-              title="The Clarity Lab"
+              title="The Financial Lab"
               subtitle="Construcție Financiară în Grup. Structurată. Reală. În 6 luni."
               priceMain={<>2.250 <span className="text-[16px] font-light">lei</span></>}
               priceNote="/ 6 luni · format de grup"
@@ -305,7 +305,7 @@ export default function LiniaUna() {
             <TierCard
               badge={{ text: '★ Cel mai ales', variant: 'star' }}
               id="3B · Personalizat"
-              title="The Clarity Decision"
+              title="The Financial Decision"
               subtitle="For women who are done guessing."
               priceMain={<>3.600 <span className="text-[16px] font-light">lei</span></>}
               priceNote="sesiuni adaptate nevoii tale"
@@ -327,7 +327,7 @@ export default function LiniaUna() {
           <div className="bg-cream border-l-[3px] border-amber px-6 py-5 mb-6">
             <p className="font-sans text-[13px] text-grey font-light leading-[1.6]">
               <strong className="text-ink font-medium">Accesul la Nivelul 4 necesită finalizarea Nivelului 3.</strong>{' '}
-              Programele de implementare și parteneriat strategic sunt disponibile doar celor care au construit un plan de business funcțional — prin The Clarity Lab sau prin The Clarity Decision. Nu este un mecanism de filtrare. Așa rămâne munca fundamentată.
+              Programele de implementare și parteneriat strategic sunt disponibile doar celor care au construit un plan de business funcțional — prin The Financial Lab sau prin The Financial Decision. Nu este un mecanism de filtrare. Așa rămâne munca fundamentată.
             </p>
           </div>
 
