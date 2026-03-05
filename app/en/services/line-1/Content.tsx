@@ -1,8 +1,9 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import MoneyMapModal from '@/components/en/MoneyMapModal'
 
 /* ─── Sub-components ─────────────────────────────────────────── */
 
@@ -99,8 +100,11 @@ const otherLines = [
 /* ─── Main component ─────────────────────────────────────────── */
 
 export default function LineOne() {
+  const [modalOpen, setModalOpen] = useState(false)
+
   return (
     <div className="min-h-screen">
+      <MoneyMapModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
 
       {/* ── Page Header ── */}
       <div className="bg-cream-d">
@@ -168,7 +172,14 @@ export default function LineOne() {
                 'Self-managed — no mandatory live sessions, no imposed schedule',
                 'A clear foundation for any financial decision that follows',
               ]} />
-              <CtaBtn href="/en#contact" variant="outline">Start with The Money Map</CtaBtn>
+              <motion.button
+                onClick={() => setModalOpen(true)}
+                className="inline-block px-8 py-3.5 text-[11px] tracking-[1.5px] uppercase font-medium font-sans transition-all duration-200 rounded-sm border border-green text-green hover:bg-green hover:text-cream"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                Start with The Money Map
+              </motion.button>
             </div>
           </div>
 
