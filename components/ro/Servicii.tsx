@@ -7,7 +7,7 @@ import BrassLine from '@/components/shared/BrassLine'
 const lines = [
   {
     number: '01',
-    title: 'Arhitect de Business & Strateg Financiar',
+    title: 'Business Arhitect & Strateg Financiar',
     sub: 'Pentru antreprenoare care vor să știe, nu să spere.',
     href: '/ro/servicii/linia-1',
   },
@@ -19,7 +19,7 @@ const lines = [
   },
   {
     number: '03',
-    title: 'Personal Leadership & Entrepreneurial Mindset Coaching',
+    title: 'Leadership Coaching for Entrepreneurs & Leaders',
     sub: 'Pentru oameni care vor să conducă cu mai multă claritate.',
     href: '/ro/servicii/linia-3',
   },

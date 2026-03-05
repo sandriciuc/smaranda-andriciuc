@@ -20,7 +20,7 @@ export default function Footer({ lang = 'ro' }: FooterProps) {
           <div>
             <h3 className="font-cormorant text-2xl text-cream mb-1">Smaranda Andriciuc</h3>
             <p className="label-style text-brass-l mb-4">
-              {isRo ? 'Claritate. Sisteme. Reezultate.' : 'Clarity. Systems. Results.'}
+              {isRo ? 'Claritate. Sisteme. Rezultate.' : 'Clarity. Systems. Results.'}
             </p>
             <p className="text-sm text-cream/60 leading-relaxed font-sans">
               {isRo

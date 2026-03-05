@@ -9,9 +9,9 @@ import Testimonials from '@/components/en/Testimonials'
 import ContactEn from '@/components/en/Contact'
 
 export const metadata: Metadata = {
-  title: 'Smaranda Andriciuc — Business Architect · Financial Strategist · Coach | Belgium',
+  title: 'Smaranda Andriciuc — Business Arhitect & Strateg Financiar · Coach | Belgium',
   description:
-    'Business Architect, Financial Strategist and Leadership Coach. Operational systems, financial clarity and entrepreneurial mindset. Based in Belgium.',
+    'Business Arhitect & Strateg Financiar and Leadership Coach. Operational systems, financial clarity and entrepreneurial mindset. Based in Belgium.',
   alternates: {
     canonical: 'https://smarandaandriciuc.com/en',
     languages: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Smaranda Andriciuc — Clarity for people. Systems for business.',
     description:
-      'Business Architect, Financial Strategist and Coach. Three lines of work, one approach: clarity grounded in real data.',
+      'Business Arhitect & Strateg Financiar and Coach. Three lines of work, one approach: clarity grounded in real data.',
     locale: 'en_BE',
   },
 }

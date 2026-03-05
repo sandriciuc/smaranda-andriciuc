@@ -70,9 +70,9 @@ export default function HeroEn() {
           {/* 3 business lines */}
           <motion.div variants={fadeUp} className="flex flex-col gap-2 mb-10">
             {[
-              '01 · Business Architect & Financial Strategist',
+              '01 · Business Arhitect & Strateg Financiar',
               '02 · Operations & Systems Consultant | Business Architect',
-              '03 · Personal Leadership & Entrepreneurial Mindset Coaching',
+              '03 · Leadership Coaching for Entrepreneurs & Leaders',
             ].map((line, i) => (
               <p key={i} className="font-mono text-cream/50 text-[12px] leading-relaxed">
                 {line}

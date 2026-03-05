@@ -13,17 +13,17 @@ const serviceLines = {
   ro: {
     label: 'Structură pentru business-uri.',
     items: [
-      { title: 'Business Architect & Financial Strategist', href: '/ro/servicii/linia-1' },
+      { title: 'Business Arhitect & Strateg Financiar', href: '/ro/servicii/linia-1' },
       { title: 'Operations & Systems Consultant | Business Architect', href: '/ro/servicii/linia-2' },
-      { title: 'Personal Leadership & Entrepreneurial Mindset Coaching', href: '/ro/servicii/linia-3' },
+      { title: 'Leadership Coaching for Entrepreneurs & Leaders', href: '/ro/servicii/linia-3' },
     ],
   },
   en: {
     label: 'Systems for business.',
     items: [
-      { title: 'Business Architect & Financial Strategist', href: '/en/services/line-1' },
+      { title: 'Business Arhitect & Strateg Financiar', href: '/en/services/line-1' },
       { title: 'Operations & Systems Consultant | Business Architect', href: '/en/services/line-2' },
-      { title: 'Personal Leadership & Entrepreneurial Mindset Coaching', href: '/en/services/line-3' },
+      { title: 'Leadership Coaching for Entrepreneurs & Leaders', href: '/en/services/line-3' },
     ],
   },
 }

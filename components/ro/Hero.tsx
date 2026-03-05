@@ -75,7 +75,7 @@ export default function HeroRo() {
             {[
               '01 · Business Arhitect & Strateg Financiar',
               '02 · Operations & Systems Consultant | Business Architect',
-              '03 · Personal Leadership & Entrepreneurial Mindset Coaching',
+              '03 · Leadership Coaching for Entrepreneurs & Leaders',
             ].map((line, i) => (
               <p key={i} className="font-mono text-cream/50 text-[12px] leading-relaxed">
                 {line}

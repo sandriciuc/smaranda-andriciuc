@@ -4,7 +4,7 @@ import Footer from '@/components/shared/Footer'
 import LiniaTrei from './Content'
 
 export const metadata: Metadata = {
-  title: 'Personal Leadership & Entrepreneurial Mindset Coaching | Smaranda Andriciuc',
+  title: 'Leadership Coaching for Entrepreneurs & Leaders | Smaranda Andriciuc',
   description:
     'Coaching pentru antreprenori și lideri care vor să înțeleagă cum gândesc, cum decid și cum se raportează la risc și creștere.',
 }

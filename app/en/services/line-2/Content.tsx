@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 const otherLines = [
-  { number: '01', title: 'Business Architect & Financial Strategist', href: '/en/services/line-1' },
-  { number: '03', title: 'Personal Leadership & Entrepreneurial Mindset Coaching', href: '/en/services/line-3' },
+  { number: '01', title: 'Business Arhitect & Strateg Financiar', href: '/en/services/line-1' },
+  { number: '03', title: 'Leadership Coaching for Entrepreneurs & Leaders', href: '/en/services/line-3' },
 ]
 
 export default function LineTwo() {
@@ -26,7 +26,7 @@ export default function LineTwo() {
         {/* Header */}
         <div className="mb-0">
           <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-brass mb-[18px]">
-            Business Processes & Analysis · Line 02
+            Operations & Systems Consultant · Line 02
           </p>
           <h1 className="font-cormorant font-light text-[clamp(38px,5vw,54px)] leading-[1.15] text-green mb-3.5">
             Your business is growing.<br />

@@ -9,9 +9,9 @@ import Testimoniale from '@/components/ro/Testimoniale'
 import Contact from '@/components/ro/Contact'
 
 export const metadata: Metadata = {
-  title: 'Smaranda Andriciuc — Business Architect · Strateg Financiar · Coach',
+  title: 'Smaranda Andriciuc — Business Arhitect & Strateg Financiar · Coach',
   description:
-    'Business Architect, Strateg Financiar și Coach de Leadership. Claritate financiară, sisteme operaționale și leadership autentic. Pe date, nu pe speranță.',
+    'Business Arhitect & Strateg Financiar și Leadership Coach. Claritate financiară, sisteme operaționale și leadership autentic. Pe date, nu pe speranță.',
   alternates: {
     canonical: 'https://smarandaandriciuc.com/ro',
     languages: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Smaranda Andriciuc — Claritate pentru oameni. Structură pentru business-uri.',
     description:
-      'Business Architect, Strateg Financiar și Coach. Trei linii de activitate, o singură abordare: claritate pe date reale.',
+      'Business Arhitect & Strateg Financiar și Coach. Trei linii de activitate, o singură abordare: claritate pe date reale.',
     locale: 'ro_RO',
   },
 }
