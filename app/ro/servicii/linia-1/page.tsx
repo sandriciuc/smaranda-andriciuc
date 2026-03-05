@@ -4,7 +4,7 @@ import Footer from '@/components/shared/Footer'
 import LiniaUna from './Content'
 
 export const metadata: Metadata = {
-  title: 'Arhitect de Business & Strateg Financiar | Smaranda Andriciuc',
+  title: 'Business & Financial Strategy Consultancy & Mentoring | Smaranda Andriciuc',
   description:
     'Programe financiare pentru antreprenoare: Workshop trimestrial, Grup 6 luni, Business Plan 1 la 1, Pachet Premium.',
 }

@@ -73,7 +73,7 @@ export default function HeroRo() {
           {/* 3 business lines */}
           <motion.div variants={fadeUp} className="flex flex-col gap-2 mb-10">
             {[
-              '01 · Business Arhitect & Strateg Financiar',
+              '01 · Business & Financial Strategy Consultancy & Mentoring',
               '02 · Operations & Systems Consultant | Business Architect',
               '03 · Leadership Coaching for Entrepreneurs & Leaders',
             ].map((line, i) => (

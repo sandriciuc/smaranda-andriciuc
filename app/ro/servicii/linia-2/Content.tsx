@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 const otherLines = [
-  { number: '01', title: 'Business Arhitect & Strateg Financiar', href: '/ro/servicii/linia-1' },
+  { number: '01', title: 'Business & Financial Strategy Consultancy & Mentoring', href: '/ro/servicii/linia-1' },
   { number: '03', title: 'Leadership Coaching for Entrepreneurs & Leaders', href: '/ro/servicii/linia-3' },
 ]
 

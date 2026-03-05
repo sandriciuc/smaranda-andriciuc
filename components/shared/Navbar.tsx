@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 
 interface NavbarProps {
   lang?: 'ro' | 'en'
@@ -13,7 +12,7 @@ const serviceLines = {
   ro: {
     label: 'Structură pentru business-uri.',
     items: [
-      { title: 'Business Arhitect & Strateg Financiar', href: '/ro/servicii/linia-1' },
+      { title: 'Business & Financial Strategy Consultancy & Mentoring', href: '/ro/servicii/linia-1' },
       { title: 'Operations & Systems Consultant | Business Architect', href: '/ro/servicii/linia-2' },
       { title: 'Leadership Coaching for Entrepreneurs & Leaders', href: '/ro/servicii/linia-3' },
     ],
@@ -21,7 +20,7 @@ const serviceLines = {
   en: {
     label: 'Systems for business.',
     items: [
-      { title: 'Business Arhitect & Strateg Financiar', href: '/en/services/line-1' },
+      { title: 'Business & Financial Strategy Consultancy & Mentoring', href: '/en/services/line-1' },
       { title: 'Operations & Systems Consultant | Business Architect', href: '/en/services/line-2' },
       { title: 'Leadership Coaching for Entrepreneurs & Leaders', href: '/en/services/line-3' },
     ],
@@ -35,7 +34,6 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const isRo = lang === 'ro'
   const lines = serviceLines[lang]
-  const pathname = usePathname()
 
   const navLinks = isRo
     ? [

@@ -25,7 +25,7 @@ const phases = [
 ]
 
 const otherLines = [
-  { number: '01', title: 'Business Arhitect & Strateg Financiar', href: '/ro/servicii/linia-1' },
+  { number: '01', title: 'Business & Financial Strategy Consultancy & Mentoring', href: '/ro/servicii/linia-1' },
   { number: '02', title: 'Operations & Systems Consultant | Business Architect', href: '/ro/servicii/linia-2' },
 ]
 

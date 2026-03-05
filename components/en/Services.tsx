@@ -7,7 +7,7 @@ import BrassLine from '@/components/shared/BrassLine'
 const lines = [
   {
     number: '01',
-    title: 'Business Arhitect & Strateg Financiar',
+    title: 'Business & Financial Strategy Consultancy & Mentoring',
     sub: 'For entrepreneurs who want to know, not to hope.',
     href: '/en/services/line-1',
   },

@@ -106,7 +106,7 @@ export default function LineOne() {
         </Link>
         <p className="font-mono text-[11px] uppercase tracking-widest text-brass mb-4">LINE 01</p>
         <h1 className="font-cormorant text-ink text-[clamp(32px,4.5vw,58px)] leading-[1.1] mb-4">
-          Business Arhitect<br /><em>& Strateg Financiar</em>
+          Business & Financial Strategy<br /><em>Consultancy & Mentoring</em>
         </h1>
         <p className="font-sans text-grey text-[16px] max-w-xl leading-relaxed">
           For entrepreneurs who want to know, not to hope.
