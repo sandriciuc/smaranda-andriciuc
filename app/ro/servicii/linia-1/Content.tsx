@@ -108,7 +108,7 @@ function TierCard({ badge, id, title, subtitle, priceMain, priceNote, priceGreen
 
 const flowSteps = [
   { id: '1A', name: 'The Clarity Circle', sub: 'Unde ești acum?' },
-  { id: '1B', name: 'Money Map', sub: 'Prima structură financiară' },
+  { id: '1B', name: 'The Money Map', sub: 'Prima structură financiară' },
   { id: '3A / 3B', name: 'The Financial Lab / Decision', sub: 'Construiești planul de business' },
   { id: '4A / 4B', name: 'Implementare', sub: 'Execuți cu suport' },
 ]
@@ -123,7 +123,7 @@ const decisionCards = [
   {
     borderColor: 'border-t-green',
     label: 'Dacă vrei să începi să construiești singură',
-    name: 'Money Map',
+    name: 'The Money Map',
     desc: 'Gratuit, autogestionat, 6 săptămâni. Primul pas potrivit dacă înveți prin practică și vrei un instrument — nu o conversație.',
   },
   {
@@ -254,30 +254,30 @@ export default function LiniaUna() {
               <CtaBtn href="/ro#contact" variant="outline">Încep aici →</CtaBtn>
             </div>
 
-            {/* 1B Money Map */}
+            {/* 1B The Money Map */}
             <div className="relative bg-white border border-cream-d py-11 px-10">
               <Badge text="Gratuit" variant="free" />
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-7 pt-4">
                 <div className="flex-1">
                   <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-brass font-semibold mb-2">1B · 6 Săptămâni</p>
-                  <h3 className="font-cormorant text-[28px] text-ink leading-[1.2] mb-1.5">Money Map</h3>
-                  <p className="font-sans text-[12px] text-lgrey tracking-[0.12em] uppercase">Auto-Structurare Inițială</p>
+                  <h3 className="font-cormorant text-[28px] text-ink leading-[1.2] mb-1.5">The Money Map</h3>
+                  <p className="font-sans text-[13px] text-lgrey font-light italic">Un instrument. Cifrele tale. Control din prima zi.</p>
                 </div>
                 <div className="sm:text-right flex-shrink-0">
                   <p className="font-cormorant text-[36px] font-medium leading-none text-green">Gratuit</p>
-                  <p className="font-sans text-[11px] text-lgrey mt-1 font-light">Ghidat + instrucțiuni periodice</p>
+                  <p className="font-sans text-[11px] text-lgrey mt-1 font-light">Fără sesiuni live obligatorii</p>
                 </div>
               </div>
               <p className="font-sans text-[15px] text-grey leading-[1.75] font-light mb-7">
-                Un instrument Excel pe care îl construiești singură — cu instrucțiuni ghidate livrate în 6 săptămâni. Pleci cu o hartă financiară funcțională a situației tale actuale. Nu un rezumat. Un instrument pe care îl poți folosi independent, din prima zi.
+                Primești template-ul Excel complet de la început — îl poți deschide, completa și folosi imediat, fără să aștepți nimic. Sau îl integrezi în viața ta pe parcursul a 6 săptămâni, cu instrucțiuni ghidate livrate pas cu pas. La final nu ai un rezumat. Ai o hartă financiară funcțională a situației tale reale — pe care o poți folosi independent, oricând.
               </p>
               <Includes items={[
-                'Template Excel Money Map — structura ta, cifrele tale',
-                '6 săptămâni de instrucțiuni ghidate',
-                'Autogestionat, fără sesiuni live obligatorii',
-                'Fundația pentru tot ce urmează',
+                'Template Excel Money Map — structura ta, cifrele tale, de la prima zi',
+                '6 săptămâni de instrucțiuni ghidate livrate periodic',
+                'Auto-gestionat — fără sesiuni live obligatorii, fără calendar impus',
+                'Fundația clară pentru orice decizie financiară urmează',
               ]} />
-              <CtaBtn href="/ro#contact" variant="outline">Vreau la workshop</CtaBtn>
+              <CtaBtn href="/ro#contact" variant="outline">Încep cu The Money Map</CtaBtn>
             </div>
           </div>
 
