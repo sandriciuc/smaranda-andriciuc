@@ -281,23 +281,23 @@ export default function LiniaUna() {
             </div>
           </div>
 
-          {/* 2 — Workshops */}
+          {/* 2 — The Real Price */}
           <div className="mb-6">
             <TierCard
               badge={{ text: 'Intrare', variant: 'entry' }}
-              id="2 · De 4× pe an"
-              title="Workshopuri"
-              subtitle="Teme Aplicate — Prețuri, Costuri, Break-even"
+              id="Atelier · De 4× pe an · 90 de minute"
+              title="The Real Price"
+              subtitle="Un subiect. 90 de minute. Un număr pe care îl știi cu certitudine."
               priceMain={<>250 <span className="text-[16px] font-light">lei</span></>}
-              priceNote="Per sesiune · 2 ore"
-              desc="Patru workshopuri pe an, fiecare concentrat pe o singură temă aplicată: strategie de prețuri, structura costurilor, calculul break-even-ului. Vii o dată, lucrezi pe o problemă reală și pleci cu un instrument financiar concret aplicat pe situația ta în sesiune — nu teorie, nu inspirație."
+              priceNote="Per sesiune · Atelier de 90 de minute"
+              desc="Prețul corect nu e ce simți că poți cere. E costuri directe + costuri indirecte + marjă + timp — calculat, nu ghicit. În 90 de minute lucrezi exact asta, aplicat pe situația ta, în sesiune. Pleci cu un instrument funcțional pe care îl poți folosi a doua zi. Nu teorie. Nu inspirație."
               includes={[
-                'Un instrument financiar specific, aplicat pe situația ta',
-                'Exercițiu practic în timpul sesiunii',
-                'Mini-template de luat acasă',
-                'Cel mai mic angajament de intrare în metodă',
+                'Calculul prețului minim sustenabil — pe serviciile tale, cu cifrele tale',
+                'Instrument financiar aplicat în sesiune, nu acasă singură',
+                'Mini-template de luat cu tine',
+                'Primul pas concret în metodă — fără angajament mare',
               ]}
-              ctaText="Vreau la workshop"
+              ctaText="Vreau la The Real Price"
               ctaVariant="green"
             />
           </div>
