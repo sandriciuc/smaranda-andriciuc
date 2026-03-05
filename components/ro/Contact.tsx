@@ -59,31 +59,37 @@ export default function Contact() {
                 <span className="text-brass text-lg">✉</span>
                 <div>
                   <p className="label-style text-lgrey text-[10px] mb-0.5">Email</p>
-                  {/* EMAIL DE COMPLETAT */}
                   <a
-                    href="mailto:EMAIL_DE_COMPLETAT"
+                    href="mailto:smaranda.andriciuc@gmail.com"
                     className="font-sans text-green text-[14px] hover:text-amber transition-colors"
                   >
-                    EMAIL_DE_COMPLETAT
+                    smaranda.andriciuc@gmail.com
                   </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <span className="text-brass text-lg">📍</span>
+                <div>
+                  <p className="label-style text-lgrey text-[10px] mb-0.5">Locație</p>
+                  <p className="font-sans text-ink text-[14px]">Belgia · remote disponibil</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
                 <span className="text-brass text-lg">⏰</span>
                 <div>
-                  <p className="label-style text-lgrey text-[10px] mb-0.5">Program</p>
-                  <p className="font-sans text-ink text-[14px]">Luni–Vineri, 9:00–18:00 (CET)</p>
+                  <p className="label-style text-lgrey text-[10px] mb-0.5">Disponibilitate</p>
+                  <p className="font-sans text-ink text-[14px]">Prin programare</p>
                 </div>
               </div>
 
-              {/* LINKEDIN DE COMPLETAT */}
               <div className="flex items-center gap-3">
                 <span className="text-brass text-lg">🔗</span>
                 <div>
                   <p className="label-style text-lgrey text-[10px] mb-0.5">LinkedIn</p>
                   <a
-                    href="https://linkedin.com/in/PROFIL_DE_COMPLETAT"
+                    href="https://linkedin.com/in/smaranda-andriciuc/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-sans text-green text-[14px] hover:text-amber transition-colors"
