@@ -107,7 +107,7 @@ function TierCard({ badge, id, title, subtitle, priceMain, priceNote, priceGreen
 /* ─── Static data ────────────────────────────────────────────── */
 
 const flowSteps = [
-  { id: '1A', name: 'Cercul Clarității', sub: 'Unde ești acum?' },
+  { id: '1A', name: 'The Clarity Circle', sub: 'Unde ești acum?' },
   { id: '1B', name: 'Money Map', sub: 'Prima structură financiară' },
   { id: '3A / 3B', name: 'The Financial Lab / Decision', sub: 'Construiești planul de business' },
   { id: '4A / 4B', name: 'Implementare', sub: 'Execuți cu suport' },
@@ -117,8 +117,8 @@ const decisionCards = [
   {
     borderColor: 'border-t-green',
     label: 'Dacă ești încă în stadiul de a înțelege întrebarea',
-    name: 'Cercul Clarității',
-    desc: 'Vino o dată. Fără angajament. Lucrează pe dacă o tranziție are sens pentru tine — înainte de a construi ceva.',
+    name: 'The Clarity Circle',
+    desc: 'Vino o dată. Fără angajament. Un grup mic, o situație reală, o perspectivă nouă.',
   },
   {
     borderColor: 'border-t-green',
@@ -207,30 +207,51 @@ export default function LiniaUna() {
 
           {/* 1A + 1B — side by side */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            {/* 1A Clarity Circle */}
+            {/* 1A The Clarity Circle */}
             <div className="relative bg-white border border-cream-d py-11 px-10">
               <Badge text="Gratuit" variant="free" />
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-7 pt-4">
                 <div className="flex-1">
                   <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-brass font-semibold mb-2">1A · Lunar</p>
-                  <h3 className="font-cormorant text-[28px] text-ink leading-[1.2] mb-1.5">Clarity Circle</h3>
-                  <p className="font-sans text-[12px] text-lgrey tracking-[0.12em] uppercase">Diagnostic & Maturitate Decizională</p>
+                  <h3 className="font-cormorant text-[28px] text-ink leading-[1.2] mb-1.5">The Clarity Circle</h3>
+                  <p className="font-sans text-[13px] text-lgrey font-light italic">Un spațiu lunar pentru femei care construiesc serios.</p>
                 </div>
                 <div className="sm:text-right flex-shrink-0">
                   <p className="font-cormorant text-[36px] font-medium leading-none text-green">Gratuit</p>
-                  <p className="font-sans text-[11px] text-lgrey mt-1 font-light">Întâlniri lunare de grup</p>
+                  <p className="font-sans text-[11px] text-lgrey mt-1 font-light">Lunar</p>
                 </div>
               </div>
-              <p className="font-sans text-[15px] text-grey leading-[1.75] font-light mb-7">
-                Un spațiu lunar de grup pentru a clarifica unde ești, ce vrei cu adevărat și dacă o tranziție spre business are sens pentru tine acum. Nu terapie. Nu motivație. Un exercițiu diagnostic structurat cu alte persoane în aceeași etapă.
+              <p className="font-sans text-[15px] text-grey leading-[1.75] font-light mb-4">
+                O dată pe lună, un grup mic de femei aduc fiecare câte o situație reală — o decizie blocată, o întrebare fără răspuns, un moment de îndoială. Lucrăm împreună: feedback direct, perspective diferite, gândire colectivă.
               </p>
-              <Includes items={[
-                'Sesiune lunară de grup — structurată, nu liberă',
-                'Cadru diagnostic decizional',
-                'Claritate asupra punctului real de plecare',
-                'Primul contact cu metodologia',
-              ]} />
-              <CtaBtn href="/ro#contact" variant="outline">Vreau la workshop</CtaBtn>
+              <p className="font-sans text-[14px] text-ink font-medium mb-4">
+                Nu terapie. Nu motivație. Nu prezentări.
+              </p>
+              <p className="font-sans text-[15px] text-grey leading-[1.75] font-light mb-6">
+                Un spațiu în care nu ești singura care trece prin asta — și unde primești reacții reale, nu încurajări vagi.
+              </p>
+              <div className="mb-5">
+                <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-brass font-semibold mb-3">Ce se întâmplă concret</p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-green font-semibold text-[12px] flex-shrink-0 mt-0.5">✓</span>
+                    <span className="font-sans text-ink text-[13px] leading-snug">Îți aduci situația. Grupul ascultă. Primești feedback direct — de la mine și de la celelalte femei din cerc.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-green font-semibold text-[12px] flex-shrink-0 mt-0.5">✓</span>
+                    <span className="font-sans text-ink text-[13px] leading-snug">Pleci cu o perspectivă pe care nu o aveai când ai intrat.</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-cream-d px-5 py-4 mb-7 space-y-2">
+                <p className="font-sans text-[12px] text-lgrey font-light leading-relaxed">
+                  <strong className="text-ink font-medium">Nu e:</strong> Un curs. Coaching individual. O comunitate de networking.
+                </p>
+                <p className="font-sans text-[12px] text-grey font-light leading-relaxed">
+                  <strong className="text-ink font-medium">E de fapt:</strong> Apartenența la un grup de femei serioase care gândesc clar și se susțin reciproc — fără dramă, fără performanță.
+                </p>
+              </div>
+              <CtaBtn href="/ro#contact" variant="outline">Încep aici →</CtaBtn>
             </div>
 
             {/* 1B Money Map */}
