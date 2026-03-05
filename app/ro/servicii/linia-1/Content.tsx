@@ -174,7 +174,7 @@ export default function LiniaUna() {
           </Link>
           <p className="font-mono text-[11px] tracking-[0.3em] uppercase text-brass mb-5">LINIA 01</p>
           <h1 className="font-cormorant text-ink text-[clamp(32px,4.5vw,52px)] leading-[1.12] mb-6">
-            Business & Financial Strategy <em className="italic text-green">Consultancy & Mentoring</em>
+            Business & Financial Strategy<br /><em className="italic text-green">Consultancy & Mentoring</em>
           </h1>
           <p className="font-sans text-[16px] text-grey font-light leading-[1.7] max-w-[620px] border-l-[3px] border-brass pl-5 italic">
             Pentru antreprenoare care vor să știe, nu să spere.
