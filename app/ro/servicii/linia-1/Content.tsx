@@ -251,7 +251,7 @@ export default function LiniaUna() {
                   <strong className="text-ink font-medium">E de fapt:</strong> Apartenența la un grup de femei serioase care gândesc clar și se susțin reciproc — fără dramă, fără performanță.
                 </p>
               </div>
-              <CtaBtn href="/ro#contact" variant="outline">Încep aici →</CtaBtn>
+              <CtaBtn href="/ro#contact" variant="outline">Încep aici</CtaBtn>
             </div>
 
             {/* 1B The Money Map */}
@@ -313,7 +313,7 @@ export default function LiniaUna() {
               priceNote="/ 6 luni · format de grup"
               desc="O sesiune ghidată pe lună. Instrumente financiare, template-uri de lucru și un grup de maximum 6 femei care fac aceeași muncă în același timp. Nu urmărești un curs. Construiești — pas cu pas, cu feedback real pe cifrele tale, fără să sari peste părțile dificile. La final ai un sistem financiar funcțional pe care îl înțelegi și îl folosești singură."
               includes={[
-                '6 sesiuni lunare ghidate de 2 ore — structurate, nu improvizate',
+                '6 sesiuni lunare ghidate de 1,5 ore — structurate, nu improvizate',
                 'Instrumente financiare și template-uri de lucru aplicabile imediat',
                 'Feedback direct pe cifrele tale — de la mine și din grup',
                 'Accountability structurat între sesiuni — nu dispari și reapari lunar',
