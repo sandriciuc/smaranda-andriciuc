@@ -375,21 +375,21 @@ export default function LiniaUna() {
             />
             <TierCard
               badge={{ text: 'Premium', variant: 'premium' }}
-              id="4B · Termen Lung"
-              title="Partener Strategic 1:1"
-              subtitle="Parteneriat Strategic Individual pe Termen Lung"
-              priceMain={<>900+ <span className="text-[16px] font-light">lei</span></>}
+              id="4B · Lunar · 1:1 · Termen lung"
+              title="The Advisory"
+              subtitle="Nu un plan. Un partener care îți cunoaște business-ul."
+              priceMain={<>1.200+ <span className="text-[16px] font-light">lei</span></>}
               priceNote="/ lună · preț la cerere"
-              desc="Un parteneriat individual pe termen lung pentru cele care vor suport strategic continuu — nu doar un plan, ci un partener de gândire care îți cunoaște cifrele, contextul și deciziile. Revizuim rezultatele, ajustăm direcția și luăm decizii împreună când contează cel mai mult."
+              desc="Există o diferență între a ști ce să faci și a avea pe cineva care cunoaște cifrele tale, contextul tău, deciziile tale — și e acolo când contează cel mai mult. The Advisory e pentru cele care au depășit faza de clarificare și vor suport strategic continuu, personalizat, fără să o ia de la zero la fiecare sesiune. Revizuim rezultatele. Ajustăm direcția. Luăm decizii împreună când presiunea e reală."
               includes={[
-                'Sesiuni lunare de strategie 1:1',
+                'Sesiuni lunare de strategie 1:1 — pe cifrele și contextul tău real',
                 'Acces continuu pentru decizii urgente între sesiuni',
                 'Revizuirea continuă a planului pe baza rezultatelor reale',
                 'Ajustări de strategie în timp real',
                 'Continuitate deplină — îți cunosc business-ul, cifrele, contextul',
               ]}
               testimonial="Nu sunt doar informată — m-am transformat în modul în care mă raportez la business."
-              ctaText="Vreau transformarea"
+              ctaText="Aplică pentru The Advisory"
               ctaVariant="dark"
             />
           </div>
