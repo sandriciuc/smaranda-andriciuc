@@ -83,7 +83,7 @@ const programs = [
 const otherLines = [
   {
     number: '02',
-    title: 'Operations & Systems Consultant | Business Architect',
+    title: 'Operations & Systems Consultancy | Business Architecture',
     href: '/en/services/line-2',
   },
   {

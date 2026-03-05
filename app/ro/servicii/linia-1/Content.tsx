@@ -153,7 +153,7 @@ const decisionCards = [
 ]
 
 const otherLines = [
-  { number: '02', title: 'Operations & Systems Consultant | Business Architect', href: '/ro/servicii/linia-2' },
+  { number: '02', title: 'Operations & Systems Consultancy | Business Architecture', href: '/ro/servicii/linia-2' },
   { number: '03', title: 'Leadership Coaching for Entrepreneurs & Leaders', href: '/ro/servicii/linia-3' },
 ]
 

@@ -13,7 +13,7 @@ const serviceLines = {
     label: 'Structură pentru business-uri.',
     items: [
       { title: 'Business & Financial Strategy Consultancy & Mentoring', href: '/ro/servicii/linia-1' },
-      { title: 'Operations & Systems Consultant | Business Architect', href: '/ro/servicii/linia-2' },
+      { title: 'Operations & Systems Consultancy | Business Architecture', href: '/ro/servicii/linia-2' },
       { title: 'Leadership Coaching for Entrepreneurs & Leaders', href: '/ro/servicii/linia-3' },
     ],
   },
@@ -21,7 +21,7 @@ const serviceLines = {
     label: 'Systems for business.',
     items: [
       { title: 'Business & Financial Strategy Consultancy & Mentoring', href: '/en/services/line-1' },
-      { title: 'Operations & Systems Consultant | Business Architect', href: '/en/services/line-2' },
+      { title: 'Operations & Systems Consultancy | Business Architecture', href: '/en/services/line-2' },
       { title: 'Leadership Coaching for Entrepreneurs & Leaders', href: '/en/services/line-3' },
     ],
   },

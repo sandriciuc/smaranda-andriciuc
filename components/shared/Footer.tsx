@@ -24,8 +24,8 @@ export default function Footer({ lang = 'ro' }: FooterProps) {
             </p>
             <p className="text-sm text-cream/60 leading-relaxed font-sans">
               {isRo
-                ? 'Operations & Systems Consultant | Business Architect | Business & Financial Strategy Consultant & Mentor. Localizat în Belgia.'
-                : 'Operations & Systems Consultant | Business Architect | Business & Financial Strategy Consultant & Mentor. Based in Belgium.'}
+                ? 'Operations & Systems Consultancy | Business Architecture | Business & Financial Strategy Consultant & Mentor. Localizat în Belgia.'
+                : 'Operations & Systems Consultancy | Business Architecture | Business & Financial Strategy Consultant & Mentor. Based in Belgium.'}
             </p>
           </div>
 

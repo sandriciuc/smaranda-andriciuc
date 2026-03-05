@@ -26,7 +26,7 @@ export default function LineTwo() {
         {/* Header */}
         <div className="mb-0">
           <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-brass mb-[18px]">
-            Operations & Systems Consultant · Line 02
+            Operations & Systems Consultancy · Line 02
           </p>
           <h1 className="font-cormorant font-light text-[clamp(38px,5vw,54px)] leading-[1.15] text-green mb-3.5">
             Your business is growing.<br />

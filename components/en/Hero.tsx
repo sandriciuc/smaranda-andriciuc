@@ -71,7 +71,7 @@ export default function HeroEn() {
           <motion.div variants={fadeUp} className="flex flex-col gap-2 mb-10">
             {[
               '01 · Business & Financial Strategy Consultancy & Mentoring',
-              '02 · Operations & Systems Consultant | Business Architect',
+              '02 · Operations & Systems Consultancy | Business Architecture',
               '03 · Leadership Coaching for Entrepreneurs & Leaders',
             ].map((line, i) => (
               <p key={i} className="font-mono text-cream/50 text-[12px] leading-relaxed">

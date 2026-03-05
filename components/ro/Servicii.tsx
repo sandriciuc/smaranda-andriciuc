@@ -13,7 +13,7 @@ const lines = [
   },
   {
     number: '02',
-    title: 'Operations & Systems Consultant | Business Architect',
+    title: 'Operations & Systems Consultancy | Business Architecture',
     sub: 'Pentru companii care vor să funcționeze mai clar.',
     href: '/ro/servicii/linia-2',
   },

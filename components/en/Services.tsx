@@ -13,7 +13,7 @@ const lines = [
   },
   {
     number: '02',
-    title: 'Operations & Systems Consultant | Business Architect',
+    title: 'Operations & Systems Consultancy | Business Architecture',
     sub: 'For companies that want to operate more clearly.',
     href: '/en/services/line-2',
   },

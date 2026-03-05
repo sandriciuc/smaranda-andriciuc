@@ -4,7 +4,7 @@ import Footer from '@/components/shared/Footer'
 import LiniaDoua from './Content'
 
 export const metadata: Metadata = {
-  title: 'Operations & Systems Consultant | Smaranda Andriciuc',
+  title: 'Operations & Systems Consultancy | Business Architecture | Smaranda Andriciuc',
   description:
     'Sisteme operaționale, vizibilitate financiară și structuri clare pentru companii care vor să funcționeze cu mai multă precizie.',
 }

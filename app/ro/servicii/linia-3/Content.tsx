@@ -26,7 +26,7 @@ const phases = [
 
 const otherLines = [
   { number: '01', title: 'Business & Financial Strategy Consultancy & Mentoring', href: '/ro/servicii/linia-1' },
-  { number: '02', title: 'Operations & Systems Consultant | Business Architect', href: '/ro/servicii/linia-2' },
+  { number: '02', title: 'Operations & Systems Consultancy | Business Architecture', href: '/ro/servicii/linia-2' },
 ]
 
 export default function LiniaTrei() {
