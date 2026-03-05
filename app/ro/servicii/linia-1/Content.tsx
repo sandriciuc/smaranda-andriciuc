@@ -286,7 +286,7 @@ export default function LiniaUna() {
           <div className="mb-6">
             <TierCard
               badge={{ text: 'Intrare', variant: 'entry' }}
-              id="Atelier · De 4× pe an · 90 de minute"
+              id="2 · Atelier · De 4× pe an · 90 de minute"
               title="The Real Price"
               subtitle="Un subiect. 90 de minute. Un număr pe care îl știi cu certitudine."
               priceMain={<>250 <span className="text-[16px] font-light">lei</span></>}
