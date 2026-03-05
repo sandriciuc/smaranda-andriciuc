@@ -107,10 +107,10 @@ function TierCard({ badge, id, title, subtitle, priceMain, priceNote, priceGreen
 /* ─── Static data ────────────────────────────────────────────── */
 
 const flowSteps = [
-  { id: '1A / 1B', name: 'The Clarity Circle', sub: 'Unde ești acum?' name: 'The Money Map', sub: 'Prima structură financiară'  },
-  { id: '2', name: 'The Real Price', sub: 'Prețul corect' },
-  { id: '3A / 3B', name: 'The Financial Lab / Decision', sub: 'Construiești planul de business' },
-  { id: '4A / 4B', name: 'Implementare', sub: 'Execuți cu suport' },
+  { id: '1', name: 'The Clarity Circle / The Money Map', sub: 'Intrare gratuită — înțelegi unde ești' },
+  { id: '2', name: 'The Real Price', sub: 'Prețul corect, calculat' },
+  { id: '3', name: 'The Financial Lab / Decision', sub: 'Construiești planul de business' },
+  { id: '4', name: 'The Implementation Circle / The Advisory', sub: 'Execuți cu suport' },
 ]
 
 const decisionCards = [
