@@ -218,7 +218,7 @@ export default function LiniaUna() {
                   <p className="font-sans text-[13px] text-lgrey font-light italic">Un spațiu lunar pentru femei care construiesc serios.</p>
                 </div>
                 <div className="sm:text-right flex-shrink-0">
-                  <p className="font-cormorant text-[36px] font-medium leading-none text-green">Gratuit</p>
+                  <p className="font-cormorant text-[36px] font-medium leading-none text-green">Fără cost</p>
                   <p className="font-sans text-[11px] text-lgrey mt-1 font-light">Lunar</p>
                 </div>
               </div>
@@ -265,7 +265,7 @@ export default function LiniaUna() {
                   <p className="font-sans text-[13px] text-lgrey font-light italic">Un instrument. Cifrele tale. Control din prima zi.</p>
                 </div>
                 <div className="sm:text-right flex-shrink-0">
-                  <p className="font-cormorant text-[36px] font-medium leading-none text-green">Gratuit</p>
+                  <p className="font-cormorant text-[36px] font-medium leading-none text-green">Fără cost</p>
                   <p className="font-sans text-[11px] text-lgrey mt-1 font-light">Fără sesiuni live obligatorii</p>
                 </div>
               </div>
