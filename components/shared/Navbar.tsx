@@ -100,7 +100,7 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
               <span className="font-cormorant text-cream text-[22px] leading-tight tracking-wide">
                 Smaranda Andriciuc
               </span>
-              <span className="label-style text-brass-l" style={{ letterSpacing: '0.18em', fontSize: '12px' }}>
+              <span className="label-style text-brass-l" style={{ letterSpacing: '0.18em', fontSize: '11px' }}>
                 {isRo ? 'Claritate. Sisteme. Rezultate.' : 'Clarity. Systems. Results.'}
               </span>
             </div>
