@@ -89,13 +89,21 @@ export default function Navbar({ lang = 'ro' }: NavbarProps) {
       >
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
-          <Link href={isRo ? '/ro' : '/en'} className="flex flex-col">
-            <span className="font-cormorant text-cream text-[22px] leading-tight tracking-wide">
-              Smaranda Andriciuc
-            </span>
-            <span className="label-style text-brass-l" style={{ letterSpacing: '0.18em', fontSize: '10px' }}>
-              {isRo ? 'Claritate. Sisteme. Rezultate.' : 'Clarity. Systems. Results.'}
-            </span>
+          <Link href={isRo ? '/ro' : '/en'} className="flex items-center gap-3">
+            {/* Icon mark */}
+            <div className="flex items-end gap-[4px] flex-shrink-0">
+              <div style={{ width: '7px', height: '28px', background: '#3D5A4C', borderRadius: '1.5px' }} />
+              <div style={{ width: '7px', height: '21px', background: '#C4873A', borderRadius: '1.5px' }} />
+              <div style={{ width: '7px', height: '16px', background: '#B89A6E', borderRadius: '1.5px' }} />
+            </div>
+            <div className="flex flex-col">
+              <span className="font-cormorant text-cream text-[22px] leading-tight tracking-wide">
+                Smaranda Andriciuc
+              </span>
+              <span className="label-style text-brass-l" style={{ letterSpacing: '0.18em', fontSize: '10px' }}>
+                {isRo ? 'Claritate. Sisteme. Rezultate.' : 'Clarity. Systems. Results.'}
+              </span>
+            </div>
           </Link>
 
           {/* Desktop nav */}
