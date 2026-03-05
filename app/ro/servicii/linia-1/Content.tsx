@@ -148,7 +148,7 @@ const decisionCards = [
     borderColor: 'border-t-amber',
     label: 'Dacă ai un plan și trebuie să-l execuți',
     name: 'Nivelul 4',
-    desc: 'Cercul de Implementare (grup) sau Partener Strategic 1:1 — disponibil după finalizarea Nivelului 3.',
+    desc: 'The Implementation Circle (grup) sau Partener Strategic 1:1 — disponibil după finalizarea Nivelului 3.',
   },
 ]
 
@@ -356,12 +356,12 @@ export default function LiniaUna() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-12">
             <TierCard
               badge={{ text: 'Grup · Continuu', variant: 'group' }}
-              id="4A · Lunar"
-              title="Cercul de Implementare Strategică"
-              subtitle="Implementare & Recalibrare Continuă"
+              id="4A · Lunar · Format de grup"
+              title="The Implementation Circle"
+              subtitle="Ai planul. Acum urmează partea mai dificilă."
               priceMain={<>450 <span className="text-[16px] font-light">lei</span></>}
               priceNote="/ lună · format de grup"
-              desc="Ai planul. Acum urmează partea mai dificilă: să-l execuți în condiții reale, cu obstacole reale, în timp real. Sesiuni lunare de grup pentru a revizui cifrele, ajusta strategia, menține direcția. Diferența dintre a ști ce să faci și a face efectiv."
+              desc="Să-l execuți în condiții reale, cu obstacole reale, în timp real. Sesiuni lunare de grup pentru a revizui cifrele, ajusta strategia, menține direcția. Diferența dintre a ști ce să faci și a face efectiv."
               includes={[
                 'Sesiune lunară de grup — revizuire, ajustare, recalibrare',
                 'Revizuirea planului pe baza rezultatelor reale',
@@ -370,7 +370,7 @@ export default function LiniaUna() {
                 'Acces la colege care implementează și ele',
               ]}
               testimonial="Verific cifrele, ajustez, decid fără panică."
-              ctaText="Vreau în grup"
+              ctaText="Vreau în The Implementation Circle"
               ctaVariant="green"
             />
             <TierCard
