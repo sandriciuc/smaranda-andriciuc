@@ -358,7 +358,7 @@ export default function LiniaUna() {
               badge={{ text: 'Grup · Continuu', variant: 'group' }}
               id="4A · Lunar · Format de grup"
               title="The Implementation Circle"
-              subtitle="Ai planul. Acum urmează partea mai dificilă."
+              subtitle="Ai planul. Acum urmează execuția."
               priceMain={<>450 <span className="text-[16px] font-light">lei</span></>}
               priceNote="/ lună · format de grup"
               desc="Să-l execuți în condiții reale, cu obstacole reale, în timp real. Sesiuni lunare de grup pentru a revizui cifrele, ajusta strategia, menține direcția. Diferența dintre a ști ce să faci și a face efectiv."
