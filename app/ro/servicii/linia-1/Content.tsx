@@ -109,7 +109,7 @@ function TierCard({ badge, id, title, subtitle, priceMain, priceNote, priceGreen
 const flowSteps = [
   { id: '1A', name: 'Cercul Clarității', sub: 'Unde ești acum?' },
   { id: '1B', name: 'Money Map', sub: 'Prima structură financiară' },
-  { id: '3A / 3B', name: 'Lab sau 1:1', sub: 'Construiești planul de business' },
+  { id: '3A / 3B', name: 'The Clarity Lab / Decision', sub: 'Construiești planul de business' },
   { id: '4A / 4B', name: 'Implementare', sub: 'Execuți cu suport' },
 ]
 
@@ -135,13 +135,13 @@ const decisionCards = [
   {
     borderColor: 'border-t-brass',
     label: 'Dacă ești deja în mișcare și ai nevoie de structură',
-    name: 'Business Plan Lab',
-    desc: 'Șase luni, format de grup. Nu ești la zero — dar nu ai încă un plan financiar funcțional.',
+    name: 'The Clarity Lab',
+    desc: 'Șase luni, grup de maximum 6 femei. Nu ești la zero — dar nu ai încă un plan financiar funcțional.',
   },
   {
     borderColor: 'border-t-green',
     label: 'Dacă ai o decizie majoră în față',
-    name: 'Business Plan 1:1',
+    name: 'The Clarity Decision',
     desc: 'Planul tău. Cifrele tale. Răspunsul la: «Când pot face tranziția în siguranță?» — cu dovezi, nu cu speranță.',
   },
   {
@@ -286,38 +286,38 @@ export default function LiniaUna() {
             <TierCard
               badge={{ text: 'Program de Grup', variant: 'group' }}
               id="3A · 6 Luni"
-              title="Business Plan Lab"
-              subtitle="Construcție Structurată în Grup"
+              title="The Clarity Lab"
+              subtitle="Construcție Financiară în Grup. Structurată. Reală. În 6 luni."
               priceMain={<>2.250 <span className="text-[16px] font-light">lei</span></>}
               priceNote="/ 6 luni · format de grup"
-              desc="O sesiune ghidată pe lună. Instrumente financiare, template-uri de lucru, metodologie structurată și un grup de femei care fac aceeași muncă. Construiești un plan financiar de business funcțional în 6 luni — împreună, pas cu pas, fără să omiți părțile dificile."
+              desc="O sesiune ghidată pe lună. Instrumente financiare, template-uri de lucru și un grup de maximum 6 femei care fac aceeași muncă în același timp. Nu urmărești un curs. Construiești — pas cu pas, cu feedback real pe cifrele tale, fără să sari peste părțile dificile. La final ai un sistem financiar funcțional pe care îl înțelegi și îl folosești singură."
               includes={[
-                '6 sesiuni lunare ghidate (2h fiecare)',
-                'Instrumente financiare și template-uri de lucru',
-                'Feedback pe cifrele tale în cadrul grupului',
-                'Accountability structurat între sesiuni',
-                'Comunitate de femei în aceeași etapă',
+                '6 sesiuni lunare ghidate de 2 ore — structurate, nu improvizate',
+                'Instrumente financiare și template-uri de lucru aplicabile imediat',
+                'Feedback direct pe cifrele tale — de la mine și din grup',
+                'Accountability structurat între sesiuni — nu dispari și reapari lunar',
+                'Un grup de maximum 6 femei în aceeași etapă — fără zgomot, fără audiență, cu prezență reală',
               ]}
-              testimonial="Am un sistem financiar funcțional. Știu costurile, marjele, break-even-ul. Verific cifrele lunar — nu le mai evit. Am control."
+              testimonial="Un sistem financiar pe care nu îl mai eviți. Știi costurile, marjele, break-even-ul. Verifici cifrele lunar pentru că acum au sens."
               ctaText="Vreau în grup"
               ctaVariant="green"
             />
             <TierCard
               badge={{ text: '★ Cel mai ales', variant: 'star' }}
               id="3B · Personalizat"
-              title="Business Plan 1:1"
-              subtitle="Fundament Strategic Personalizat"
+              title="The Clarity Decision"
+              subtitle="For women who are done guessing."
               priceMain={<>3.600 <span className="text-[16px] font-light">lei</span></>}
-              priceNote="~10 ore lucru personalizat"
-              desc="Construim împreună planul financiar pe situația ta reală. Scenarii, proiecții și răspunsul la întrebarea: «Când pot face tranziția în siguranță?» Aproximativ 10 ore de lucru personalizat. Pleci cu un document, nu cu un sentiment."
+              priceNote="sesiuni adaptate nevoii tale"
+              desc="Un proces de lucru 1:1 construit în jurul situației tale reale — cifrele tale, business-ul tău, decizia ta. Lucrăm împreună în sesiuni adaptate nevoii tale. Analizăm ce există, construim ce lipsește, calculăm scenariile reale. La final știi exact unde ești, ce e fezabil și când."
               includes={[
-                '~10 ore de lucru personalizat',
-                'Plan financiar de business complet',
-                '3 scenarii: rămân la job / plec în 6 luni / plec în 12 luni',
-                'Strategie de preț validată pe date',
-                'Document final — planul tău, cu cifrele tale',
+                'Un business plan financiar complet pentru 12 luni — construit pe datele tale, nu pe medii de industrie',
+                'Un instrument Excel pe care îl folosești și adaptezi singură după ce pleci',
+                'Un plan de acțiune săptămânal pentru primele 3 luni — concret, aplicabil de a doua zi',
+                'Un document de o pagină cu tot ce contează — pentru momentele când ai nevoie să vezi clar dintr-o privire',
+                'Suport real între sesiuni — nu ești singură în proces',
               ]}
-              testimonial="Am permisiunea rațională să decid. Nu mai ghicesc. Am un document care îmi arată ce e real, ce e riscant și ce trebuie să se întâmple."
+              testimonial="Permisiunea rațională de a decide — bazată pe cifre reale, nu pe speranță."
               ctaText="Vreau planul meu"
               ctaVariant="amber"
             />
@@ -327,7 +327,7 @@ export default function LiniaUna() {
           <div className="bg-cream border-l-[3px] border-amber px-6 py-5 mb-6">
             <p className="font-sans text-[13px] text-grey font-light leading-[1.6]">
               <strong className="text-ink font-medium">Accesul la Nivelul 4 necesită finalizarea Nivelului 3.</strong>{' '}
-              Programele de implementare și parteneriat strategic sunt disponibile doar celor care au construit un plan de business funcțional — prin Lab sau prin procesul 1:1. Nu este un mecanism de filtrare. Așa rămâne munca fundamentată.
+              Programele de implementare și parteneriat strategic sunt disponibile doar celor care au construit un plan de business funcțional — prin The Clarity Lab sau prin The Clarity Decision. Nu este un mecanism de filtrare. Așa rămâne munca fundamentată.
             </p>
           </div>
 
