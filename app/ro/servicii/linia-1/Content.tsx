@@ -107,8 +107,9 @@ function TierCard({ badge, id, title, subtitle, priceMain, priceNote, priceGreen
 /* ─── Static data ────────────────────────────────────────────── */
 
 const flowSteps = [
-  { id: '1A', name: 'The Clarity Circle', sub: 'Unde ești acum?' },
-  { id: '1B', name: 'The Money Map', sub: 'Prima structură financiară' },
+  { id: '1A / 1B', name: 'The Clarity Circle', sub: 'Unde ești acum?' },
+  {name: 'The Money Map', sub: 'Prima structură financiară' },
+  { id: '2', name: 'The Real Price', sub: 'Prețul corect.' },
   { id: '3A / 3B', name: 'The Financial Lab / Decision', sub: 'Construiești planul de business' },
   { id: '4A / 4B', name: 'Implementare', sub: 'Execuți cu suport' },
 ]
@@ -129,8 +130,8 @@ const decisionCards = [
   {
     borderColor: 'border-t-brass',
     label: 'Dacă ai o problemă specifică de rezolvat',
-    name: 'Workshop',
-    desc: '250 lei. Vino pentru o sesiune, lucrează pe o temă reală — prețuri, costuri sau break-even. Vezi dacă abordarea ți se potrivește.',
+    name: 'Atelier',
+    desc: '250 lei. Vino pentru o sesiune, lucrează pe o temă reală. Vezi dacă abordarea ți se potrivește.',
   },
   {
     borderColor: 'border-t-brass',
@@ -147,8 +148,8 @@ const decisionCards = [
   {
     borderColor: 'border-t-amber',
     label: 'Dacă ai un plan și trebuie să-l execuți',
-    name: 'Nivelul 4',
-    desc: 'The Implementation Circle (grup) sau Partener Strategic 1:1 — disponibil după finalizarea Nivelului 3.',
+    name: 'Implementation & Advisory',
+    desc: 'The Implementation Circle (grup) sau The Adisory — disponibil după finalizarea unui The Financiat Lab sau Decision.',
   },
 ]
 
@@ -202,14 +203,14 @@ export default function LiniaUna() {
 
           {/* Section label */}
           <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-lgrey font-medium pt-12 mb-10">
-            Intrare · Acces Gratuit
+          
           </p>
 
           {/* 1A + 1B — side by side */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             {/* 1A The Clarity Circle */}
             <div className="relative bg-white border border-cream-d py-11 px-10">
-              <Badge text="Gratuit" variant="free" />
+              <Badge text="Fără cost" variant="free" />
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-7 pt-4">
                 <div className="flex-1">
                   <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-brass font-semibold mb-2">1A · Lunar</p>
@@ -256,7 +257,7 @@ export default function LiniaUna() {
 
             {/* 1B The Money Map */}
             <div className="relative bg-white border border-cream-d py-11 px-10">
-              <Badge text="Gratuit" variant="free" />
+              <Badge text="Fără cost" variant="free" />
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-7 pt-4">
                 <div className="flex-1">
                   <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-brass font-semibold mb-2">1B · 6 Săptămâni</p>
@@ -320,7 +321,7 @@ export default function LiniaUna() {
                 'Un grup de maximum 6 femei în aceeași etapă — fără zgomot, fără audiență, cu prezență reală',
               ]}
               testimonial="Un sistem financiar pe care nu îl mai eviți. Știi costurile, marjele, break-even-ul. Verifici cifrele lunar pentru că acum au sens."
-              ctaText="Vreau în grup"
+              ctaText="Intru în The Financial Lab"
               ctaVariant="green"
             />
             <TierCard
