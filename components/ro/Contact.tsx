@@ -22,6 +22,7 @@ export default function Contact() {
   })
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [errorMsg, setErrorMsg] = useState('')
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -32,10 +33,21 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
-    // Simulăm trimiterea — înlocuiește cu integrare reală (Resend, Formspree, etc.)
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    setLoading(false)
-    setSubmitted(true)
+    setErrorMsg('')
+    try {
+      const res = await fetch('/api/contact-ro', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+      const data = await res.json()
+      if (!res.ok) throw new Error(data.error || 'Eroare la trimitere.')
+      setSubmitted(true)
+    } catch (err: unknown) {
+      setErrorMsg(err instanceof Error ? err.message : 'Eroare neașteptată. Încearcă din nou.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -201,6 +213,10 @@ export default function Contact() {
                     className="w-full border border-green/15 rounded-xl px-4 py-3 font-sans text-[14px] text-ink bg-cream placeholder:text-lgrey focus:outline-none focus:border-amber/60 transition-colors resize-none"
                   />
                 </div>
+
+                {errorMsg && (
+                  <p className="font-sans text-[12px] text-red-500">{errorMsg}</p>
+                )}
 
                 {/* Submit */}
                 <motion.button
