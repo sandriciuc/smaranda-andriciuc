@@ -348,7 +348,7 @@ export default function LiniaUna() {
                 'Un grup de maximum 6 femei în aceeași etapă — fără zgomot, fără audiență, cu prezență reală',
               ]}
               testimonial="Un sistem financiar pe care nu îl mai eviți. Știi costurile, marjele, break-even-ul. Verifici cifrele lunar pentru că acum au sens."
-              ctaText="Intru în The Financial Lab"
+              ctaText="Mă înscriu la The Financial Lab"
               ctaHref={CALENDAR_RO}
               ctaVariant="green"
               ctaNote="Rezervă o conversație de 30 de minute — fără angajament. Analizăm situația ta împreună și vei ști dacă acesta este următorul pas potrivit."
@@ -394,7 +394,7 @@ export default function LiniaUna() {
                 'Acces la colege care implementează și ele',
               ]}
               testimonial="Verific cifrele, ajustez, decid fără panică."
-              ctaText="Vreau în The Implementation Circle"
+              ctaText="Vreau la The Implementation Circle"
               ctaHref={CALENDAR_RO}
               ctaVariant="green"
               ctaNote="Disponibil după finalizarea The Financial Decision."
