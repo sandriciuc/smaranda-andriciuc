@@ -108,7 +108,9 @@ export default function LiniaDoua() {
             Îți spun direct ce văd — inclusiv dacă nu sunt persoana potrivită pentru ce ai nevoie.
           </p>
           <motion.a
-            href="/ro#contact"
+            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3ry9vssDsBo7WjTR72KjN3x-9a14mY9NJfHcd3H9PeoAD0vX0t_mUmnJdrCKwHZ5q5H1vbfeTU"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block px-9 py-[15px] bg-amber text-cream font-sans text-[11px] tracking-[2.5px] uppercase transition-colors duration-200 hover:bg-green"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.97 }}

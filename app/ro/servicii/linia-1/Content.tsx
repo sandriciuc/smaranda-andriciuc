@@ -351,6 +351,7 @@ export default function LiniaUna() {
               ctaText="Intru în The Financial Lab"
               ctaHref={CALENDAR_RO}
               ctaVariant="green"
+              ctaNote="Book a free 30-minute call — no commitment. We look at your situation together and you'll know if this is the right next step."
             />
             <TierCard
               badge={{ text: '★ Cel mai ales', variant: 'star' }}
@@ -371,15 +372,8 @@ export default function LiniaUna() {
               ctaText="Vreau planul meu"
               ctaHref={CALENDAR_RO}
               ctaVariant="amber"
+              ctaNote="Book a free 30-minute call — no commitment. We look at your situation together and you'll know if this is the right next step."
             />
-          </div>
-
-          {/* Access Rule */}
-          <div className="bg-cream border-l-[3px] border-amber px-6 py-5 mb-6">
-            <p className="font-sans text-[13px] text-grey font-light leading-[1.6]">
-              <strong className="text-ink font-medium">Accesul la Nivelul 4 necesită finalizarea Nivelului 3.</strong>{' '}
-              Programele de implementare și parteneriat strategic sunt disponibile doar celor care au construit un plan de business funcțional — prin The Financial Lab sau prin The Financial Decision. Nu este un mecanism de filtrare. Așa rămâne munca fundamentată.
-            </p>
           </div>
 
           {/* 4A + 4B — side by side */}
@@ -403,6 +397,7 @@ export default function LiniaUna() {
               ctaText="Vreau în The Implementation Circle"
               ctaHref={CALENDAR_RO}
               ctaVariant="green"
+              ctaNote="Disponibil după finalizarea The Financial Decision · Prețul se discută în funcție de contextul tău."
             />
             <TierCard
               badge={{ text: 'Premium', variant: 'premium' }}
@@ -423,6 +418,7 @@ export default function LiniaUna() {
               ctaText="Aplică pentru The Advisory"
               ctaHref={CALENDAR_RO}
               ctaVariant="dark"
+              ctaNote="Disponibil după finalizarea The Financial Decision · Prețul se discută în funcție de contextul tău."
             />
           </div>
 
