@@ -39,7 +39,7 @@ export default function LiniaTrei() {
         <div className="absolute top-10 left-[55%] w-[180px] h-[180px] rounded-full bg-[rgba(196,135,58,0.07)] pointer-events-none" />
         <div className="max-w-[780px] mx-auto relative z-10">
           <h1 className="font-cormorant font-light text-[clamp(48px,6vw,68px)] leading-[1.05] text-cream mb-[10px]">
-            Leadership Coaching for Entrepreneurs & Leaders
+            Leadership Coaching for Entrepreneurs &<br /><em className="italic text-brass-l">Leaders</em>
           </h1>
           <p className="font-cormorant text-[18px] italic text-brass-l font-light mb-7">
             Un proces de leadership mentality.
