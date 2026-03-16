@@ -64,7 +64,7 @@ export default function AboutMe() {
                   companies, financial clarity for entrepreneurs, and leadership & entrepreneurial
                   mindset coaching — because external systems don't work without internal clarity.
                 </p>
-                <p className="font-medium text-cream/90">I don't sell courage. I build clarity.</p>
+                <p className="font-medium text-cream/90">I don't say you can. I show you can. With your numbers, not anyone else's.</p>
               </div>
             </AnimatedSection>
 

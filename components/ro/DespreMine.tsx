@@ -66,7 +66,7 @@ export default function DespreMine() {
                   și mindset antreprenorial — pentru că sistemele externe nu funcționează
                   fără claritate internă.
                 </p>
-                <p className="font-medium text-cream/90">Nu vând curaj. Construiesc claritate.</p>
+                <p className="font-medium text-cream/90">Nu îți spun că poți. Îți arăt că poți. Cu cifrele tale, nu ale altcuiva.</p>
               </div>
             </AnimatedSection>
 

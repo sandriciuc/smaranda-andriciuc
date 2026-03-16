@@ -6,10 +6,16 @@ import AnimatedSection from '@/components/shared/AnimatedSection'
 import BrassLine from '@/components/shared/BrassLine'
 
 const programs = [
-  'Workshop trimestrial',
-  'Program de Grup (6 luni)',
-  'Business Plan 1 la 1',
-  'Pachet Premium',
+  'Business & Financial Strategy Consultancy & Mentoring',
+  'The Clarity Circle',
+  'The Money Map',
+  'Atelier trimestrial',
+  'The Financial Lab',
+  'The Financial Decision',
+  'The Implementation Circle',
+  'The Advisory',
+  'Operations & Systems Consultancy',
+  'Leadership Coaching for Entrepreneurs and Leaders',
   'Nu știu încă',
 ]
 

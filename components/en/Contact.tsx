@@ -6,9 +6,14 @@ import AnimatedSection from '@/components/shared/AnimatedSection'
 import BrassLine from '@/components/shared/BrassLine'
 
 const serviceOptions = [
-  'Business Processes & Analysis',
-  'Business Mentoring & Consultancy',
-  'Not sure yet',
+  'Business & Financial Strategy Consultancy & Mentoring',
+  'The Clarity Circle',
+  'The Money Map',
+  'The Financial Decision',
+  'The Advisory',
+  'Operations & Systems Consultancy',
+  'Leadership Coaching for Entrepreneurs and Leaders',
+  "I don't know yet",
 ]
 
 export default function ContactEn() {

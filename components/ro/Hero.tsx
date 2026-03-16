@@ -102,7 +102,7 @@ export default function HeroRo() {
           >
             {[
               '20+ ani experiență reală',
-              'Inginer · Economist · Coach Certificat (ICF/EMCC)',
+              'Inginer · Economist · Coach Certificat (ICF/EMCC) - în curs',
               'Belgia · Online Worldwide',
             ].map((badge, i) => (
               <motion.div
