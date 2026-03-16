@@ -397,7 +397,7 @@ export default function LiniaUna() {
               ctaText="Vreau în The Implementation Circle"
               ctaHref={CALENDAR_RO}
               ctaVariant="green"
-              ctaNote="Disponibil după finalizarea The Financial Decision · Prețul se discută în funcție de contextul tău."
+              ctaNote="Disponibil după finalizarea The Financial Decision."
             />
             <TierCard
               badge={{ text: 'Premium', variant: 'premium' }}
