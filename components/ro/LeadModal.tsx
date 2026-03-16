@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 interface LeadModalProps {
   isOpen: boolean
   onClose: () => void
-  program: string  // pre-filled program
+  program: string
 }
 
 const BUSINESS_TYPES = [
@@ -18,9 +18,16 @@ const BUSINESS_TYPES = [
   'Altul',
 ]
 
+const PROGRAM_OPTIONS = [
+  'The Clarity Circle',
+  'The Money Map',
+  'Ambele',
+]
+
 export default function LeadModal({ isOpen, onClose, program }: LeadModalProps) {
   const [form, setForm] = useState({
     email: '',
+    selectedProgram: program,
     phone: '',
     businessType: '',
     challenge: '',
@@ -37,7 +44,13 @@ export default function LeadModal({ isOpen, onClose, program }: LeadModalProps) 
       const res = await fetch('/api/subscribe-ro', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, program }),
+        body: JSON.stringify({
+          email: form.email,
+          phone: form.phone,
+          businessType: form.businessType,
+          challenge: form.challenge,
+          program: form.selectedProgram,
+        }),
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || 'Ceva nu a funcționat.')
@@ -57,7 +70,7 @@ export default function LeadModal({ isOpen, onClose, program }: LeadModalProps) 
     onClose()
     setTimeout(() => {
       setStatus('idle')
-      setForm({ email: '', phone: '', businessType: '', challenge: '' })
+      setForm({ email: '', selectedProgram: program, phone: '', businessType: '', challenge: '' })
       setErrorMsg('')
     }, 300)
   }
@@ -91,7 +104,7 @@ export default function LeadModal({ isOpen, onClose, program }: LeadModalProps) 
               <div className="bg-green px-8 py-5 flex items-center justify-between sticky top-0">
                 <div>
                   <p className="font-mono text-[9px] tracking-[0.3em] uppercase text-brass mb-0.5">Gratuit · Linia 01</p>
-                  <p className="font-cormorant text-[22px] text-cream leading-tight">{program}</p>
+                  <p className="font-cormorant text-[22px] text-cream leading-tight">Acces gratuit</p>
                 </div>
                 <button
                   onClick={handleClose}
@@ -140,6 +153,28 @@ export default function LeadModal({ isOpen, onClose, program }: LeadModalProps) 
                         placeholder="tu@email.com"
                         className="w-full bg-white border border-cream-d px-4 py-2.5 font-sans text-[13px] text-ink placeholder:text-lgrey focus:outline-none focus:border-green transition-colors"
                       />
+                    </div>
+
+                    {/* Program selection */}
+                    <div className="mb-4">
+                      <label className="block font-mono text-[9px] tracking-[0.25em] uppercase text-brass mb-2">
+                        Mă interesează
+                      </label>
+                      <div className="flex flex-col gap-2">
+                        {PROGRAM_OPTIONS.map(opt => (
+                          <label key={opt} className="flex items-center gap-3 cursor-pointer group">
+                            <input
+                              type="radio"
+                              name="selectedProgram"
+                              value={opt}
+                              checked={form.selectedProgram === opt}
+                              onChange={handleChange}
+                              className="accent-green w-4 h-4 flex-shrink-0"
+                            />
+                            <span className="font-sans text-[13px] text-ink group-hover:text-green transition-colors">{opt}</span>
+                          </label>
+                        ))}
+                      </div>
                     </div>
 
                     {/* Phone */}
