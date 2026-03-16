@@ -59,14 +59,6 @@ export default function HeroEn() {
             that want to operate with more precision, clarity and direction.
           </motion.p>
 
-          {/* Tagline mono */}
-          <motion.p
-            variants={fadeUp}
-            className="font-mono text-brass-l text-[13px] mb-10"
-          >
-            Engineer. Economist. Certified Coach.
-          </motion.p>
-
           {/* 3 business lines */}
           <motion.div variants={fadeUp} className="flex flex-col gap-2 mb-10">
             {[
@@ -109,8 +101,7 @@ export default function HeroEn() {
           >
             {[
               '20+ years of real experience',
-              'Engineer + Economist + Coach',
-              'Certified Coach ICF & EMCC - in progress',
+              'Engineer · Economist · Certified Coach (ICF/EMCC) - in progress',
               'Belgium · Online Worldwide',
             ].map((badge, i) => (
               <motion.div

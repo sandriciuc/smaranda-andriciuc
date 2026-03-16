@@ -1,12 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { fadeUp, staggerContainer, fadeIn } from '@/lib/animations'
+import { fadeUp, staggerContainer } from '@/lib/animations'
 
 export default function HeroRo() {
-  const scrollToContact = () => {
-    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
-  }
   const scrollToServcii = () => {
     document.querySelector('#servicii')?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -62,13 +59,6 @@ export default function HeroRo() {
             care vor să funcționeze cu mai multă precizie, claritate și direcție.
           </motion.p>
 
-          {/* Tagline mono */}
-          <motion.p
-            variants={fadeUp}
-            className="font-mono text-brass-l text-[13px] mb-10"
-          >
-            Inginer. Economist. Coach certificat.
-          </motion.p>
 
           {/* 3 business lines */}
           <motion.div variants={fadeUp} className="flex flex-col gap-2 mb-10">
@@ -112,8 +102,7 @@ export default function HeroRo() {
           >
             {[
               '20+ ani experiență reală',
-              'Inginer + Economist + Coach',
-              'Certificare ICF & EMCC în curs',
+              'Inginer · Economist · Coach Certificat (ICF/EMCC)',
               'Belgia · Online Worldwide',
             ].map((badge, i) => (
               <motion.div
