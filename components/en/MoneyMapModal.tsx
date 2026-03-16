@@ -20,6 +20,7 @@ const BUSINESS_TYPES = [
 export default function MoneyMapModal({ isOpen, onClose }: MoneyMapModalProps) {
   const [form, setForm] = useState({
     email: '',
+    program: '',
     phone: '',
     businessType: '',
     challenge: '',
@@ -56,7 +57,7 @@ export default function MoneyMapModal({ isOpen, onClose }: MoneyMapModalProps) {
     onClose()
     setTimeout(() => {
       setStatus('idle')
-      setForm({ email: '', phone: '', businessType: '', challenge: '' })
+      setForm({ email: '', program: '', phone: '', businessType: '', challenge: '' })
       setErrorMsg('')
     }, 300)
   }
@@ -139,6 +140,23 @@ export default function MoneyMapModal({ isOpen, onClose }: MoneyMapModalProps) {
                         placeholder="you@email.com"
                         className="w-full bg-white border border-cream-d px-4 py-2.5 font-sans text-[13px] text-ink placeholder:text-lgrey focus:outline-none focus:border-green transition-colors"
                       />
+                    </div>
+
+                    {/* Program */}
+                    <div className="mb-4">
+                      <label className="block font-mono text-[9px] tracking-[0.25em] uppercase text-brass mb-1.5">
+                        I'm interested in
+                      </label>
+                      <select
+                        name="program"
+                        value={form.program}
+                        onChange={handleChange}
+                        className="w-full bg-white border border-cream-d px-4 py-2.5 font-sans text-[13px] text-ink focus:outline-none focus:border-green transition-colors appearance-none"
+                      >
+                        <option value="" disabled>Select one...</option>
+                        <option value="The Money Map">The Money Map</option>
+                        <option value="The Clarity Circle">The Clarity Circle</option>
+                      </select>
                     </div>
 
                     {/* Phone */}

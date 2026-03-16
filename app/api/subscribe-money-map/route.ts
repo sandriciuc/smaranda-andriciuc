@@ -13,7 +13,7 @@ import { NextRequest, NextResponse } from 'next/server'
 
 export async function POST(req: NextRequest) {
   try {
-    const { email, phone, businessType, challenge } = await req.json()
+    const { email, phone, businessType, challenge, program } = await req.json()
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: 'A valid email address is required.' }, { status: 400 })
@@ -25,15 +25,16 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Email service not configured.' }, { status: 500 })
     }
 
-    const groupId = process.env.MAILERLITE_GROUP_ID
+    const groupId = process.env.MAILERLITE_GROUP_EN_ID
 
     const payload: Record<string, unknown> = {
       email,
       status: 'active',
       fields: {
         ...(phone && { phone }),
+        ...(program && { program_interes: program }),
         ...(businessType && { business_type: businessType }),
-        ...(challenge && { last_note: challenge }),  // MailerLite built-in field
+        ...(challenge && { last_note: challenge }),
       },
       ...(groupId && { groups: [groupId] }),
     }
