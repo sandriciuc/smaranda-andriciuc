@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
     }
 
     const apiKey = process.env.MAILERLITE_API_KEY
-    const groupId = process.env.MAILERLITE_GROUP_ID
+    const groupId = process.env.MAILERLITE_GROUP_EN_ID
 
     if (!apiKey) {
       console.error('MAILERLITE_API_KEY is not set')
