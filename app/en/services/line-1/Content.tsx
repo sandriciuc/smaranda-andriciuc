@@ -51,9 +51,11 @@ function CtaBtn({ href, variant, children }: { href: string; variant?: string; c
     amber:   'bg-amber text-white hover:brightness-90',
     dark:    'bg-ink text-cream hover:bg-[#333]',
   }
+  const isExternal = href.startsWith('http')
   return (
     <motion.a
       href={href}
+      {...(isExternal && { target: '_blank', rel: 'noopener noreferrer' })}
       className={`${base} ${variants[variant || 'green']}`}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.97 }}

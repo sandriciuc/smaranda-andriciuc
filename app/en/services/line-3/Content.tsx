@@ -193,6 +193,8 @@ export default function LineThree() {
                   <div className="flex flex-col items-end gap-1.5">
                     <motion.a
                       href="https://calendar.app.google/LL7LLWkpSWtjJbYG9"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-block px-7 py-[13px] text-[11px] tracking-[2px] uppercase font-sans bg-cream text-green hover:bg-brass-l hover:text-white transition-colors duration-200"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.97 }}
