@@ -394,7 +394,7 @@ export default function LiniaUna() {
                 'Acces la colege care implementează și ele',
               ]}
               testimonial="Verific cifrele, ajustez, decid fără panică."
-              ctaText="Vreau la The Implementation Circle"
+              ctaText="Mă înscriu la The Implementation Circle"
               ctaHref={CALENDAR_RO}
               ctaVariant="green"
               ctaNote="Disponibil după finalizarea The Financial Decision."
