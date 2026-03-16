@@ -351,7 +351,7 @@ export default function LiniaUna() {
               ctaText="Intru în The Financial Lab"
               ctaHref={CALENDAR_RO}
               ctaVariant="green"
-              ctaNote="Rezervă o convorbire de 30 de minute — fără angajament. Analizăm situația ta împreună și vei ști dacă acesta este următorul pas potrivit."
+              ctaNote="Rezervă o conversație de 30 de minute — fără angajament. Analizăm situația ta împreună și vei ști dacă acesta este următorul pas potrivit."
             />
             <TierCard
               badge={{ text: '★ Cel mai ales', variant: 'star' }}
@@ -372,7 +372,7 @@ export default function LiniaUna() {
               ctaText="Vreau planul meu"
               ctaHref={CALENDAR_RO}
               ctaVariant="amber"
-              ctaNote="Rezervă o convorbire de 30 de minute — fără angajament. Analizăm situația ta împreună și vei ști dacă acesta este următorul pas potrivit."
+              ctaNote="Rezervă o conversație de 30 de minute — fără angajament. Analizăm situația ta împreună și vei ști dacă acesta este următorul pas potrivit."
             />
           </div>
 
