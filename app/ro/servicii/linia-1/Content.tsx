@@ -1,8 +1,11 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import LeadModal from '@/components/ro/LeadModal'
+
+const CALENDAR_RO = 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3ry9vssDsBo7WjTR72KjN3x-9a14mY9NJfHcd3H9PeoAD0vX0t_mUmnJdrCKwHZ5q5H1vbfeTU'
 
 /* ─── Sub-components ─────────────────────────────────────────── */
 
@@ -42,18 +45,33 @@ function Testimonial({ text }: { text: string }) {
   )
 }
 
-function CtaBtn({ href, variant, children }: { href: string; variant?: string; children: React.ReactNode }) {
-  const base = 'inline-block px-8 py-3.5 text-[11px] tracking-[1.5px] uppercase font-medium font-sans transition-all duration-200 rounded-sm'
-  const variants: Record<string, string> = {
+function CtaBtn({ href, variant, onClick, children }: { href?: string; variant?: string; onClick?: () => void; children: React.ReactNode }) {
+  const base = 'inline-block px-8 py-3.5 text-[11px] tracking-[1.5px] uppercase font-medium font-sans transition-all duration-200 rounded-sm cursor-pointer'
+  const styles: Record<string, string> = {
     outline: 'border border-green text-green hover:bg-green hover:text-cream',
     green:   'bg-green text-cream hover:bg-green-d',
     amber:   'bg-amber text-white hover:brightness-90',
     dark:    'bg-ink text-cream hover:bg-[#333]',
   }
+  const isExternal = href?.startsWith('http')
+  if (onClick) {
+    return (
+      <motion.button
+        type="button"
+        onClick={onClick}
+        className={`${base} ${styles[variant || 'green']}`}
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.97 }}
+      >
+        {children}
+      </motion.button>
+    )
+  }
   return (
     <motion.a
       href={href}
-      className={`${base} ${variants[variant || 'green']}`}
+      {...(isExternal && { target: '_blank', rel: 'noopener noreferrer' })}
+      className={`${base} ${styles[variant || 'green']}`}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.97 }}
     >
@@ -76,10 +94,12 @@ interface TierCardProps {
   includes: string[]
   testimonial?: string
   ctaText: string
+  ctaHref?: string
   ctaVariant?: string
+  ctaNote?: string
 }
 
-function TierCard({ badge, id, title, subtitle, priceMain, priceNote, priceGreen, desc, includes, testimonial, ctaText, ctaVariant }: TierCardProps) {
+function TierCard({ badge, id, title, subtitle, priceMain, priceNote, priceGreen, desc, includes, testimonial, ctaText, ctaHref, ctaVariant, ctaNote }: TierCardProps) {
   return (
     <div className="relative bg-white border border-cream-d py-11 px-10">
       <Badge text={badge.text} variant={badge.variant} />
@@ -99,7 +119,8 @@ function TierCard({ badge, id, title, subtitle, priceMain, priceNote, priceGreen
       <p className="font-sans text-[15px] text-grey leading-[1.75] font-light mb-7 max-w-[640px]">{desc}</p>
       <Includes items={includes} />
       {testimonial && <Testimonial text={testimonial} />}
-      <CtaBtn href="/ro#contact" variant={ctaVariant}>{ctaText}</CtaBtn>
+      <CtaBtn href={ctaHref || '/ro#contact'} variant={ctaVariant}>{ctaText}</CtaBtn>
+      {ctaNote && <p className="font-sans text-[12px] text-lgrey mt-3 font-light">{ctaNote}</p>}
     </div>
   )
 }
@@ -160,8 +181,15 @@ const otherLines = [
 /* ─── Main component ─────────────────────────────────────────── */
 
 export default function LiniaUna() {
+  const [modalProgram, setModalProgram] = useState<string | null>(null)
+
   return (
     <div className="min-h-screen">
+      <LeadModal
+        isOpen={modalProgram !== null}
+        onClose={() => setModalProgram(null)}
+        program={modalProgram || ''}
+      />
 
       {/* ── Page Header ── */}
       <div className="bg-cream-d">
@@ -251,7 +279,7 @@ export default function LiniaUna() {
                   <strong className="text-ink font-medium">E de fapt:</strong> Apartenența la un grup de femei serioase care gândesc clar și se susțin reciproc — fără dramă, fără performanță.
                 </p>
               </div>
-              <CtaBtn href="/ro#contact" variant="outline">Încep aici</CtaBtn>
+              <CtaBtn variant="outline" onClick={() => setModalProgram('The Clarity Circle')}>Încep aici</CtaBtn>
             </div>
 
             {/* 1B The Money Map */}
@@ -277,7 +305,7 @@ export default function LiniaUna() {
                 'Auto-gestionat — fără sesiuni live obligatorii, fără calendar impus',
                 'Fundația clară pentru orice decizie financiară urmează',
               ]} />
-              <CtaBtn href="/ro#contact" variant="outline">Încep cu The Money Map</CtaBtn>
+              <CtaBtn variant="outline" onClick={() => setModalProgram('The Money Map')}>Încep cu The Money Map</CtaBtn>
             </div>
           </div>
 
@@ -321,6 +349,7 @@ export default function LiniaUna() {
               ]}
               testimonial="Un sistem financiar pe care nu îl mai eviți. Știi costurile, marjele, break-even-ul. Verifici cifrele lunar pentru că acum au sens."
               ctaText="Intru în The Financial Lab"
+              ctaHref={CALENDAR_RO}
               ctaVariant="green"
             />
             <TierCard
@@ -340,6 +369,7 @@ export default function LiniaUna() {
               ]}
               testimonial="Permisiunea rațională de a decide — bazată pe cifre reale, nu pe speranță."
               ctaText="Vreau planul meu"
+              ctaHref={CALENDAR_RO}
               ctaVariant="amber"
             />
           </div>
@@ -371,6 +401,7 @@ export default function LiniaUna() {
               ]}
               testimonial="Verific cifrele, ajustez, decid fără panică."
               ctaText="Vreau în The Implementation Circle"
+              ctaHref={CALENDAR_RO}
               ctaVariant="green"
             />
             <TierCard
@@ -390,6 +421,7 @@ export default function LiniaUna() {
               ]}
               testimonial="Nu sunt doar informată — m-am transformat în modul în care mă raportez la business."
               ctaText="Aplică pentru The Advisory"
+              ctaHref={CALENDAR_RO}
               ctaVariant="dark"
             />
           </div>

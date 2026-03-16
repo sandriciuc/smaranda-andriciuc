@@ -38,11 +38,8 @@ export default function LineThree() {
         <div className="absolute bottom-[-100px] right-[-60px] w-[420px] h-[420px] rounded-full bg-[rgba(184,154,110,0.09)] pointer-events-none" />
         <div className="absolute top-10 left-[55%] w-[180px] h-[180px] rounded-full bg-[rgba(196,135,58,0.07)] pointer-events-none" />
         <div className="max-w-[780px] mx-auto relative z-10">
-          <p className="font-sans text-[10px] tracking-[3px] uppercase text-brass-l mb-5">
-            The Clarity Process · Line 03
-          </p>
           <h1 className="font-cormorant font-light text-[clamp(48px,6vw,68px)] leading-[1.05] text-cream mb-[10px]">
-            The Clarity Process
+            Leadership Coaching for Entrepreneurs & Leaders
           </h1>
           <p className="font-cormorant text-[18px] italic text-brass-l font-light mb-7">
             A leadership mentality process.
