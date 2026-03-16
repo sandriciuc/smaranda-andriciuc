@@ -214,16 +214,11 @@ export default function LineOne() {
                 'Real support between sessions — you are not alone in the process',
               ]} />
               <Testimonial text="Rational permission to decide — based on real numbers, not hope." />
-              <CtaBtn href="/en#contact" variant="amber">I want my plan</CtaBtn>
+              <CtaBtn href="https://calendar.app.google/LL7LLWkpSWtjJbYG9" variant="amber">I want my plan</CtaBtn>
+              <p className="font-sans text-[12px] text-lgrey mt-3 font-light">
+                Book a free 30-minute call — no commitment. We look at your situation together and you'll know if this is the right next step.
+              </p>
             </div>
-          </div>
-
-          {/* Access Rule */}
-          <div className="bg-cream border-l-[3px] border-amber px-6 py-5 mb-6">
-            <p className="font-sans text-[13px] text-grey font-light leading-[1.6]">
-              <strong className="text-ink font-medium">Access to Level 3 requires completing Level 2.</strong>{' '}
-              The Advisory is available only to those who have built a functional business plan through The Financial Decision. This is not a filtering mechanism. This is how the work stays grounded.
-            </p>
           </div>
 
           {/* 3 — The Advisory */}
@@ -252,7 +247,10 @@ export default function LineOne() {
                 'Full continuity — I know your business, your numbers, your context',
               ]} />
               <Testimonial text="I'm not just informed — I transformed how I relate to my business." />
-              <CtaBtn href="/en#contact" variant="dark">Apply for The Advisory</CtaBtn>
+              <CtaBtn href="https://calendar.app.google/LL7LLWkpSWtjJbYG9" variant="dark">Apply for The Advisory</CtaBtn>
+              <p className="font-sans text-[12px] text-lgrey mt-3 font-light">
+                Available after completing The Financial Decision · Price discussed based on your context.
+              </p>
             </div>
           </div>
 

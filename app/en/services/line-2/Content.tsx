@@ -108,7 +108,7 @@ export default function LineTwo() {
             I'll tell you directly what I see — including if I'm not the right person for what you need.
           </p>
           <motion.a
-            href="/en#contact"
+            href="https://calendar.app.google/LL7LLWkpSWtjJbYG9"
             className="inline-block px-9 py-[15px] bg-amber text-cream font-sans text-[11px] tracking-[2.5px] uppercase transition-colors duration-200 hover:bg-green"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.97 }}

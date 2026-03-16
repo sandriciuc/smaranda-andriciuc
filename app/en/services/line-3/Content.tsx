@@ -190,14 +190,17 @@ export default function LineThree() {
                     <p className="font-cormorant text-[36px] font-semibold text-brass-l leading-none">€ 450</p>
                     <p className="font-sans text-[11px] text-cream/45 mt-1">Full process · adapted to you</p>
                   </div>
-                  <motion.a
-                    href="/en#contact"
-                    className="inline-block px-7 py-[13px] text-[11px] tracking-[2px] uppercase font-sans bg-cream text-green hover:bg-brass-l hover:text-white transition-colors duration-200"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.97 }}
-                  >
-                    Apply
-                  </motion.a>
+                  <div className="flex flex-col items-end gap-1.5">
+                    <motion.a
+                      href="https://calendar.app.google/LL7LLWkpSWtjJbYG9"
+                      className="inline-block px-7 py-[13px] text-[11px] tracking-[2px] uppercase font-sans bg-cream text-green hover:bg-brass-l hover:text-white transition-colors duration-200"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.97 }}
+                    >
+                      Apply
+                    </motion.a>
+                    <p className="font-sans text-[11px] text-cream/45 font-light">Book a free 30-minute call — no commitment.</p>
+                  </div>
                 </div>
                 <p className="font-sans text-[12px] italic text-cream/50 mt-[14px] pt-[14px] border-t border-white/[0.07] leading-[1.55]">
                   100% refund after the first session — if it's not right for you, I refund in full. No questions asked.
@@ -235,7 +238,7 @@ export default function LineThree() {
                     <p className="font-sans text-[11px] text-lgrey mt-1">Per month · no commitment</p>
                   </div>
                   <motion.a
-                    href="/en#contact"
+                    href="mailto:smaranda.andriciuc@gmail.com"
                     className="inline-block px-7 py-[13px] text-[11px] tracking-[2px] uppercase font-sans border border-green text-green bg-transparent hover:bg-green hover:text-cream transition-colors duration-200"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.97 }}
