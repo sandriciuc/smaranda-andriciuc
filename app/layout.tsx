@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Cormorant_Garamond, DM_Sans, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
+import Script from 'next/script'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -56,7 +57,22 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ro" className={`${cormorant.variable} ${dmSans.variable} ${ibmPlexMono.variable}`}>
+   <html lang="ro" className={`${cormorant.variable} ${dmSans.variable} ${ibmPlexMono.variable}`}>
+      
+      {/* Google Analytics */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-STXYCN5NB4"
+        strategy="afterInteractive"
+      />
+      <Script id="ga-script" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-STXYCN5NB4');
+        `}
+      </Script>
+
       <body>{children}</body>
     </html>
   )
