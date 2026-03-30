@@ -360,7 +360,7 @@ export default function LiniaUna() {
               subtitle="For women who are done guessing."
               priceMain={<>3.600 <span className="text-[16px] font-light">lei</span></>}
               priceNote="sesiuni adaptate nevoii tale"
-              desc="Un proces de lucru 1:1 construit în jurul situației tale reale — cifrele tale, business-ul tău, decizia ta. Lucrăm împreună în sesiuni adaptate nevoii tale. Analizăm ce există, construim ce lipsește, calculăm scenariile reale. La final știi exact unde ești, ce e fezabil și când."
+              desc="Un proces de lucru de 3 sau 4 sesiuni 1:1 construit în jurul situației tale reale — cifrele tale, business-ul tău, decizia ta. Lucrăm împreună în sesiuni adaptate nevoii tale. Analizăm ce există, construim ce lipsește, calculăm scenariile reale. La final știi exact unde ești, ce e fezabil și când."
               includes={[
                 'Un business plan financiar complet pentru 12 luni — construit pe datele tale, nu pe medii de industrie',
                 'Un instrument Excel pe care îl folosești și adaptezi singură după ce pleci',
