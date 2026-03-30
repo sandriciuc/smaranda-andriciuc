@@ -206,7 +206,7 @@ export default function LineOne() {
                 </div>
               </div>
               <p className="font-sans text-[15px] text-grey leading-[1.75] font-light mb-7 max-w-[640px]">
-                A 1:1 working process built around your real situation — your numbers, your business, your decision. We work together in sessions adapted to your needs. We analyse what exists, build what is missing, calculate the real scenarios. At the end you know exactly where you stand, what is feasible and when.
+                A 1:1 working process of 3 or 4 sessions built around your real situation — your numbers, your business, your decision. We work together in sessions adapted to your needs. We analyse what exists, build what is missing, calculate the real scenarios. At the end you know exactly where you stand, what is feasible and when.
               </p>
               <Includes items={[
                 'A complete financial business plan for 12 months — built on your data, not industry averages',
