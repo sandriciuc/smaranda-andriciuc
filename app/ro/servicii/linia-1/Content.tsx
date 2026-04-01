@@ -279,7 +279,7 @@ export default function LiniaUna() {
                   <strong className="text-ink font-medium">E de fapt:</strong> Apartenența la un grup de femei serioase care gândesc clar și se susțin reciproc — fără dramă, fără performanță.
                 </p>
               </div>
-              <CtaBtn variant="outline" onClick={() => setModalProgram('The Clarity Circle')}>Încep aici</CtaBtn>
+              <CtaBtn variant="outline" href="/ro/atelier/the-clarity-circle">Încep aici</CtaBtn>
             </div>
 
             {/* 1B The Money Map */}
