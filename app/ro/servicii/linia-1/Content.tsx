@@ -315,7 +315,7 @@ export default function LiniaUna() {
               badge={{ text: 'Intrare', variant: 'entry' }}
               id="2 · Atelier · De 4× pe an · 2 ore"
               title="The Real Price"
-              subtitle="Un subiect. 90 de minute. Un număr pe care îl știi cu certitudine."
+              subtitle="Un subiect. 2 ore. Un număr pe care îl știi cu certitudine."
               priceMain={<>250 <span className="text-[16px] font-light">lei</span></>}
               priceNote="Per sesiune · Atelier de 2 ore"
               desc="Prețul corect nu e ce simți că poți cere. E costuri directe + costuri indirecte + marjă + timp — calculat, nu ghicit. În 2 ore lucrezi exact asta, aplicat pe situația ta, în sesiune. Pleci cu un instrument funcțional pe care îl poți folosi a doua zi. Nu teorie. Nu inspirație."
