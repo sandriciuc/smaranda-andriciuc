@@ -134,7 +134,7 @@ export default function ClarityCircleContent() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-0.5 bg-cream/10">
             {[
-              { n: '01', label: 'Check-in', body: 'Fiecare participantă spune în 2 minute unde se află și ce aduce în sesiune.' },
+              { n: '01', label: 'Check-in', body: 'Fiecare participantă spune unde se află și ce aduce în sesiune.' },
               { n: '02', label: 'Situații la masă', body: '1-2 situații intră în lucru — analizăm, punem întrebări, oferim perspectivă.' },
               { n: '03', label: 'Feedback colectiv', body: 'Nu sfaturi. Întrebări bune și observații directe din parte unui grup care înțelege contextul.' },
               { n: '04', label: 'Un pas clar', body: 'Pleci cu ceva concret — o decizie clarificată, o întrebare rezolvată, o direcție.' },
