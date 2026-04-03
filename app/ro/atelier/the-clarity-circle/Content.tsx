@@ -101,7 +101,7 @@ export default function ClarityCircleContent() {
             </blockquote>
             <div className="mb-6">
               <p className="font-mono text-[10px] tracking-[1.4px] uppercase text-green font-medium mb-3">Este:</p>
-              {['Un grup mic cu situații reale', 'Feedback onest de la femei în aceeași etapă', 'O oră și jumătate în care se lucrează efectiv', 'Gratuit — fără cost, fără obligații'].map((item) => (
+              {['Un grup mic cu situații reale', 'Feedback onest de la femei în aceeași etapă', 'O oră și un sfert în care se lucrează efectiv', 'Gratuit — fără cost, fără obligații'].map((item) => (
                 <div key={item} className="flex items-start gap-3 mb-2.5 font-sans text-[14px] text-grey font-light">
                   <span className="text-green text-[15px] mt-0.5">✓</span>
                   {item}
@@ -288,12 +288,12 @@ export default function ClarityCircleContent() {
                   </div>
 
                   <div className="mb-4">
-                    <label className="block font-mono text-[10px] tracking-[1.2px] uppercase text-cream/45 mb-2">Prenume</label>
+                    <label className="block font-mono text-[10px] tracking-[1.2px] uppercase text-cream/45 mb-2">Nume complet</label>
                     <input
                       type="text"
                       value={form.name}
                       onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
-                      placeholder="Prenumele tău"
+                      placeholder="Nume și prenume"
                       className="w-full bg-white border border-cream/14 text-ink font-sans text-[14px] font-light px-4 py-3.5 outline-none focus:border-amber placeholder:text-ink/30 transition-colors"
                     />
                   </div>
