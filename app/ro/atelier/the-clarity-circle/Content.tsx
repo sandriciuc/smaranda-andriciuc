@@ -7,7 +7,7 @@ export default function ClarityCircleContent() {
   const [form, setForm] = useState({ email: '', name: '', phone: '', businessType: '', challenge: '' })
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault()
     setStatus('loading')
     try {
@@ -220,12 +220,10 @@ export default function ClarityCircleContent() {
 
       {/* Quote full */}
       <div className="bg-amber px-6 py-20 text-center relative overflow-hidden">
-        <div className="absolute top-[-60px] left-10 font-cormorant text-[320px] font-light text-white/8 leading-none pointer-events-none select-none">"</div>
         <div className="relative z-10 max-w-2xl mx-auto">
-          <p className="font-cormorant text-[clamp(26px,3.5vw,42px)] font-light italic text-white leading-[1.35] mb-6">
-            „Nu îți spun că poți. Îți arăt că poți. Cu cifrele tale, nu ale altcuiva."
+          <p className="font-cormorant text-[clamp(26px,3.5vw,42px)] font-light italic text-white leading-[1.35]">
+            Nu îți spun că poți. Îți arăt că poți. Cu cifrele tale, nu ale altcuiva.
           </p>
-          <p className="font-mono text-[11px] tracking-[2px] uppercase text-white/60">Smaranda Andriciuc</p>
         </div>
       </div>
 
