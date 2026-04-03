@@ -7,7 +7,7 @@ export default function ClarityCircleContent() {
   const [form, setForm] = useState({ email: '', name: '', phone: '', businessType: '', challenge: '' })
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setStatus('loading')
     try {
@@ -285,7 +285,7 @@ export default function ClarityCircleContent() {
                       value={form.email}
                       onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
                       placeholder="adresa@email.ro"
-                      className="w-full bg-cream/6 border border-cream/14 text-cream font-sans text-[14px] font-light px-4 py-3.5 outline-none focus:border-amber placeholder:text-cream/20 transition-colors"
+                      className="w-full bg-white border border-cream/14 text-ink font-sans text-[14px] font-light px-4 py-3.5 outline-none focus:border-amber placeholder:text-ink/30 transition-colors"
                     />
                   </div>
 
@@ -296,7 +296,18 @@ export default function ClarityCircleContent() {
                       value={form.name}
                       onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
                       placeholder="Prenumele tău"
-                      className="w-full bg-cream/6 border border-cream/14 text-cream font-sans text-[14px] font-light px-4 py-3.5 outline-none focus:border-amber placeholder:text-cream/20 transition-colors"
+                      className="w-full bg-white border border-cream/14 text-ink font-sans text-[14px] font-light px-4 py-3.5 outline-none focus:border-amber placeholder:text-ink/30 transition-colors"
+                    />
+                  </div>
+
+                  <div className="mb-4">
+                    <label className="block font-mono text-[10px] tracking-[1.2px] uppercase text-cream/45 mb-2">Telefon</label>
+                    <input
+                      type="tel"
+                      value={form.phone}
+                      onChange={e => setForm(f => ({ ...f, phone: e.target.value }))}
+                      placeholder="+40 7xx xxx xxx"
+                      className="w-full bg-white border border-cream/14 text-ink font-sans text-[14px] font-light px-4 py-3.5 outline-none focus:border-amber placeholder:text-ink/30 transition-colors"
                     />
                   </div>
 
@@ -307,7 +318,7 @@ export default function ClarityCircleContent() {
                       value={form.businessType}
                       onChange={e => setForm(f => ({ ...f, businessType: e.target.value }))}
                       placeholder="ex: servicii, produse, consultanță..."
-                      className="w-full bg-cream/6 border border-cream/14 text-cream font-sans text-[14px] font-light px-4 py-3.5 outline-none focus:border-amber placeholder:text-cream/20 transition-colors"
+                      className="w-full bg-white border border-cream/14 text-ink font-sans text-[14px] font-light px-4 py-3.5 outline-none focus:border-amber placeholder:text-ink/30 transition-colors"
                     />
                   </div>
 
@@ -318,7 +329,7 @@ export default function ClarityCircleContent() {
                       onChange={e => setForm(f => ({ ...f, challenge: e.target.value }))}
                       placeholder="O situație, o decizie, o întrebare..."
                       rows={3}
-                      className="w-full bg-cream/6 border border-cream/14 text-cream font-sans text-[14px] font-light px-4 py-3.5 outline-none focus:border-amber placeholder:text-cream/20 transition-colors resize-none"
+                      className="w-full bg-white border border-cream/14 text-ink font-sans text-[14px] font-light px-4 py-3.5 outline-none focus:border-amber placeholder:text-ink/30 transition-colors resize-none"
                     />
                   </div>
 
