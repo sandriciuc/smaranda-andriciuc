@@ -77,7 +77,7 @@ export default function ClarityCircleContent() {
               <span className="font-mono text-[10px] tracking-[3px] uppercase text-amber">Ce este</span>
             </div>
             <h2 className="font-cormorant text-[clamp(32px,4vw,48px)] font-light text-ink leading-[1.1] mb-6">
-              Nu e coaching.<br />Nu e curs.<br /><em className="italic text-green">E altceva.</em>
+              Un spațiu de gândire<br /><em className="italic text-green">colectivă aplicată.</em>
             </h2>
             <div className="font-sans text-[15px] text-grey font-light leading-[1.85] space-y-4">
               <p>
@@ -99,20 +99,20 @@ export default function ClarityCircleContent() {
                 „Apartenența la un grup de femei serioase care gândesc clar și se susțin reciproc — fără dramă, fără performanță."
               </p>
             </blockquote>
-            <div className="mb-4">
-              <p className="font-mono text-[10px] tracking-[1.4px] uppercase text-grey font-medium mb-3">Nu este:</p>
-              {['Un curs', 'Coaching individual', 'O comunitate de networking', 'Terapie de grup'].map((item) => (
+            <div className="mb-6">
+              <p className="font-mono text-[10px] tracking-[1.4px] uppercase text-green font-medium mb-3">Este:</p>
+              {['Un grup mic cu situații reale', 'Feedback onest de la femei în aceeași etapă', 'O oră și jumătate în care se lucrează efectiv', 'Gratuit — fără cost, fără obligații'].map((item) => (
                 <div key={item} className="flex items-start gap-3 mb-2.5 font-sans text-[14px] text-grey font-light">
-                  <span className="opacity-40 line-through italic text-[13px] mt-0.5">–</span>
+                  <span className="text-green text-[15px] mt-0.5">✓</span>
                   {item}
                 </div>
               ))}
             </div>
             <div>
-              <p className="font-mono text-[10px] tracking-[1.4px] uppercase text-green font-medium mb-3">Este:</p>
-              {['Un grup mic cu situații reale', 'Feedback onest de la femei în aceeași etapă', 'O oră și jumătate în care se lucrează efectiv', 'Gratuit — fără cost, fără obligații'].map((item) => (
+              <p className="font-mono text-[10px] tracking-[1.4px] uppercase text-grey font-medium mb-3">Nu este:</p>
+              {['Un curs', 'Coaching individual', 'O comunitate de networking', 'Terapie de grup'].map((item) => (
                 <div key={item} className="flex items-start gap-3 mb-2.5 font-sans text-[14px] text-grey font-light">
-                  <span className="text-green text-[15px] mt-0.5">✓</span>
+                  <span className="opacity-40 line-through italic text-[13px] mt-0.5">–</span>
                   {item}
                 </div>
               ))}
@@ -205,8 +205,8 @@ export default function ClarityCircleContent() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-0.5 bg-ink/8">
             {[
-              { title: 'Format', body: 'Online · grup mic\nMaximum 6-8 participante per sesiune' },
-              { title: 'Frecvență', body: 'O dată pe lună\nDată comunicată prin email' },
+              { title: 'Format', body: 'Online · grup mic' },
+              { title: 'Frecvență', body: 'O dată pe lună' },
               { title: 'Cost', body: 'Gratuit\nFără angajament, fără obligații' },
             ].map((card) => (
               <div key={card.title} className="bg-white p-10 text-center">
