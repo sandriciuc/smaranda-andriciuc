@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { fbqLead } from '@/lib/fbq'
 
 interface MoneyMapModalProps {
   isOpen: boolean
@@ -42,6 +43,7 @@ export default function MoneyMapModal({ isOpen, onClose }: MoneyMapModalProps) {
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || 'Something went wrong')
       setStatus('success')
+      fbqLead('Money Map Modal EN')
     } catch (err: unknown) {
       setStatus('error')
       setErrorMsg(err instanceof Error ? err.message : 'Something went wrong. Please try again.')

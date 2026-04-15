@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import AnimatedSection from '@/components/shared/AnimatedSection'
+import { fbqLead } from '@/lib/fbq'
 import BrassLine from '@/components/shared/BrassLine'
 
 const serviceOptions = [
@@ -44,6 +45,7 @@ export default function ContactEn() {
       })
       if (!res.ok) throw new Error()
       setSubmitted(true)
+      fbqLead('Contact EN')
     } catch {
       alert('Something went wrong. Please try again.')
     } finally {

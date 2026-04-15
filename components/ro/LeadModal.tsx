@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { fbqLead } from '@/lib/fbq'
 
 interface LeadModalProps {
   isOpen: boolean
@@ -55,6 +56,7 @@ export default function LeadModal({ isOpen, onClose, program }: LeadModalProps) 
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || 'Ceva nu a funcționat.')
       setStatus('success')
+      fbqLead('LeadModal RO')
     } catch (err: unknown) {
       setStatus('error')
       setErrorMsg(err instanceof Error ? err.message : 'Ceva nu a funcționat. Încearcă din nou.')

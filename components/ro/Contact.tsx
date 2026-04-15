@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import AnimatedSection from '@/components/shared/AnimatedSection'
+import { fbqLead } from '@/lib/fbq'
 import BrassLine from '@/components/shared/BrassLine'
 
 const programs = [
@@ -49,6 +50,7 @@ export default function Contact() {
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || 'Eroare la trimitere.')
       setSubmitted(true)
+      fbqLead('Contact RO')
     } catch (err: unknown) {
       setErrorMsg(err instanceof Error ? err.message : 'Eroare neașteptată. Încearcă din nou.')
     } finally {
