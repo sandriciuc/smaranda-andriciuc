@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import { fbqInitiateCheckout } from '@/lib/fbq'
 
 const STRIPE = 'https://book.stripe.com/28EfZaevR9Ta8Z6er02Ry01'
 
@@ -33,7 +34,7 @@ export default function AtelierContent() {
             ))}
           </div>
           <div className="flex flex-wrap items-center gap-5">
-            <a href={STRIPE} target="_blank" rel="noopener noreferrer" className="inline-block px-9 py-4 bg-brass text-white font-sans text-[12px] tracking-[1.5px] uppercase rounded-sm transition-all hover:bg-amber">
+            <a href={STRIPE} target="_blank" rel="noopener noreferrer" onClick={() => fbqInitiateCheckout(250, 'RON', 'The Real Price')} className="inline-block px-9 py-4 bg-brass text-white font-sans text-[12px] tracking-[1.5px] uppercase rounded-sm transition-all hover:bg-amber">
               Vreau un loc — 250 lei
             </a>
             <span className="font-sans text-[13px] text-cream/50 font-light">
@@ -220,7 +221,7 @@ export default function AtelierContent() {
           <p className="font-sans text-[15px] text-cream/65 font-light mb-9 leading-[1.65]">
             2 ore. Un instrument practic. Claritate despre ce schimbi mâine.<br />Pleci cu calculul tău real, nu cu o promisiune vagă.
           </p>
-          <a href={STRIPE} target="_blank" rel="noopener noreferrer" className="inline-block px-12 py-[18px] bg-brass text-white font-sans text-[12px] tracking-[2px] uppercase rounded-sm transition-all hover:bg-amber mb-4">
+          <a href={STRIPE} target="_blank" rel="noopener noreferrer" onClick={() => fbqInitiateCheckout(250, 'RON', 'The Real Price')} className="inline-block px-12 py-[18px] bg-brass text-white font-sans text-[12px] tracking-[2px] uppercase rounded-sm transition-all hover:bg-amber mb-4">
             Rezerv locul meu — 250 lei
           </a>
           <p className="font-sans text-[12px] text-cream/40 font-light leading-[1.6]">

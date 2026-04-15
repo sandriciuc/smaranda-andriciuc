@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
+import { fbqLead } from '@/lib/fbq'
 
 export default function ClarityCircleContent() {
   const [form, setForm] = useState({ email: '', name: '', phone: '', businessType: '', challenge: '' })
@@ -16,8 +17,10 @@ export default function ClarityCircleContent() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...form, program: 'The Clarity Circle' }),
       })
-      if (res.ok) setStatus('success')
-      else setStatus('error')
+      if (res.ok) {
+        setStatus('success')
+        fbqLead('The Clarity Circle')
+      } else setStatus('error')
     } catch {
       setStatus('error')
     }
