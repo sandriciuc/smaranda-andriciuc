@@ -16,7 +16,7 @@ export default function AtelierContent() {
         <div className="relative z-10 max-w-2xl mx-auto">
           <div className="flex items-center gap-3 mb-7">
             <div className="w-8 h-px bg-brass" />
-            <span className="font-mono text-[10px] tracking-[3px] uppercase text-brass-l">Atelier · Mai 2026</span>
+            <span className="font-mono text-[10px] tracking-[3px] uppercase text-brass-l">Atelier · 22 Mai 2026 · 10:00–12:00</span>
           </div>
           <h1 className="font-cormorant text-[clamp(42px,6vw,68px)] font-light text-cream leading-[1.05] mb-6">
             Calculează-ți<br /><em className="italic text-brass-l">Prețul Corect</em>
@@ -26,7 +26,7 @@ export default function AtelierContent() {
             <strong className="text-cream font-normal">În 2 ore afli de ce și ce schimbi.</strong>
           </p>
           <div className="flex flex-wrap gap-2.5 mb-10">
-            {['2 ore', 'Online', 'Maximum 8 participante', 'Mai 2026 · dată exactă prin email'].map((pill) => (
+            {['2 ore', 'Online', 'Maximum 8 participante', '22 Mai 2026 · 10:00–12:00'].map((pill) => (
               <span key={pill} className="flex items-center gap-2 px-4 py-2 rounded-full border border-brass/30 bg-cream/5 text-cream/80 font-sans text-[12px] font-light">
                 <span className="w-1.5 h-1.5 rounded-full bg-brass flex-shrink-0" />
                 {pill}
@@ -184,7 +184,7 @@ export default function AtelierContent() {
                 { k: 'Format', v: 'Online' },
                 { k: 'Durată', v: '2 ore' },
                 { k: 'Locuri', v: <strong key="loc" className="text-green font-medium">Maximum 8 participante</strong> },
-                { k: 'Data', v: 'Mai 2026 · comunicată prin email' },
+                { k: 'Data', v: '22 Mai 2026 · 10:00–12:00' },
                 { k: 'Preț', v: <span key="pret" className="font-cormorant text-[32px] font-medium text-green leading-none">250 lei</span> },
                 { k: 'Plată', v: 'Stripe · condiții flexibile la cerere' },
               ] as { k: string; v: React.ReactNode }[]).map((row) => (
