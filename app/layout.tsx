@@ -62,6 +62,11 @@ export default function RootLayout({
   return (
    <html lang="ro" className={`${cormorant.variable} ${dmSans.variable} ${ibmPlexMono.variable}`}>
       <body>
+        <noscript>
+          <img height="1" width="1" style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=1594215188347899&ev=PageView&noscript=1"
+          />
+        </noscript>
         {children}
 
         {/* Google Analytics */}
